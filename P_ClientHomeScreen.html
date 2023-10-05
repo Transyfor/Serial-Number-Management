@@ -1,60 +1,90 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="projectstyles.css">
+        <Link rel="stylesheet" type="text/css" href="projectstyles.css"></rel>
         <title>Client Home Screen</title>
     </head>
     <!---hrefs TO BE UPDATED --->
-    <body> 
-        <h2>YOUR LICENCES</h2>
+    <body>
+        <div class="heading">
+            <h2>YOUR LICENCES</h2>
+        </div>
+
         <div id="licenceTable">
-            <table bgcolor="grey">
-                <tr bgcolor="blue" align="center">
+            <table  class="anytable" style="overflow-x:auto;">
+                <tr  height="50px">
                     <th width="150">Software</th>
-                    <th width="150">Licence Number</th>
+                    <th width="150">Serial Number</th>
                     <th width="150">Subscription Date</th>
                     <th width="150">Expiration Date</th>
+                    <th width="150">Subscription Fee ($)</th>
+                    <th width="150">Status</th>
                 </tr>
-                <tr bgcolor="lightblue" align="center">
+                <tr>
                     <td>Software1</td>
                     <td>sw1!859646</td>
-                    <td></td>
-                    <td></td>
+                    <td>07/10/2022</td>
+                    <td>06/11/2023</td>
+                    <td>19.99</td>
+                    <td>Active</td>
                 </tr>
-                <tr bgcolor="lightblue" align="center">
+                <tr  >
                     <td>Software2</td>
                     <td>sw2!745118</td>
-                    <td></td>
-                    <td></td>
+                    <td>17/02/2022</td>
+                    <td>16/02/2024</td>
+                    <td>189.99</td>
+                    <td>Active</td>
                 </tr>
-                <tr bgcolor="lightblue" align="center">
+                <tr  >
                     <td>Software3</td>
                     <td>sw3!748569</td>
-                    <td></td>
-                    <td></td>
+                    <td>02/10/2023</td>
+                    <td>01/10/2024</td>
+                    <td>49.99</td>
+                    <td>Active</td>
+                </tr>
+                <tr  >
+                    <td>Software4</td>
+                    <td>sw4!78769</td>
+                    <td>30/11/2023</td>
+                    <td>29/11/2024</td>
+                    <td>79.99</td>
+                    <td>Active</td>
+                </tr>
+                <tr  >
+                    <td>Software5</td>
+                    <td>sw5!111562</td>
+                    <td>13/12/2023</td>
+                    <td>12/12/2025</td>
+                    <td>99.99</td>
+                    <td>Active</td>
+                </tr>
+                <tr  >
+                    <td>Software6</td>
+                    <td>sw5!5543672</td>
+                    <td>06/12/2021</td>
+                    <td>05/12/2022</td>
+                    <td>69.99</td>
+                    <td>Expired</td>
                 </tr>
             </table>
         </div>
         </br></br></br>
-        <div id="button1">
-            <a href="https://www.cibconline.cibc.com"> 
+            <a href="https://www.cibconline.cibc.com" class="button"> 
                 <button autofocus type="button">Manage Account</button>
             </a>
-        </div> </br>
-        </div>
-        <div id="button2">
-            <a href="https://www.cibconline.cibc.com">
+         </br></br></br>
+ 
+            <a href="https://www.cibconline.cibc.com" class="button">
                 <button type="button">Redeem Licence</button>
             </a>
-        </div> </br></br>
+        </br></br>
 
         </br></br></br></br></br></br>
-        <div class="button3">
-            <a href="https://www.cibconline.cibc.com">
+            <a href="https://www.cibconline.cibc.com" class="button2">
                 <button onclick="alert('You Are About To Log Out')" type="button">Log out</button>
             </a>
-        </div>
-
 
     </body>
 </html>
