@@ -105,9 +105,9 @@ th { background-color: #4CAF50; }
 
   #create-account-form{
   width: 400px; 
-  margin: auto; 
-  position: absolute; 
-  top: 30%; left: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
   padding: 20px; 
   height: 150px; 
 }
@@ -145,7 +145,7 @@ th { background-color: #4CAF50; }
 }
 
 #outer-form-box{
-  height: 785px;
+  height: 625px;
 }
   /*
   * Serial Management - Client Exclusive Styles
