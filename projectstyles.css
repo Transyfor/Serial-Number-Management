@@ -1,7 +1,32 @@
-
+/*
+Site-Wide Styles
+*/
 
 * {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;
+}
+
+footer {background-color: black; color: white;}
+
+.primaryText{
+  color: darkblue;
+  size: 20px;
+}
+
+.secondaryText{
+  color: grey;
+  size:10px;
+}
+
+.bubbleStyle{
+  background-color: rgb(249, 249, 249); 
+  padding: 10px; border-radius: 10px; 
+  box-shadow: 10px 10px rgba(61, 61, 67, 0.744); 
+}
+
+.blueBackground {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/007/621/325/original/blue-wave-abstract-background-web-background-blue-texture-banner-design-creative-cover-design-backdrop-minimal-background-illustration-vector.jpg); 
+  background-color: lightblue;
 }
 
 .heading {
@@ -23,7 +48,7 @@ tr:hover {background-color:#1abc9c;}
 table { background-color: #93c093; }
 th { background-color: #4CAF50; }
 
-.button {
+.button { /* maybe make this more universal and put rest in correct section */
     width: 100%;
     border: none;
     padding: 32px 64px;
@@ -53,3 +78,77 @@ th { background-color: #4CAF50; }
     border: 2px solid #4CAF50;
   }
   
+  .inputBox:hover{
+    background-color: rgb(239, 234, 234);
+  }
+  /*
+  Home page exlusive styles
+  */
+
+  /*
+  Create Account Page Exclusive Styles
+  */
+
+  #createaccount-SP-button {
+    border-radius: 100px; 
+    background-color: rgb(210, 238, 144); 
+    color: black; 
+    padding: 10px; 
+    width: 125px; 
+    position: relative; 
+    left: 50px; 
+    text-decoration: none;
+}
+
+  #create-account-form-SP{
+  width: 400px; 
+  margin: auto; 
+  position: absolute; 
+  top: 30%; left: 35%;
+  padding: 20px; 
+  height: 150px; 
+}
+
+#SP-create-username {
+  position: relative; left: 30px;
+}
+
+#SP-create-password{
+  position: relative; left:36px;
+}
+
+#SP-create-name {
+  position:relative; left: 63px
+}
+
+#create-account-submit-button {
+  border-radius: 100px; 
+  background-color: lightgreen; 
+  color: black; 
+  padding: 10px; 
+  width: 125px; 
+  position: relative;
+  bottom: -10px; 
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+}
+#create-account-reset-button{
+  border-radius: 100px; 
+  background-color: rgb(210, 238, 144); 
+  color: black; padding: 10px; 
+  width: 125px; 
+  position: relative; 
+  left: 125px; 
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+}
+
+  /*
+  * Serial Management - Client Exclusive Styles
+  */
+
+  /*
+  * Serial Management- SP Excluvive Styles
+  */
+
+  /*
+  * Account Management Exclusive Styles
+  */
