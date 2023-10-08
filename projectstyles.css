@@ -158,3 +158,21 @@ th { background-color: #4CAF50; }
   /*
   * Account Management Exclusive Styles
   */
+
+  /*
+  * Account Management Exclusive Styles
+  */
+
+  /*
+  * Home Page Exclusive Styles
+  */
+  #HPheading {
+    padding: 20px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 80px;
+  }
+
+
+  
