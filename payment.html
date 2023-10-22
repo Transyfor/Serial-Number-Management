@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html style="height: 94.5%;
+padding-top: 0%;">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="projectstyles.css">
+    <title> SP Change Payment Method </title>
+</head>
+
+<header class="heading">
+    Simple Serial Management System
+</header>
+
+<body style="height: 800px; padding-top: 0%;" class="blueBackground">
+    <div class="maindiv">
+        <div class="subdiv1">
+            <ul class="manageacctmenu">
+                <li><a href="#password" id="password">Change Password</a></li>
+                <li><a href="#address" id="address">Change Address</a></li>
+                <li><a href="#name" id="name">Change Name</a></li>
+                <li><a class="active" href="#payment" id="payment">Change Payment Method</a></li>
+            </ul>
+        </div>
+
+        <div class="bubbleStyle" id="paymentdiv">
+            <form>
+                <h1 id="paymenttitle">Change Payment<br>Method</h1>
+                <label for="newpayment" id="enterpayment">Payment Method:</label>
+                <input type="text" id="newpayment" name="newpayment" class="inputBox">
+                <input type="submit" value="Submit" id="submitpayment">
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+<footer> Copyright 2023 SSMS Corporation All Right Reserved </footer>
+
+</html>
