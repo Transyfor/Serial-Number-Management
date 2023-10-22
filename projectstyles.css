@@ -160,6 +160,189 @@ th { background-color: #4CAF50; }
   * Account Management Exclusive Styles
   */
 
+.manageacctmenu {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    width: 150px;
+    overflow: auto;
+}
+
+.manageacctmenu a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.manageacctmenu a.active {
+    background-color: #325B91;
+    color: white;
+}
+
+.manageacctmenu a:hover:not(.active) {
+    background-color: rgb(210, 238, 144);
+    color: black;
+}
+
+.maindiv {
+    margin: 0px;
+    height: 100%;
+}
+
+.subdiv1 {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    float: left;
+}
+
+#passworddiv {
+    position: relative;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    padding: 20px;
+    height: 220px;
+}
+
+#addressdiv {
+    position: relative;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    padding: 20px;
+    height: 270px;
+}
+
+#namediv {
+    position: relative;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    padding: 20px;
+    height: 225px;
+}
+
+#paymentdiv {
+    position: relative;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    padding: 20px;
+    height: 177px;
+}
+
+#psswtitle,
+#addresstitle,
+#nametitle,
+#paymenttitle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    text-align: left;
+    position: relative;
+    left: 30px;
+    font-size: 23pt;
+}
+
+#pssw,
+#newaddress,
+#entername,
+#newname,
+#enterpayment,
+#newpayment {
+    position: relative;
+    left: 30px;
+}
+
+#oldpassword,
+#newpassword {
+    float: right;
+    margin-right: 30px;
+}
+
+.headers {
+    background-color: rgba(128, 128, 128, 0.774);
+    text-align: center;
+    font-size: 30px;
+}
+
+footer {
+    color: white;
+}
+
+#submitpssw {
+    border-radius: 100px;
+    background-color: lightgreen;
+    color: black;
+    padding: 10px;
+    width: 125px;
+    position: relative;
+    bottom: -67.5px;
+    left: 259px;
+    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+}
+
+#submitaddress {
+    border-radius: 100px;
+    background-color: lightgreen;
+    color: black;
+    padding: 10px;
+    width: 125px;
+    position: relative;
+    bottom: -28px;
+    left: 259px;
+    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+}
+
+#submitname {
+    border-radius: 100px;
+    background-color: lightgreen;
+    color: black;
+    padding: 10px;
+    width: 125px;
+    position: relative;
+    bottom: -30px;
+    left: 259px;
+    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+}
+
+#submitpayment {
+    border-radius: 100px;
+    background-color: lightgreen;
+    color: black;
+    padding: 10px;
+    width: 125px;
+    position: relative;
+    bottom: -30px;
+    left: 259px;
+    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+}
+
+#submitpssw:hover,
+#submitaddress:hover,
+#submitname:hover,
+#submitpayment:hover {
+    background-color: #329161;
+    color: black;
+    cursor: pointer;
+}
+
+#oldaddresstag,
+#streetaddress,
+#oldaddress,
+#oldnametag,
+#oldname {
+    text-align: left;
+    position: relative;
+    left: 30px;
+}
+
   /*
   * Account Management Exclusive Styles
   */
