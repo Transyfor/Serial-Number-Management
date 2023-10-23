@@ -1,3 +1,7 @@
+document.getElementById("homescreenHeader").onclick = function () {
+    location.href = 'P_ClientHomeScreen.html';
+};
+
 document.getElementById("password").onclick = function () {
     location.href = 'password.html';
 };
