@@ -3,265 +3,303 @@ Site-Wide Styles
 */
 
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;
 }
 
 footer {
-    background-color: black; 
-    color: white;
-    margin: 0px;}
+  background-color: black; 
+  color: white;
+  margin: 0px;}
 
 .primaryText{
-  color: darkblue;
-  size: 20px;
+color: darkblue;
+size: 20px;
 }
 
 .secondaryText{
-  color: grey;
-  size:10px;
+color: grey;
+size:10px;
 }
 
 .bubbleStyle{
-  background-color: rgb(249, 249, 249); 
-  padding: 10px; border-radius: 10px; 
-  box-shadow: 10px 10px rgba(61, 61, 67, 0.744); 
+background-color: rgb(249, 249, 249); 
+padding: 10px; border-radius: 10px; 
+box-shadow: 10px 10px rgba(61, 61, 67, 0.744); 
 }
 
 .blueBackground {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/007/621/325/original/blue-wave-abstract-background-web-background-blue-texture-banner-design-creative-cover-design-backdrop-minimal-background-illustration-vector.jpg); 
-  background-color: lightblue;
+background-image: url(https://static.vecteezy.com/system/resources/previews/007/621/325/original/blue-wave-abstract-background-web-background-blue-texture-banner-design-creative-cover-design-backdrop-minimal-background-illustration-vector.jpg); 
+background-color: lightblue;
 }
 
 .heading {
-  padding: 20px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 80px;
+padding: 20px;
+text-align: center;
+background: #1abc9c;
+color: white;
+font-size: 80px;
 }
 
 #homescreenHeader {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .anytable{
-  width: 100%;
-  border: 1px solid;
-  text-align: left;
-  padding: 5px; 
+width: 100%;
+border: 1px solid;
+text-align: left;
+padding: 5px; 
 }
 
 tr:hover {background-color:#1abc9c;}
 table { background-color: #93c093; }
 th { background-color: #4CAF50; }
 
-.button { /* maybe make this more universal and put rest in correct section */
-    width: 100%;
-    border: none;
-    padding: 32px 64px;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-    font-size: 24px;
-    margin: 16x 2px;
-    border-radius: 12px;
-  }
 
-  /*.button:hover{
-    background: #4CAF50;
-  }*/
 
-  .button2 {
-    top:85%;
-    left:85%;
-    width:100px;
-    height:40px;
-    position: absolute;
-    cursor: pointer;
-    text-align: center;
-    font-size: 16px;
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
-  }
-  
-  .inputBox:hover{
-    background-color: rgb(210, 211, 239);
-  }
-  /*
-  Home page exlusive styles
-  */
-
-  /*
-  Create Account Page Exclusive Styles
-  */
-
-  #createaccount-button {
-    border-radius: 100px; 
-    background-color: rgb(210, 238, 144); 
-    color: black; 
-    padding: 10px; 
-    width: 125px; 
-    position: relative; 
-    left: 50px; 
-    text-decoration: none;
+.inputBox:hover{
+  background-color: rgb(210, 211, 239);
 }
+/*
+Home page exlusive styles
+*/
 
-  #create-account-form{
-  width: 400px; 
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 150px;
-  padding: 20px; 
-  height: 220px; 
-}
+/*
+Create Account Page Exclusive Styles
+*/
 
-#create-username {
-  position: relative; left: 30px;
-}
-
-#create-password{
-  position: relative; left:36px;
-}
-
-#create-name {
-  position:relative; left: 63px
-}
-
-#create-account-submit-button {
+#createaccount-button {
   border-radius: 100px; 
-  background-color: lightgreen; 
+  background-color: rgb(210, 238, 144); 
   color: black; 
   padding: 10px; 
   width: 125px; 
-  position: relative;
-  bottom: -50px;
-  left: 80px;
-  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+  position: relative; 
+  left: 50px; 
+  text-decoration: none;
+}
+
+#create-account-form{
+width: 400px; 
+margin-left: auto;
+margin-right: auto;
+margin-top: 150px;
+padding: 20px; 
+height: 220px; 
+}
+
+#create-username {
+position: relative; left: 30px;
+}
+
+#create-password{
+position: relative; left:36px;
+}
+
+#create-name {
+position:relative; left: 63px
+}
+
+#create-account-submit-button {
+border-radius: 100px; 
+background-color: lightgreen; 
+color: black; 
+padding: 10px; 
+width: 125px; 
+position: relative;
+bottom: -50px;
+left: 80px;
+box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 #create-account-reset-button{
-  border-radius: 100px; 
-  background-color: #d2ee90; 
-  color: black; padding: 10px; 
-  width: 125px; 
-  position: relative; 
-  bottom: -4px;
-  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+border-radius: 100px; 
+background-color: #d2ee90; 
+color: black; padding: 10px; 
+width: 125px; 
+position: relative; 
+bottom: -4px;
+box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 
 #outer-form-box{
-  height: 625px;
+height: 625px;
 }
-  /*
-  * Serial Management - Client Exclusive Styles
-  */
+/*
+* Serial Management - Client Exclusive Styles
+*/
 
-  /*
-  * Serial Management- SP Excluvive Styles
-  */
+#clientHS-Manage_Redeem-button {
+  border-radius: 100px;
+  border: none; 
+  background-color: lightgreen;
+  cursor: pointer;  
+  position: relative;
+  left:45%;
+  padding: 10px; 
+  width: 150px; 
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+}
+  
+#client-logout-button{
+  border-radius: 100px; 
+  background-color: #d2ee90; 
+  color: black; 
+  padding: 10px; 
+  top:99%;
+  width:150px;
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+  }
 
-  /*
-  * Account Management Exclusive Styles
-  */
+  #clientHS-table{
+    width: 1100px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 20px; 
+    height: 220px; 
+    }
+
+/*
+* Serial Management- SP Excluvive Styles
+*/
+.heading2 {
+  height:20px;
+  padding: 20px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+  position:relative;
+  }
+
+#SPtHS-table{
+  width: 1100px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 20px; 
+  height: 220px; 
+  }
+
+ #SerialNumber-table{
+  width: 400px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 20px; 
+  height: 220px; 
+  }
+
+  #SNTable{
+    color:white;
+    }
+
+
+/*
+* Account Management Exclusive Styles
+*/
 
 .manageacctmenu {
-    list-style-type: none;
-    margin: 0;
-    margin-top: 10px;
-    padding: 0;
-    width: 150px;
-    overflow: auto;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  width: 150px;
+  overflow: auto;
 }
 
 .manageacctmenu a {
-    display: block;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
 }
 
 .manageacctmenu a.active {
-    background-color: #325B91;
-    color: white;
+  background-color: #325B91;
+  color: white;
 }
 
 .manageacctmenu a:hover:not(.active) {
-    background-color: rgb(210, 238, 144);
-    color: black;
+  background-color: rgb(210, 238, 144);
+  color: black;
 }
 
 .maindiv {
-    margin: 0px;
-    height: 100%;
+  margin: 0px;
+  height: 100%;
 }
 
 .subdiv1 {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    float: left;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  float: left;
 }
 
 #passworddiv {
-    position: relative;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 150px;
-    padding: 20px;
-    height: 220px;
+  position: relative;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
+  padding: 20px;
+  height: 220px;
 }
 
 #addressdiv {
-    position: relative;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 150px;
-    padding: 20px;
-    height: 270px;
+  position: relative;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
+  padding: 20px;
+  height: 270px;
 }
 
 #namediv {
-    position: relative;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 150px;
-    padding: 20px;
-    height: 225px;
+  position: relative;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
+  padding: 20px;
+  height: 225px;
 }
 
 #paymentdiv {
-    position: relative;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 150px;
-    padding: 20px;
-    height: 177px;
+  position: relative;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
+  padding: 20px;
+  height: 177px;
 }
 
 #codediv {
-    position: relative;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 150px;
-    padding: 20px;
-    height: 155px;
+  position: relative;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
+  padding: 20px;
+  height: 155px;
 }
 
 #psswtitle,
 #addresstitle,
 #nametitle,
 #paymenttitle {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 2%;
-    margin-bottom: 6%;
-    text-align: left;
-    position: relative;
-    left: 30px;
-    font-size: 23pt;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 2%;
+  margin-bottom: 6%;
+  text-align: left;
+  position: relative;
+  left: 30px;
+  font-size: 23pt;
 }
 
 #pssw,
@@ -272,84 +310,86 @@ th { background-color: #4CAF50; }
 #newpayment,
 #code,
 #codeinput {
-    position: relative;
-    left: 30px;
+  position: relative;
+  left: 30px;
 }
 
 #oldpassword,
 #newpassword {
-    float: right;
-    margin-right: 30px;
+  float: right;
+  margin-right: 30px;
 }
 
 .headers {
-    background-color: rgba(128, 128, 128, 0.774);
-    text-align: center;
-    font-size: 30px;
+  background-color: rgba(128, 128, 128, 0.774);
+  text-align: center;
+  font-size: 30px;
 }
 
 footer {
-    color: white;
+  color: white;
+  margin-bottom: 0px;
+  position:absolute;
 }
 
 #submitpssw {
-    border-radius: 100px;
-    background-color: lightgreen;
-    color: black;
-    padding: 10px;
-    width: 125px;
-    position: relative;
-    bottom: -67.5px;
-    left: 259px;
-    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+  border-radius: 100px;
+  background-color: lightgreen;
+  color: black;
+  padding: 10px;
+  width: 125px;
+  position: relative;
+  bottom: -67.5px;
+  left: 259px;
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 
 #submitaddress {
-    border-radius: 100px;
-    background-color: lightgreen;
-    color: black;
-    padding: 10px;
-    width: 125px;
-    position: relative;
-    bottom: -28px;
-    left: 259px;
-    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+  border-radius: 100px;
+  background-color: lightgreen;
+  color: black;
+  padding: 10px;
+  width: 125px;
+  position: relative;
+  bottom: -28px;
+  left: 259px;
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 
 #submitname {
-    border-radius: 100px;
-    background-color: lightgreen;
-    color: black;
-    padding: 10px;
-    width: 125px;
-    position: relative;
-    bottom: -30px;
-    left: 259px;
-    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+  border-radius: 100px;
+  background-color: lightgreen;
+  color: black;
+  padding: 10px;
+  width: 125px;
+  position: relative;
+  bottom: -30px;
+  left: 259px;
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 
 #submitpayment {
-    border-radius: 100px;
-    background-color: lightgreen;
-    color: black;
-    padding: 10px;
-    width: 125px;
-    position: relative;
-    bottom: -30px;
-    left: 259px;
-    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+  border-radius: 100px;
+  background-color: lightgreen;
+  color: black;
+  padding: 10px;
+  width: 125px;
+  position: relative;
+  bottom: -30px;
+  left: 259px;
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 
 #submitcode {
-    border-radius: 100px;
-    background-color: lightgreen;
-    color: black;
-    padding: 10px;
-    width: 125px;
-    position: relative;
-    bottom: -80px;
-    left: 0px;
-    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+  border-radius: 100px;
+  background-color: lightgreen;
+  color: black;
+  padding: 10px;
+  width: 125px;
+  position: relative;
+  bottom: -80px;
+  left: 0px;
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 
 #submitpssw:hover,
@@ -357,9 +397,9 @@ footer {
 #submitname:hover,
 #submitpayment:hover,
 #submitcode:hover {
-    background-color: #329161;
-    color: black;
-    cursor: pointer;
+  background-color: #329161;
+  color: black;
+  cursor: pointer;
 }
 
 #oldaddresstag,
@@ -367,41 +407,40 @@ footer {
 #oldaddress,
 #oldnametag,
 #oldname {
-    text-align: left;
-    position: relative;
-    left: 30px;
+  text-align: left;
+  position: relative;
+  left: 30px;
 }
 
-  /*
-  * Account Management Exclusive Styles
-  */
+/*
+* Account Management Exclusive Styles
+*/
 
-  /*
-  * Home Page Exclusive Styles
-  */
+/*
+* Home Page Exclusive Styles
+*/
 
-  #submitButton {
-    border-radius: 100px; 
-    background-color: lightgreen; 
-    color: black; 
-    padding: 10px; 
-    width: 125px; 
-    position: relative;
-    right:85px;
-    bottom: -20px; 
-    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)  
-  }
+#submitButton {
+  border-radius: 100px; 
+  background-color: lightgreen; 
+  color: black; 
+  padding: 10px; 
+  width: 125px; 
+  position: relative;
+  right:85px;
+  bottom: -20px; 
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)  
+}
 
-  #createButton {
-    border-radius: 100px; 
-    background-color: #d2ee90; 
-    color: black; 
-    padding: 10px; 
-    width: 125px; 
-    position: relative;
-    top:-25px;
-    right:-80px;
-    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)  
-  }
+#createButton {
+  border-radius: 100px; 
+  background-color: #d2ee90; 
+  color: black; 
+  padding: 10px; 
+  width: 125px; 
+  position: relative;
+  top:-25px;
+  right:-80px;
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)  
+}
 
-  
