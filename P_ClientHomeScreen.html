@@ -5,20 +5,19 @@
         <title>Client Home Screen</title>
     </head>
     <!---hrefs TO BE UPDATED --->
-    <body>
-        <div class="heading">
-            <h2>YOUR LICENCES</h2>
-        </div>
-
-        <div id="licenceTable">
-            <table  class="anytable" style="overflow-x:auto;">
+    <header class="heading">
+        Your Licences
+    </header>
+    <body class="blueBackground">
+        <div >
+            <table id="clientHS-table" class="bubbleStyle">
                 <tr  height="50px">
                     <th width="150">Software</th>
                     <th width="150">Serial Number</th>
-                    <th width="150">Subscription Date</th>
-                    <th width="150">Expiration Date</th>
-                    <th width="150">Subscription Fee ($)</th>
-                    <th width="150">Status</th>
+                    <th width="160">Subscription Date</th>
+                    <th width="160">Expiration Date</th>
+                    <th width="170">Subscription Fee ($)</th>
+                    <th width="130">Status</th>
                 </tr>
                 <tr>
                     <td>Software1</td>
@@ -71,22 +70,25 @@
             </table>
         </div>
         </br></br></br>
-            <a href="https://www.cibconline.cibc.com" class="button"> 
-                <button autofocus type="button">Manage Account</button>
+        <div>
+            <a  href="https://www.cibconline.cibc.com" > 
+                <button id="clientHS-Manage_Redeem-button" type="button">Manage Account</button>
             </a>
          </br></br></br>
  
-            <a href="https://www.cibconline.cibc.com" class="button">
-                <button type="button">Redeem Licence</button>
-            </a>
+            <a  href="https://www.cibconline.cibc.com" >
+                <button id="clientHS-Manage_Redeem-button" type="button">Redeem Licence</button>
+            </a>         
         </br></br>
-
-        </br></br></br></br></br></br>
-            <a href="https://www.cibconline.cibc.com" class="button2">
-                <button onclick="alert('You Are About To Log Out')" type="button">Log out</button>
+        </br></br></br></br>
+            <a  href="https://www.cibconline.cibc.com" >
+                <button id="client-logout-button" onclick="alert('You Are About To Log Out')" type="button">Log out</button>
             </a>
+            <script></script>
+        </div>
 
     </body>
+    <footer> Copyright 2023 SSMS Corporation All Right Reserved </footer>
 </html>
 
 

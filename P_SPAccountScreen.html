@@ -4,94 +4,155 @@
         <Link rel="stylesheet" type="text/css" href="projectstyles.css"></rel>
         <title>Service Provider Account Screen</title>
     </head>
-    <body>
-        <div class="heading">
-            <h2>LIST OF CLIENTS</h2>
+    <header class="heading">
+        List of Clients
+    </header>
+    <body class="blueBackground">
+            <div>
+                <table id="SPtHS-table" class="bubbleStyle">
+                    <tr height="50px">
+                        <th width="120">Client</th>
+                        <th width="150">Serial Number</th>
+                        <th width="120">Status</th>
+                        <th width="150">Subscription Date</th>
+                        <th width="160">Expiration Date</th>
+                        <th width="120">Payment Method</th>
+                    </tr>
+                    <tr>
+                        <td>Client1</td>
+                        <td>sw1!859646</td>
+                        <td>Active</td>
+                        <td>07/10/2022</td>
+                        <td>06/11/2023</td>
+                        <td>PayPal</td>
+                    </tr>
+                    <tr>
+                        <td>Client1</td>
+                        <td>sw43!908563</td>
+                        <td>Active</td>
+                        <td>17/02/2022</td>
+                        <td>16/02/2024</td>
+                        <td>Credit</td>
+                    </tr>
+                    <tr  >
+                        <td>Client2</td>
+                        <td>sw2!745118</td>
+                        <td>Active</td>
+                        <td>02/10/2023</td>
+                        <td>01/10/2024</td>
+                        <td>Credit</td>
+                    </tr>
+                    <tr  >
+                        <td>Client3</td>
+                        <td>sw3!748569</td>
+                        <td>Deactive</td>
+                        <td>30/01/2022</td>
+                        <td>29/01/2023</td>
+                        <td>Credit</td>
+                    </tr>
+                    <tr  >
+                        <td>Client3</td>
+                        <td>sw21!7434269</td>
+                        <td>Active</td>
+                        <td>13/12/2023</td>
+                        <td>12/12/2025</td>
+                        <td>Credit</td>
+                    </tr>
+                    <tr  >
+                        <td>Client3</td>
+                        <td>sw19!679232</td>
+                        <td>Active</td>
+                        <td>07/05/2022</td>
+                        <td>06/05/2023</td>
+                        <td>PayPal</td>
+                    </tr>
+                    <tr  >
+                        <td>Client4</td>
+                        <td>sw4!78769</td>
+                        <td>Deactive</td>
+                        <td>06/12/2021</td>
+                        <td>05/12/2022</td>
+                        <td>Debit</td>
+                    </tr>
+                    <tr  >
+                        <td>Client5</td>
+                        <td>sw5!111562</td>
+                        <td>Deactive</td>
+                        <td>07/10/2020</td>
+                        <td>06/11/2021</td>
+                        <td>Credit</td>
+                    </tr>
+                    <tr  >
+                        <td>Client6</td>
+                        <td>sw5!5543672</td>
+                        <td>Active</td>
+                        <td>30/11/2023</td>
+                        <td>29/11/2024</td>
+                        <td>Credit</td>
+                    </tr>
+                </table>
         </div>
-
-        <div id="ListofClients">
-            <table  class="anytable" style="overflow-x:auto;">
+        <div>
+            <header class="heading2">
+                Serial Numbers List
+            </header>
+            <table id="SerialNumber-table" class="bubbleStyle">
+                <!--<tr id="SNTable" height="50px">
+                    <td rowspan = "2"> </td>
+                    <th colspan = "3">Serial Numbers List</th>
+                </tr>-->
                 <tr height="50px">
-                    <th width="150">Client</th>
+                    <th width="50">No.</th>
                     <th width="150">Serial Number</th>
-                    <th width="150">BLAH</th>
-                    <th width="150">BLAH</th>
-                    <th width="150">BLAH</th>
-                    <th width="150">BLAH</th>
+                    <th width="150">Redeemed</th>
                 </tr>
                 <tr>
-                    <td>Client1</td>
-                    <td>sw1!859646</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
+                    <td>1</td>
+                    <td>6355889699</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
-                    <td>Client1</td>
-                    <td>sw43!908563</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
+                    <td>2</td>
+                    <td>9048193061</td>
+                    <td>Yes</td>
                 </tr>
                 <tr  >
-                    <td>Client2</td>
-                    <td>sw2!745118</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
+                    <td>3</td>
+                    <td>2818186387</td>
+                    <td>No</td>
                 </tr>
                 <tr  >
-                    <td>Client3</td>
-                    <td>sw3!748569</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
+                    <td>4</td>
+                    <td>8151499694</td>
+                    <td>Yes</td>
                 </tr>
                 <tr  >
-                    <td>Client3</td>
-                    <td>sw21!7434269</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
+                    <td>5</td>
+                    <td>9761690838</td>
+                    <td>No</td>
                 </tr>
                 <tr  >
-                    <td>Client3</td>
-                    <td>sw19!679232</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
+                    <td>6</td>
+                    <td>6510642069</td>
+                    <td>No</td>
                 </tr>
                 <tr  >
-                    <td>Client4</td>
-                    <td>sw4!78769</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
+                    <td>7</td>
+                    <td>2232341414</td>
+                    <td>No</td>
                 </tr>
                 <tr  >
-                    <td>Client5</td>
-                    <td>sw5!111562</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
+                    <td>8</td>
+                    <td>6414193177</td>
+                    <td>No</td>
                 </tr>
                 <tr  >
-                    <td>Client6</td>
-                    <td>sw5!5543672</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
-                    <td>BLAH</td>
+                    <td>9</td>
+                    <td>8112049524</td>
+                    <td>Yes</td>
                 </tr>
             </table>
-        </div>
-
+    </div>
+    </body>
+    <footer> Copyright 2023 SSMS Corporation All Right Reserved </footer>
 </html>
