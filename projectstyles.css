@@ -63,7 +63,11 @@ th { background-color: #4CAF50; }
 
 
 .inputBox:hover{
-  background-color: rgb(210, 211, 239);
+  background-color: rgb(201, 201, 201);
+}
+
+.radioStyling{
+  transform: scale(2);
 }
 /*
 Home page exlusive styles
@@ -72,6 +76,11 @@ Home page exlusive styles
 /*
 Create Account Page Exclusive Styles
 */
+
+#CAlogo{
+  display: block;
+  margin: auto;
+}
 
 #createaccount-button {
   border-radius: 100px; 
@@ -88,9 +97,9 @@ Create Account Page Exclusive Styles
 width: 400px; 
 margin-left: auto;
 margin-right: auto;
-margin-top: 150px;
+margin-top: 40px;
 padding: 20px; 
-height: 220px; 
+height: 380px; 
 }
 
 #create-username {
@@ -113,7 +122,6 @@ padding: 10px;
 width: 125px; 
 position: relative;
 bottom: -50px;
-left: 80px;
 box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 #create-account-reset-button{
@@ -128,6 +136,11 @@ box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 
 #outer-form-box{
 height: 625px;
+}
+
+.moveSP{
+  position: relative;
+  left: 90px;
 }
 /*
 * Serial Management - Client Exclusive Styles
