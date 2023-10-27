@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style="height: 94.5%;
+padding-top: 0%;">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="projectstyles.css">
+    <title> SP Delete Account </title>
+</head>
+
+<header class="heading">
+    Manage Account
+</header>
+
+<body style="height: 800px; padding-top: 0%;" class="blueBackground">
+    <div class="maindiv">
+        <div class="subdiv1">
+            <ul class="manageacctmenu">
+                <li><a href="#password" id="password">Change Password</a></li>
+                <li><a href="#address" id="address">Change Address</a></li>
+                <li><a href="#name" id="name">Change Name</a></li>
+                <li><a href="#payment" id="payment">Change Payment Method</a></li>
+                <li><a class="active" href="#delete" id="delete">Delete Account</a></li>
+            </ul>
+        </div>
+
+        <div class="bubbleStyle" id="deletediv">
+            <form>
+                <h1 id="deletetitle">Delete Account</h1>
+                <label for="currentpassword" id="currentpassword">Enter Password:</label>
+                <input type="password" id="currentpassword" name="currentpassword" class="inputBox">
+                <br />
+                <p id="deleteconfirmation">*Enter your current password to confirm the deletion*
+                </p>
+                <input type="submit" value="Submit" id="submitdelete">
+            </form>
+        </div>
+    </div>
+
+    <div id="popup-window">
+        <h1 id="confirmQuestion">Are you sure you want to delete your account?</h1>
+        <p id="deleteExplanation">You will be unable to recover your account afterwards.</p>
+        <button id="confirmButton" onclick="window.location.href='clientLogin.html'">Confirm</button>
+        <button id="cancelButton">Cancel</button>
+
+        <!-- <style>
+            body>*:not(#popup-window):not(footer) {
+                filter: blur(2px);
+            }
+        </style> -->
+    </div>
+
+    <div class="backarrow">
+        <a href="#backarrow" id="backarrow">
+            <p id="backarrowtext">
+                &#8249; home</p>
+        </a>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+<footer> Copyright 2023 SSMS Corporation All Right Reserved </footer>
+
+</html>
