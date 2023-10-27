@@ -8,11 +8,9 @@ padding-top: 0%;">
     <title> SP Change Payment Method </title>
 </head>
 
-<a href="#homescreenHeader" id="homescreenHeader">
-    <header class="heading">
-        Simple Serial Management System
-    </header>
-</a>
+<header class="heading">
+    Manage Account
+</header>
 
 <body style="height: 800px; padding-top: 0%;" class="blueBackground">
     <div class="maindiv">
@@ -22,17 +20,27 @@ padding-top: 0%;">
                 <li><a href="#address" id="address">Change Address</a></li>
                 <li><a href="#name" id="name">Change Name</a></li>
                 <li><a class="active" href="#payment" id="payment">Change Payment Method</a></li>
+                <li><a href="#delete" id="delete">Delete Account</a></li>
             </ul>
         </div>
 
         <div class="bubbleStyle" id="paymentdiv">
             <form>
                 <h1 id="paymenttitle">Change Payment<br>Method</h1>
-                <label for="newpayment" id="enterpayment">Payment Method:</label>
+                <p id="oldpaymentmethodtag">Current Payment Method: </p>
+                <p id="oldpaymentmethod"><em><strong>Credit</strong></em></p>
+                <label for="newpayment" id="enterpayment">New Payment Method:</label>
                 <input type="text" id="newpayment" name="newpayment" class="inputBox">
                 <input type="submit" value="Submit" id="submitpayment">
             </form>
         </div>
+    </div>
+
+    <div class="backarrow">
+        <a href="#backarrow" id="backarrow">
+            <p id="backarrowtext">
+                &#8249; home</p>
+        </a>
     </div>
 
     <script type="text/javascript" src="script.js"></script>
