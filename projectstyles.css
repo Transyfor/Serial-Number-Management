@@ -69,11 +69,15 @@ th { background-color: #4CAF50; }
 
 
 .inputBox:hover{
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(236, 236, 236);
 }
 
 .radioStyling{
   transform: scale(2);
+}
+
+.radioStyling:hover{
+  cursor: pointer;
 }
 /*
 Home page exlusive styles
@@ -105,19 +109,27 @@ margin-left: auto;
 margin-right: auto;
 margin-top: 40px;
 padding: 20px; 
-height: 380px; 
+height: 510px; 
 }
 
 #create-username {
-position: relative; left: 30px;
+position: relative; left: 45px;
 }
 
 #create-password{
-position: relative; left:36px;
+position: relative; left:51px;
 }
 
 #create-name {
-position:relative; left: 63px
+position:relative; left: 78px
+}
+
+#create-email{
+  position: relative; left:15px
+}
+
+#create-address{
+  position: relative; left: 8px;
 }
 
 #create-account-submit-button {
@@ -130,6 +142,13 @@ position: relative;
 bottom: -50px;
 box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
+
+#create-account-submit-button:hover{
+  background-color: #329161;
+  color: black;
+  cursor: pointer;
+}
+
 #create-account-reset-button{
 border-radius: 100px; 
 background-color: #d2ee90; 
@@ -139,9 +158,9 @@ position: relative;
 bottom: -4px;
 box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
-
-#outer-form-box{
-height: 625px;
+#create-account-reset-button:hover{
+  background-color: #93c093;
+  cursor: pointer;
 }
 
 .moveSP{
