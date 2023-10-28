@@ -8,11 +8,9 @@ padding-top: 0%;">
     <title> SP Change Address </title>
 </head>
 
-<a href="#homescreenHeader" id="homescreenHeader">
-    <header class="heading">
-        Simple Serial Management System
-    </header>
-</a>
+<header class="heading">
+    Manage Account
+</header>
 
 <body style="height: 800px; padding-top: 0%;" class="blueBackground">
     <div class="maindiv">
@@ -22,6 +20,7 @@ padding-top: 0%;">
                 <li><a class="active" href="#address" id="address">Change Address</a></li>
                 <li><a href="#name" id="name">Change Name</a></li>
                 <li><a href="#payment" id="payment">Change Payment Method</a></li>
+                <li><a href="#delete" id="delete">Delete Account</a></li>
             </ul>
         </div>
 
@@ -30,11 +29,18 @@ padding-top: 0%;">
                 <h1 id="addresstitle">Change Address</h1>
                 <p id="oldaddresstag">Old address: </p>
                 <p id="oldaddress"><em><strong>123 Main Street<br>Montreal, Quebec, A1A 1A1<br>Canada</strong></em></p>
-                <label for="streetaddress" id="streetaddress">Street Address:</label>
+                <label for="streetaddress" id="streetaddress">New Address:</label>
                 <input type="text" id="streetaddress" name="streetaddress" class="inputBox" autocomplete="off">
                 <input type="submit" value="Submit" id="submitaddress">
             </form>
         </div>
+    </div>
+
+    <div class="backarrow">
+        <a href="#backarrow" id="backarrow">
+            <p id="backarrowtext">
+                &#8249; home</p>
+        </a>
     </div>
 
     <script type="text/javascript" src="script.js"></script>
