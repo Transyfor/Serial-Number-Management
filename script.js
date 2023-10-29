@@ -1,3 +1,7 @@
+document.getElementById("backarrow").onclick = function () {
+    location.href = 'P_ClientHomeScreen.html';
+};
+
 document.getElementById("password").onclick = function () {
     location.href = 'password.html';
 };
@@ -16,10 +20,6 @@ document.getElementById("payment").onclick = function () {
 
 document.getElementById("delete").onclick = function () {
     location.href = 'deleteAccount.html';
-};
-
-document.getElementById("backarrow").onclick = function () {
-    location.href = 'P_ClientHomeScreen.html';
 };
 
 // Get the elements by their ID
