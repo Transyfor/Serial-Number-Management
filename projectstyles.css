@@ -204,6 +204,34 @@ box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
     height: 220px; 
     }
 
+  /*
+* Serial Number Page Exclusive Styles
+*/
+
+#licence-Number-Generator-button {
+  border-radius: 100px;
+  border: none; 
+  background-color: lightgreen;
+  cursor: pointer;  
+  position: relative;
+  left:40%;
+  padding: 10px; 
+  width: 300px; 
+  box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+}
+
+
+#tb{
+  left:41%;
+  position: relative;
+  border-radius: 100px;
+  border: none; 
+  display: inline-block;
+  width: 250px; 
+  padding: 10px; 
+}
+
+
 /*
 * Serial Management- SP Excluvive Styles
 */

@@ -71,16 +71,18 @@
             </table>
     </div>
 </br></br>
-    <a>
-        <button id="clientHS-Manage_Redeem-button" type="button" onclick="Random();">Generate New Licence Number</button>
-    </a> 
+<form name="rn">
+    <input type="button" id="licence-Number-Generator-button" value="Generate New Licence Number" onclick="RandomSN();" />
+    </br></br>
+    <input type="text" id="snBox" />
+</form>        
     </br></br></br></br>
     <a  href="homepage.html" >
         <button id="client-logout-button" onclick="alert('You Are About To Log Out')" type="button">Log out</button>
     </a>
 
     <script>
-        function Random() {
+        function RandomSN() {
         var rnd = Math.floor(Math.random() * 1000000000);
         document.getElementById('tb').value = rnd;
         }
