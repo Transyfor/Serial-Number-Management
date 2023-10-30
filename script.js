@@ -10,6 +10,10 @@ document.getElementById("logout").onclick = function () {
     location.href = 'homepage.html';
 };
 
+document.getElementById("password").onclick = function () {
+    location.href = 'password.html';
+};
+
 document.getElementById("address").onclick = function () {
     location.href = 'address.html';
 };
