@@ -103,15 +103,28 @@
                 </table>
         </div>
         </br></br></br></br>
-        <a  href="homepage.html" >
-            <button id="client-logout-button" onclick="alert('You Are About To Log Out')" type="button">Log out</button>
-        </a>
-        <!--<script>
-            $(document).ready(function(){
+        
+        <button id="client-logout-button" onclick="logout()" type="button">Log out</button>
+       
+        <script>
+            function logout(){
+            var reallyLogout=confirm("Do you really want to log out?");
+            if(reallyLogout){
+                location.href="homepage.html";
+            }
+            }
+            var answer = document.getElementById("logout");
+            if (answer.addEventListener) {
+                answer.addEventListener("click", logoutfunction, false);
+                } else {
+                    answer.attachEvent('onclick', logoutfunction);
+            }  
+
+            /*$(document).ready(function(){
                 $('.renewbtn').click(function(){
                     $(this).html($(this).html() == 'edit' ? 'modify' : 'edit');});
-            });
-        </script>-->
+            });*/
+        </script>
        
     </body>
     <footer> Copyright 2023 SSMS Corporation All Right Reserved </footer>
