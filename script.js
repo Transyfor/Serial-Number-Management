@@ -1,5 +1,9 @@
-document.getElementById("backarrow").onclick = function () {
+document.getElementById("homepage").onclick = function () {
     location.href = 'P_ClientHomeScreen.html';
+};
+
+document.getElementById("logout").onclick = function () {
+    location.href = 'homepage.html';
 };
 
 document.getElementById("password").onclick = function () {
