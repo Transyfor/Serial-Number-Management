@@ -190,14 +190,14 @@ th {
   * Serial Management - Client Exclusive Styles
   */
 
-#clientHS-Manage_Redeem-button {
+#move-between-pages-button {
     border-radius: 100px;
     background-color: lightgreen;
     cursor: pointer;
     position: relative;
     left: 45%;
     padding: 10px;
-    width: 150px;
+    width: 200px;
     box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 
@@ -238,7 +238,7 @@ th {
   * Serial Number Page Exclusive Styles
   */
 
-#licence-Number-Generator-button {
+#middle-page-button {
     border-radius: 100px;
     background-color: lightgreen;
     cursor: pointer;
@@ -249,11 +249,13 @@ th {
     box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
 }
 
-#licence-Number-Generator-button:hover {
+#middle-page-button:hover {
     background-color: #329161;
     color: black;
     cursor: pointer;
 }
+
+
 
 #tb {
     left: 41%;
@@ -301,16 +303,27 @@ th {
     color: white;
 }
 
-/* from layla: I added this to make the input box aligned at the center. feel free to change it as you wish */
 #snBox {
     display: block;
     margin: 0 auto;
 }
 
+.Renewbtn {
+    width:100%;
+    height:100%;
+    border-radius: 100px;
+    background-color:white;
+    cursor: pointer;
+    border-color: lightgreen;
+    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+
+}
+
 .Renewbtn:hover {
-    background-color: darkgray;
+    background-color: lightgreen;
     cursor: pointer;
 }
+
 
 /*
   * Account Management Exclusive Styles
