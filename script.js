@@ -2,12 +2,12 @@ document.getElementById("homepage").onclick = function () {
     location.href = 'P_ClientHomeScreen.html';
 };
 
-document.getElementById("logout").onclick = function () {
-    location.href = 'homepage.html';
+document.getElementById("passwordmenu").onclick = function () {
+    location.href = 'password.html';
 };
 
-document.getElementById("password").onclick = function () {
-    location.href = 'password.html';
+document.getElementById("logout").onclick = function () {
+    location.href = 'homepage.html';
 };
 
 document.getElementById("address").onclick = function () {
