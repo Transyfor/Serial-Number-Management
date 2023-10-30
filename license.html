@@ -1,49 +1,41 @@
-document.getElementById("homepage").onclick = function () {
-    location.href = 'P_ClientHomeScreen.html';
-};
+<!DOCTYPE html>
+<html style="height: 94.5%;
+padding-top: 0%;">
 
-document.getElementById("passwordmenu").onclick = function () {
-    location.href = 'password.html';
-};
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="projectstyles.css">
+    <title> SP Redeem License Code </title>
+</head>
 
-document.getElementById("logout").onclick = function () {
-    location.href = 'homepage.html';
-};
+<header class="heading">
+    Simple Serial Management System
+</header>
 
-document.getElementById("password").onclick = function () {
-    location.href = 'password.html';
-};
+<body style="height: 800px; padding-top: 0%;" class="blueBackground">
+    <div class="maindiv">
+        <div class="navigation">
+            <ul id="horizontalmenu">
+                <li id="homepage"><a class="active" href="#homepage">Home</a></li>
+                <li id="passwordmenu"><a href="#passwordmenu">Manage</a></li>
+                <li id="about"><a href="#about">About</a></li>
+                <li id="logout" style="float:right"><a href="#logout">Logout</a></li>
+            </ul>
+        </div>
 
-document.getElementById("address").onclick = function () {
-    location.href = 'address.html';
-};
+        <div class="bubbleStyle" id="codediv">
+            <form>
+                <h1 id="psswtitle">Redeem License Code</h1>
+                <label for="codeinput" id="code">Code:</label>
+                <input type="text" id="codeinput" name="codeinput" class="inputBox" maxLength="6">
+                <input type="submit" value="Submit" id="submitcode">
+            </form>
+        </div>
+    </div>
 
-document.getElementById("name").onclick = function () {
-    location.href = 'name.html';
-};
+    <script type="text/javascript" src="script.js"></script>
+</body>
 
-document.getElementById("payment").onclick = function () {
-    location.href = 'payment.html';
-};
+<footer> Copyright 2023 SSMS Corporation All Right Reserved </footer>
 
-document.getElementById("delete").onclick = function () {
-    location.href = 'deleteAccount.html';
-};
-
-// Get the elements by their ID
-var submitdelete = document.getElementById("submitdelete");
-var popupWindow = document.getElementById("popup-window");
-var confirmButton = document.getElementById("confirmButton");
-var cancelButton = document.getElementById("cancelButton");
-// Show the pop-up window when the link is clicked
-submitdelete.addEventListener("click", function (event) {
-    event.preventDefault();
-    popupWindow.style.display = "block";
-});
-// Hide the pop-up window when the close button is clicked
-confirmButton.addEventListener("click", function () {
-    popupWindow.style.display = "none";
-});
-cancelButton.addEventListener("click", function () {
-    popupWindow.style.display = "none";
-});
+</html>
