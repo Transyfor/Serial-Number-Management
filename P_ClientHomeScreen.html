@@ -4,11 +4,18 @@
         <Link rel="stylesheet" type="text/css" href="projectstyles.css"></rel>
         <title>Client Home Screen</title>
     </head>
-    <!---hrefs TO BE UPDATED --->
     <header class="heading">
         Your Licences
     </header>
     <body class="blueBackground">
+        <div class="maindiv">
+            <div class="navigation">
+                <ul id="horizontalmenu">
+                    <li id="homepage"><a href="P_ClientHomeScreen.html">Home</a></li>
+                    <li id="passwordmenu"><a class="active" href="password.html">Manage</a></li>
+                    <li id="logout" style="float:right"><a onclick="logout()" >Log out</a></li>
+                </ul>
+            </div>
         <div >
             <table id="clientHS-table" class="bubbleStyle">
                 <tr  height="50px">
@@ -76,23 +83,19 @@
                 </tr>
             </table>
         </div>
-        </br></br></br>
+        </br></br>
         <div>
             <a  href="password.html" > 
                 <button id="move-between-pages-button" type="button">Manage Account</button>
             </a>
-         </br></br></br>
+         </br></br>
  
             <a  href="license.html" >
                 <button id="move-between-pages-button" type="button">Redeem Licence</button>
             </a>         
-        </br></br>
         </br></br></br></br>
-            <a  href="homepage.html" >
-                <button id="client-logout-button" onclick="alert('You Are About To Log Out')" type="button">Log out</button>
-            </a>
-            <script></script>
         </div>
+        <script type="text/javascript" src="script.js"></script> 
 
     </body>
     <footer> &#0169; 2023 SSMS Corporation All Right Reserved </footer>
