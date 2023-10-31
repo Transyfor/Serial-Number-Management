@@ -47,3 +47,28 @@ confirmButton.addEventListener("click", function () {
 cancelButton.addEventListener("click", function () {
     popupWindow.style.display = "none";
 });
+
+//Log out function
+function logout(){
+    var reallyLogout=confirm("Do you really want to log out?");
+    if(reallyLogout){
+        location.href="homepage.html";
+    }
+    }
+    var answer = document.getElementById("logout");
+    if (answer.addEventListener) {
+        answer.addEventListener("click", logoutfunction, false);
+        } else {
+            answer.attachEvent('onclick', logoutfunction);
+    }  
+
+    /*$(document).ready(function(){
+        $('.renewbtn').click(function(){
+            $(this).html($(this).html() == 'edit' ? 'modify' : 'edit');});
+    });*/
+
+    //Random Number Generator (temporary) for Serial Number
+    function RandomSN() {
+        var rnd = Math.floor(Math.random() * 1000000000);
+        document.getElementById('tb').value = rnd;
+    }

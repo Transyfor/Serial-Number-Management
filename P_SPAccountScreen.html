@@ -8,6 +8,14 @@
         List of Clients
     </header>
     <body class="blueBackground">
+        <div class="maindiv">
+            <div class="navigation">
+                <ul id="horizontalmenu">
+                    <li id="homepage"><a href="P_SPAccountScreen.html">Home</a></li>
+                    <li id="passwordmenu"><a class="active" href="password.html">Manage</a></li>
+                    <li id="logout" style="float:right"><a onclick="logout()" >Log out</a></li>
+                </ul>
+            </div>
             <div>
                 <table id="SPtHS-table" class="bubbleStyle">
                     <tr height="50px">
@@ -108,10 +116,10 @@
         
         </br></br></br>
         
-        <button id="client-logout-button" onclick="logout()" type="button">Log out</button>
+       <!--<button id="client-logout-button" onclick="logout()" type="button">Log out</button>-->
        
-        <script>
-            function logout(){
+       <script type="text/javascript" src="script.js"></script>
+        <!-- function logout(){
             var reallyLogout=confirm("Do you really want to log out?");
             if(reallyLogout){
                 location.href="homepage.html";
@@ -128,7 +136,7 @@
                 $('.renewbtn').click(function(){
                     $(this).html($(this).html() == 'edit' ? 'modify' : 'edit');});
             });*/
-        </script>
+        </script>-->  
        
     </body>
     <footer>  &#0169; 2023 SSMS Corporation All Right Reserved </footer>

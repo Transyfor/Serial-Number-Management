@@ -11,6 +11,14 @@
 </header>
 
 <body class="blueBackground">
+    <div class="maindiv">
+        <div class="navigation">
+            <ul id="horizontalmenu">
+                <li id="homepage"><a href="P_SPAccountScreen.html">Home</a></li>
+                <li id="passwordmenu"><a class="active" href="password.html">Manage</a></li>
+                <li id="logout" style="float:right"><a onclick="logout()" >Log out</a></li>
+            </ul>
+    </div>
 
     <div>
         <table id="SerialNumber-table" class="bubbleStyle">
@@ -79,11 +87,12 @@
     </form>
     </br></br></br></br>
     <!--<a href="homepage.html">-->
-        <button id="client-logout-button" onclick="logout()" type="button">Log out</button>
+       <!--<button id="client-logout-button" onclick="logout()" type="button">Log out</button>-->
     <!--</a>-->
 
-    <script>
-        function RandomSN() {
+    <script type="text/javascript" src="script.js"></script>
+
+       <!-- function RandomSN() {
             var rnd = Math.floor(Math.random() * 1000000000);
             document.getElementById('tb').value = rnd;
         }
@@ -103,8 +112,8 @@
             answer.addEventListener("click", logoutfunction, false);
             } else {
                 answer.attachEvent('onclick', logoutfunction);
-        }  
-    </script>
+            }  -->
+
 </body>
 <footer>  &#0169; 2023 SSMS Corporation All Right Reserved </footer>
 
