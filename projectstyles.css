@@ -353,16 +353,23 @@ th {
 }
 
 #homepage,
-#passwordmenu,
-#about {
+#passwordmenu {
     float: left;
 }
 
 #homepage a,
-#passwordmenu a,
-#about a,
-#logout a {
+#passwordmenu a {
     display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#logout button {
+    display: block;
+    background-color: black;
+    cursor: pointer;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -371,15 +378,14 @@ th {
 
 #homepage a.active,
 #passwordmenu a.active,
-#about a.active,
-#logout a.active {
+#about a.active {
     background-color: #111;
 }
 
 #homepage a:hover:not(.active),
 #passwordmenu a:hover:not(.active),
 #about a:hover:not(.active),
-#logout a:hover:not(.active) {
+#logout button:hover:not(.active) {
     background-color: #111;
 }
 
