@@ -48,7 +48,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="projectstyles.css">
+    <link rel="stylesheet" href="/api/projectstyles.css">
     <title> Home Page </title>
     <style>
         header {
