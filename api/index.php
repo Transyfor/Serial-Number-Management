@@ -117,7 +117,7 @@
 
 <body class="blueBackground" style="scrollbar-width: none;overflow-y: scroll; overflow: hidden;">
     <header class="heading">Welcome to Simple Serial Management System</header><br>
-    <img src="Logo-01.png" alt="Our Logo" id="logo">
+    <img src="/Logo-01.png" alt="Our Logo" id="logo">
     <section id="inputBox" class="bubbleStyle">
         <form id="homePageLoginBox" method="post"> 
             <label>Username:</label><br>
