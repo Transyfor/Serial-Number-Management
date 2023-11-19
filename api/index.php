@@ -35,8 +35,8 @@
             }
         }
         else{
-        echo '<script>alert("Login is invalid")</script>'; 
-        header("Location: /index.php");
+        echo '<script>alert("Login is invalid"); 
+        window.location.href="index.php";</script>'; 
         exit();
         }
 

@@ -3,40 +3,34 @@
 
 //We start by checking that the $_POST array has values for each
 if(empty($_POST["create-username"])){
-    echo '<script>alert("Username is required")</script>'; 
-    header("Location: /CreateAccount.html");
+    echo '<script>alert("Username is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-password"])){
-    echo '<script>alert("Password is required")</script>'; 
-    header("Location: /CreateAccount.html");
+    echo '<script>alert("Password is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-name"])){
-    echo '<script>alert("Name is required")</script>'; 
-    header("Location: /CreateAccount.html");
+    echo '<script>alert("Name is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-email"])){
-    echo '<script>alert("Email is required")</script>'; 
-    header("Location: /CreateAccount.html");
+    echo '<script>alert("Email is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-address"])){
-    echo '<script>alert("Address is required")</script>'; 
-    header("Location: /CreateAccount.html");
+    echo '<script>alert("Address is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
 //We can also check for a valid email
 
 if (! filter_var($_POST["create-email"], FILTER_VALIDATE_EMAIL)) {
-    echo '<script>alert("Valid email is required")</script>'; 
-    header("Location: /CreateAccount.html");
+    echo '<script>alert("Valid email is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
@@ -64,8 +58,7 @@ if($stmt->execute()){ //If appending was successful
 }
 else{ //If it wasnt successful
     if($mysqli->errno === 1062) { //Special case if it's because email already taken
-        echo '<script>alert("Given email or username is already taken")</script>'; 
-        header("Location: /CreateAccount.html");
+        echo '<script>alert("Given email or username is already taken"); window.location.href="CreateAccount.html";</script>';
         exit();
     } 
     else {
