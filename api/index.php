@@ -25,6 +25,8 @@
                 $_SESSION['Serial Numbers']=$user['Serial Numbers'];
                 //And then send them to the right page afterwards
                 if($_SESSION['Account Type']=="Client"){
+                echo '<script>alert("Going to client"); 
+         window.location.href="index.php";</script>'; 
                 header("Location: /api/P_ClientHomeScreen.php");
                 exit();
                 }
