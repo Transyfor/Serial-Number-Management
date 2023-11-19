@@ -73,13 +73,15 @@
     <header class="heading">Welcome to Simple Serial Management System</header><br>
     <img src="Logo-01.png" alt="Our Logo" id="logo">
     <section id="inputBox" class="bubbleStyle">
-        <form id="homePageLoginBox" action="/loginHandler.php" method="post">
+        <form id="homePageLoginBox" action="loginHandler.php" method="post">
             <label>Username:</label><br>
             <input type="text" id="loginInfo" name="user" class="inputBox"><br><br>
             <label>Password:</label><br>
             <input type="password" id="password" name="password" class="inputBox"><br>
             <input id="submitButtonHome" type="submit" value="Login">
-
+        <?php if(isset($_GET['error'])){ ?>
+            <p class="error"> <?php echo $_GET['error']; ?> </p>
+        <?php } ?>
         </form>
         <button id="createButtonHome" onclick="location.href = 'CreateAccount.html';">Create Account</button>
 
@@ -97,27 +99,6 @@
         </text>
 
     </section>
-
-    <script>
-        let loginForm = document.getElementById("homePageLoginBox");
-        let loginButton = document.getElementById("submitButtonHome");
-
-        loginButton.addEventListener("click", (e) => {
-            e.preventDefault();
-            const username = loginForm.loginInfo.value;
-            const password = loginForm.password.value;
-
-            if (username == "user" && password == "123") {
-                window.location.href = "P_ClientHomeScreen.html";
-            } else if (username == "provider" && password == "123") {
-                window.location.href = "P_SPAccountScreen.html";
-            } else if (username == "" || password == "") {
-                alert("Username and password required.")
-            } else {
-                alert("Please enter a valid username and password.");
-            }
-        })
-    </script>
 </body>
 
 <footer> &copy 2023 SSMS Corporation All Right Reserved </footer>

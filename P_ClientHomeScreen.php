@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -104,3 +107,4 @@
 <footer> &#0169; 2023 SSMS Corporation All Right Reserved </footer>
 
 </html>
+?>
