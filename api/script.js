@@ -36,7 +36,7 @@ cancelButton.addEventListener("click", function () {
 function logout() {
   var reallyLogout = confirm("Do you really want to log out?");
   if (reallyLogout) {
-    location.href = "homepage.html";
+    location.href = "index.html";
   }
 }
 
