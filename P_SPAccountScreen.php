@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); //This makes it so that any variables attributed to the current session will still be present on this page.
 ?>
 <!DOCTYPE html>
 <html>

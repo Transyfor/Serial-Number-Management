@@ -1,3 +1,49 @@
+<?php
+
+//We will deal with the login up here. No need to make another .php file to handle it.
+    if($_SERVER["REQUEST_METHOD"]=== "POST"){ //So if the form below posts, this catches it
+        //We start by connecting to the database by requiring our db_conn file
+        $mysqli= require __DIR__ ."/db_conn.php";
+
+        //Then we write the sql to select a record based on the email address
+        $sql= sprintf("SELECT * FROM Users WHERE Username = '%s'",$mysli->real_escape_string($_POST["user"])); //The sprintf function replaces the %s in our string with the the second parameter, which is the given username in this case.
+//We could've not written the real_escape_string part and just wrote $_POST["user"] directly, but real_escape_string protects us from attackers.
+        $result= $mysqli->query($sql); //This just fetches the row in our table which has the username we want. 
+        $user= $result->fetch_assoc(); //This converts the row of our table into an array
+        //Now we check if the given password was correct
+        if ($user){ //This part only runs if there IS a user
+            if(password_verify($_POST['password'],$user['Password'])){ //php has a built in password checker!
+                session_start(); //This makes it so that I can attribute variables to the current user
+                $_SESSION['userID']=$user['userID'];
+                $_SESSION['Name']=$user['Name'];
+                $_SESSION['Username']=$user['Username'];
+                $_SESSION['Password']=$user['Password'];
+                $_SESSION['Email']=$user['Email'];
+                $_SESSION['Address']=$user['Address'];
+                $_SESSION['Payment Method']=$user['Payment Method'];
+                $_SESSION['Account Type']=$user['Account Type'];
+                $_SESSION['Serial Numbers']=$user['Serial Numbers'];
+                //And then send them to the right page afterwards
+                if($_SESSION['Account Type']=="Client"){
+                header("Location: P_ClientHomeScreen.php");
+                exit();
+                }
+                if($_SESSION['Account Type']=="SP"){
+                    header("Location: P_SPAccountScreen.php");
+                    exit();
+                }
+            }
+        }
+        else{
+        echo '<script>alert("Login is invalid")</script>'; 
+        header("Location: /index.php");
+        exit();
+        }
+
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -73,15 +119,12 @@
     <header class="heading">Welcome to Simple Serial Management System</header><br>
     <img src="Logo-01.png" alt="Our Logo" id="logo">
     <section id="inputBox" class="bubbleStyle">
-        <form id="homePageLoginBox" action="loginHandler.php" method="post">
+        <form id="homePageLoginBox" method="post"> 
             <label>Username:</label><br>
             <input type="text" id="loginInfo" name="user" class="inputBox"><br><br>
             <label>Password:</label><br>
             <input type="password" id="password" name="password" class="inputBox"><br>
             <input id="submitButtonHome" type="submit" value="Login">
-        <?php if(isset($_GET['error'])){ ?>
-            <p class="error"> <?php echo $_GET['error']; ?> </p>
-        <?php } ?>
         </form>
         <button id="createButtonHome" onclick="location.href = 'CreateAccount.html';">Create Account</button>
 

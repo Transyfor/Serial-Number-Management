@@ -11,7 +11,7 @@
     <body id="create-account-page" class="blueBackground">
         <div id="outer-form-box">
         <div id="create-account-form" class="bubbleStyle">
-            <form action="index.html" method="post">
+            <form action="createAccountHandler.php" method="post" novalidate>
                 <img id="CAlogo" src="Logo-02.png" height="100px">
                 <br>
                 <div style>
@@ -35,21 +35,21 @@
                 </div>
                 <br>
                 <label for="create-address"> Home Address: </label>
-                <input id="create-address" type="text" name="create-name" class="inputBox">
+                <input id="create-address" type="text" name="create-address" class="inputBox">
                 <br>
                 <br>
                 Payment Method
                 <br>
-                <input id="visa" type="radio" name="payment method" class="radioStyling">
+                <input id="visa" type="radio" name="paymentMethod" class="radioStyling" checked="checked" value="Visa">
                 <label for="visa" style="position: relative; left: 5px;"> Visa </label>
-                <input id="Mastercard" type="radio" name="payment method" class="radioStyling" style="position: relative; left: 110px;">
+                <input id="Mastercard" type="radio" name="paymentMethod" class="radioStyling" style="position: relative; left: 110px;" value="Mastercard">
                 <label for="Mastercard" style="position: relative; left: 110px;"> Mastercard </label>
                 <br>
                 Account type
                 <br>
-                <input id="client" type="radio" name="accountType" class="radioStyling">
+                <input id="client" type="radio" name="accountType" class="radioStyling" checked="checked" value="Client">
                 <label for="client"> Client </label>
-                <input id="SP" type="radio" name="accountType" class="radioStyling" style="position: relative; left: 90px;">
+                <input id="SP" type="radio" name="accountType" class="radioStyling" style="position: relative; left: 90px;" value="SP">
                 <label for="SP" class="moveSP"> Software Provider</label>
                 <input id="create-account-submit-button" type="submit" value="Submit">
                 <input id="create-account-reset-button" type="reset" value="Restart">
