@@ -39,8 +39,8 @@ $mysqli = require __DIR__ ."/db_conn.php"; //This is a connection object
 //Now we've connected to the database! We can now enter a new record into the user table
 
 //First we make a statement which we'll use in our query
-$sql = "INSERT INTO 'Users' ('Name','Username','Password','Email','Address','Payment Method','Account Type') VALUES (?,?,?,?,?,?,?)";
-
+$sql = "INSERT INTO Users (Name, Username, Password, Email, Address, 'Payment Method', 'Account Type') 
+        VALUES (?, ?, ?, ?, ?, ?, ?)";
 //Then we create a new prepared statement object by calling the statement init method on the mysqli connect object.
 $stmt= $mysqli->stmt_init();
 
@@ -53,7 +53,7 @@ if(!$stmt->prepare($sql)){
 //In our $sql (which is now $stmt) String, there are question marks for the values we need to add. Let's replace the question marks with what we want to add now
 $stmt->bind_param("ssssss",$_POST["create-username"],$_POST["create-password"],$_POST["create-name"],$_POST["create-email"],$_POST["create-address"],$_POST["paymentMethod"],$_POST["accountType"]); //the first parameter the method takes is to tell it what type each value is. We're adding 7 strings to our table, so "sssssss", where each s represents one of the variables
 if($stmt->execute()){ //If appending was successful
-    header("Location: /index.php");
+    header("Location: /api/index.php");
     exit();
 }
 else{ //If it wasnt successful
