@@ -48,7 +48,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="projectstyles.css">
+    <link rel="stylesheet" href="./projectstyles.css">
     <title> Home Page </title>
     <style>
         header {
@@ -126,7 +126,7 @@
             <input type="password" id="password" name="password" class="inputBox"><br>
             <input id="submitButtonHome" type="submit" value="Login">
         </form>
-        <button id="createButtonHome" onclick="location.href = 'CreateAccount.html';">Create Account</button>
+        <button id="createButtonHome" onclick="location.href = './createAccount.html';">Create Account</button>
 
     </section>
     <section class="bubbleStyle" id="bubbleText">
