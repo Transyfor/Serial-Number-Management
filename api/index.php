@@ -25,11 +25,11 @@
                 $_SESSION['Serial Numbers']=$user['Serial Numbers'];
                 //And then send them to the right page afterwards
                 if($_SESSION['Account Type']=="Client"){
-                header("Location: P_ClientHomeScreen.php");
+                header("Location: /api/P_ClientHomeScreen.php");
                 exit();
                 }
                 if($_SESSION['Account Type']=="SP"){
-                    header("Location: P_SPAccountScreen.php");
+                    header("Location: /api/P_SPAccountScreen.php");
                     exit();
                 }
             }
