@@ -6,6 +6,23 @@
         { "src": "/", "dest": "/api/index.php" },
         { "src": "/projectstyles.css", "dest": "/projectstyles.css"},
         { "src": "/Logo-01.png", "dest": "/Logo-01.png"},
-        { "src": "/api/P_ClientHomeScreen.php", "dest": "/api/P_ClientHomeScreen.php"}
+        { "src": "/api/P_ClientHomeScreen.php", "dest": "/api/P_ClientHomeScreen.php"},
+        { "src": "/api/addressChangeProvider.php", "dest": "/api/addressChangeProvider.php"},
+        { "src": "/api/createAccountHandler.php", "dest": "/api/createAccountHandler.php"},
+        { "src": "/api/db_conn.php", "dest": "/api/db_conn.php"},
+        { "src": "/api/deleteAccountClient.php", "dest": "/api/deleteAccountClient.php"},
+        { "src": "/api/emailChangeClient.php", "dest": "/api/emailChangeClient.php"},
+        { "src": "/api/emailChangeProvider.php", "dest": "/api/emailChangeProvider.php"},
+        { "src": "/api/license.php", "dest": "/api/license.php"},
+        { "src": "/api/loginChangeClient.php", "dest": "/api/loginChangeClient.php"},
+        { "src": "/api/loginChangeProvider.php", "dest": "/api/loginChangeProvider.php"},
+        { "src": "/api/nameChangeProvider.php", "dest": "/api/nameChangeProvider.php"},
+        { "src": "/api/P_SPAccountScreen.php", "dest": "/api/P_SPAccountScreen.php"},
+        { "src": "/api/passwordChangeClient.php", "dest": "/api/passwordChangeClient.php"},
+        { "src": "/api/passwordChangeProvider.php", "dest": "/api/passwordChangeProvider.php"},
+        { "src": "/api/paymentChangeClient.php", "dest": "/api/paymentChangeClient.php"},
+        { "src": "/api/script.js", "dest": "/api/script.js"},
+        { "src": "/api/SerialNumberList.php", "dest": "/api/SerialNumberList.php"}
+
     ]
 }
