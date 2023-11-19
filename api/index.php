@@ -48,7 +48,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="projectstyles.css">
+    <link rel="stylesheet" href="./proprojectstyles.css">
     <title> Home Page </title>
     <style>
         header {
