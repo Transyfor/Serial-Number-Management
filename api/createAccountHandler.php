@@ -39,7 +39,7 @@ $mysqli = require __DIR__ ."/db_conn.php"; //This is a connection object
 //Now we've connected to the database! We can now enter a new record into the user table
 
 //First we make a statement which we'll use in our query
-$sql = "INSERT INTO Users (Name,Username,Password,Email,Address,'Payment Method','Account Type') VALUES (?,?,?,?,?,?,?)";
+$sql = "INSERT INTO 'Users' ('Name','Username','Password','Email','Address','Payment Method','Account Type') VALUES (?,?,?,?,?,?,?)";
 
 //Then we create a new prepared statement object by calling the statement init method on the mysqli connect object.
 $stmt= $mysqli->stmt_init();
