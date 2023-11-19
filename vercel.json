@@ -6,7 +6,5 @@
         { "src": "/", "dest": "/api/index.php" },
         { "src": "/projectstyles.css", "dest": "/projectstyles.css"},
         { "src": "/Logo-01.png", "dest": "/Logo-01.png"},
-        { "src": "/index.php", "dest": "/api/index.php" }
-
     ]
 }
