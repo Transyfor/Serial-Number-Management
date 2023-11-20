@@ -3,27 +3,27 @@
 
 //We start by checking that the $_POST array has values for each
 if(empty($_POST["create-username"])){
-    echo '<script>alert("Username is required"); window.location.href="CreateAccount.html";</script>';
+    echo '<script>alert("Username is required"); window.location.href="/api/CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-password"])){
-    echo '<script>alert("Password is required"); window.location.href="CreateAccount.html";</script>';
+    echo '<script>alert("Password is required"); window.location.href="/api/CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-name"])){
-    echo '<script>alert("Name is required"); window.location.href="CreateAccount.html";</script>';
+    echo '<script>alert("Name is required"); window.location.href="/api/CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-email"])){
-    echo '<script>alert("Email is required"); window.location.href="CreateAccount.html";</script>';
+    echo '<script>alert("Email is required"); window.location.href="/api/CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-address"])){
-    echo '<script>alert("Address is required"); window.location.href="CreateAccount.html";</script>';
+    echo '<script>alert("Address is required"); window.location.href="/api/CreateAccount.html";</script>';
     exit();
 }
 
@@ -57,7 +57,7 @@ if($stmt->execute()){ //If appending was successful
 }
 else{ //If it wasnt successful
     if($mysqli->errno === 1062) { //Special case if it's because email already taken
-        echo '<script>alert("Given email or username is already taken"); window.location.href="CreateAccount.html";</script>';
+        echo '<script>alert("Given email or username is already taken"); window.location.href="/api/CreateAccount.html";</script>';
         exit();
     } 
     else {
