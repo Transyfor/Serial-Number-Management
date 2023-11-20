@@ -10,6 +10,7 @@
         { "src": "/api/addressChangeProvider.php", "dest": "/api/addressChangeProvider.php"},
         { "src": "/api/createAccountHandler.php", "dest": "/api/createAccountHandler.php"},
         { "src": "/api/db_conn.php", "dest": "/api/db_conn.php"},
+        { "src": "/db_conn.php", "dest": "/api/db_conn.php"},
         { "src": "/api/deleteAccountClient.php", "dest": "/api/deleteAccountClient.php"},
         { "src": "/api/emailChangeClient.php", "dest": "/api/emailChangeClient.php"},
         { "src": "/api/emailChangeProvider.php", "dest": "/api/emailChangeProvider.php"},
