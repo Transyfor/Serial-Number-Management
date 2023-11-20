@@ -5,7 +5,7 @@ session_start(); //This makes it so that any variables attributed to the current
 <html>
 
 <head>
-    <Link rel="stylesheet" type="text/css" href="projectstyles.css">
+    <Link rel="stylesheet" type="text/css" href="/projectstyles.css">
     </rel>
     <title>Service Provider Account Screen</title>
 </head>
