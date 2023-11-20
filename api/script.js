@@ -1,11 +1,3 @@
-document.getElementById("homepage").onclick = function () {
-  location.href = "P_ClientHomeScreen.html";
-};
-
-document.getElementById("settingsProvider").onclick = function () {
-  location.href = "loginChangeProvider.html";
-};
-
 document.getElementById("loginchangeprovidermenu").onclick = function () {
   location.href = "loginChangeProvider.html";
 };
