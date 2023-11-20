@@ -12,7 +12,6 @@
         //Now we check if the given password was correct
         if ($user){ //This part only runs if there IS a user
             if($_POST['password']==$user['Password']){ //php has a built in password checker!
-                echo '<script>alert("Found spot"); window.location.href="index.php";</script>';
                 session_start(); //This makes it so that I can attribute variables to the current user
                 $_SESSION['userID']=$user['userID'];
                 $_SESSION['Name']=$user['Name'];
