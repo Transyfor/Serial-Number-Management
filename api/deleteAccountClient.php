@@ -96,7 +96,7 @@
             <button id="cancelButton">Cancel</button>
         </div>
 
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="/api/script.js"></script>
     </body>
 
     <footer>&#0169; 2023 SSMS Corporation All Right Reserved</footer>
