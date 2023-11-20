@@ -22,10 +22,8 @@
                 $_SESSION['Payment Method']=$user['Payment Method'];
                 $_SESSION['Account Type']=$user['Account Type'];
                 $_SESSION['Serial Numbers']=$user['Serial Numbers'];
-                print_r($_SESSION);
                 //And then send them to the right page afterwards
                 if($_SESSION['Account Type']=="Client"){
-                echo '<script>alert("Going to client"); window.location.href="index.php";</script>'; 
                 header("Location: /api/P_ClientHomeScreen.php");
                 exit();
                 }
