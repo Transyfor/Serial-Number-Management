@@ -39,7 +39,7 @@
         }
         else{
         echo '<script>alert("Login is invalid"); 
-        window.location.href="index.php";</script>'; 
+        window.location.href="/api/index.php";</script>'; 
         exit();
         }
 
