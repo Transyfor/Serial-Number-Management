@@ -18,7 +18,7 @@ session_start(); //This makes it so that any variables attributed to the current
         <div class="navigation">
             <ul id="horizontalmenu">
                 <li id="homepage"><a class="active" href="P_ClientHomeScreen.html">Home</a></li>
-                <li id="passwordmenu"><a href="password.html">Settings</a></li>
+                <li id="settings"><a href="loginChangeClient.html">Settings</a></li>
                 <li id="logout" style="float:right"><button onclick="logout()">Log out</button></li>
             </ul>
         </div>
