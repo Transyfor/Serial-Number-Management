@@ -2,7 +2,7 @@
 <html style="height: 94.5%; padding-top: 0%">
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="projectstyles.css" />
+        <link rel="stylesheet" href="/projectstyles.css" />
         <title>SP Change Password</title>
     </head>
 
