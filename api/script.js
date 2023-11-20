@@ -34,9 +34,9 @@ function logout() {
 
 var answer = document.getElementById("logout");
 if (answer.addEventListener) {
-  answer.addEventListener("click", logoutfunction, false);
+  answer.addEventListener("click", logout(), false);
 } else {
-  answer.attachEvent("onclick", logoutfunction);
+  answer.attachEvent("onclick", logout());
 }
 
 /*$(document).ready(function(){
