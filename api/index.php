@@ -2,9 +2,9 @@
 
 //We will deal with the login up here. No need to make another .php file to handle it.
     if($_SERVER["REQUEST_METHOD"]=== "POST"){ //So if the form below posts, this catches it
-        echo '<script>alert("Found spot"); window.location.href="/api/index.php";</script>';
         //We start by connecting to the database by requiring our db_conn file
         $mysqli= require __DIR__ ."/db_conn.php";
+
         //Then we write the sql to select a record based on the email address
         $sql= sprintf("SELECT * FROM Users WHERE Username = '%s'",$mysqli->real_escape_string($_POST["user"])); //The sprintf function replaces the %s in our string with the the second parameter, which is the given username in this case.
 //We could've not written the real_escape_string part and just wrote $_POST["user"] directly, but real_escape_string protects us from attackers.
@@ -13,7 +13,7 @@
         //Now we check if the given password was correct
         if ($user){ //This part only runs if there IS a user
             if(password_verify($_POST['password'],$user['Password'])){ //php has a built in password checker!
-                echo '<script>alert("Found spot"); window.location.href="/api/index.php";</script>';
+                echo '<script>alert("Found spot"); window.location.href="index.php";</script>';
                 session_start(); //This makes it so that I can attribute variables to the current user
                 $_SESSION['userID']=$user['userID'];
                 $_SESSION['Name']=$user['Name'];
@@ -27,7 +27,7 @@
                 print_r($_SESSION);
                 //And then send them to the right page afterwards
                 if($_SESSION['Account Type']=="Client"){
-                echo '<script>alert("Going to client"); window.location.href="/api/index.php";</script>'; 
+                echo '<script>alert("Going to client"); window.location.href="index.php";</script>'; 
                 header("Location: /api/P_ClientHomeScreen.php");
                 exit();
                 }
@@ -39,7 +39,7 @@
         }
         else{
         echo '<script>alert("Login is invalid"); 
-        window.location.href="/api/index.php";</script>'; 
+        window.location.href="index.php";</script>'; 
         exit();
         }
 
