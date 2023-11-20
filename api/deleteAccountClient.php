@@ -2,7 +2,7 @@
 <html style="height: 94.5%; padding-top: 0%">
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./projectstyles.css" />
+        <link rel="stylesheet" href="/projectstyles.css" />
         <title>SP Delete Account</title>
     </head>
 
@@ -13,10 +13,10 @@
             <div class="navigation">
                 <ul id="horizontalmenu">
                     <li id="homepage">
-                        <a href="./P_ClientHomeScreen.html">Home</a>
+                        <a href="P_ClientHomeScreen.php">Home</a>
                     </li>
                     <li id="settings">
-                        <a class="active" href="./loginChangeClient.html"
+                        <a class="active" href="loginChangeClient.php"
                             >Settings</a
                         >
                     </li>
@@ -29,29 +29,29 @@
             <div class="subdiv1">
                 <ul class="manageacctmenu">
                     <li>
-                        <a href="./loginChangeClient.html" id="password"
+                        <a href="loginChangeClient.php" id="password"
                             >Change Login</a
                         >
                     </li>
                     <li>
-                        <a href="./addressChangeClient.html" id="address"
+                        <a href="addressChangeClient.php" id="address"
                             >Change Address</a
                         >
                     </li>
                     <li>
-                        <a href="./nameChangeClient.html" id="name"
+                        <a href="nameChangeClient.php" id="name"
                             >Change Name</a
                         >
                     </li>
                     <li>
-                        <a href="./paymentChangeClient.html" id="payment"
+                        <a href="paymentChangeClient.php" id="payment"
                             >Change Payment Method</a
                         >
                     </li>
                     <li>
                         <a
                             class="active"
-                            href="./deleteAccountClient.html"
+                            href="deleteAccountClient.php"
                             id="delete"
                             >Delete Account</a
                         >
@@ -89,7 +89,7 @@
             </p>
             <button
                 id="confirmButton"
-                onclick="window.location.href='./homepage.html'"
+                onclick="window.location.href='index.php'"
             >
                 Confirm
             </button>
