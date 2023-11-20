@@ -18,7 +18,7 @@ session_start(); //This makes it so that any variables attributed to the current
         <div class="navigation">
             <ul id="horizontalmenu">
                 <li id="homepage"><a href="P_SPAccountScreen.php">Home</a></li>
-                <li id="settings"><a href="/api/loginChangeProvider.php">Settings</a></li>
+                <li id="settings"><a href="/loginChangeProvider.php">Settings</a></li>
                 <li id="logout" style="float:right"><button onclick="logout()">Log out</button></li>
             </ul>
         </div>
