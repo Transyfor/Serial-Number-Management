@@ -2,7 +2,7 @@
 <html style="height: 94.5%; padding-top: 0%">
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./projectstyles.css" />
+        <link rel="stylesheet" href="/projectstyles.css" />
         <title>SP Change Login</title>
     </head>
 
@@ -13,10 +13,10 @@
             <div class="navigation">
                 <ul id="horizontalmenu">
                     <li id="homepage">
-                        <a href="./P_ClientHomeScreen.html">Home</a>
+                        <a href="P_ClientHomeScreen.php">Home</a>
                     </li>
                     <li id="settings">
-                        <a class="active" href="./loginChangeClient.html"
+                        <a class="active" href="loginChangeClient.php"
                             >Settings</a
                         >
                     </li>
@@ -31,28 +31,28 @@
                     <li>
                         <a
                             class="active"
-                            href="./loginChangeClient.html"
+                            href="loginChangeClient.php"
                             id="password"
                             >Change Login</a
                         >
                     </li>
                     <li>
-                        <a href="./addressChangeClient.html" id="address"
+                        <a href="addressChangeClient.php" id="address"
                             >Change Address</a
                         >
                     </li>
                     <li>
-                        <a href="./nameChangeClient.html" id="name"
+                        <a href="nameChangeClient.php" id="name"
                             >Change Name</a
                         >
                     </li>
                     <li>
-                        <a href="./paymentChangeClient.html" id="payment"
+                        <a href="paymentChangeClient.php" id="payment"
                             >Change Payment Method</a
                         >
                     </li>
                     <li>
-                        <a href="./deleteAccountClient.html" id="delete"
+                        <a href="deleteAccountClient.php" id="delete"
                             >Delete Account</a
                         >
                     </li>
@@ -69,7 +69,7 @@
                                 font-size: larger;
                                 cursor: pointer;
                             "
-                            onclick="location.href = './loginChangeClient.html'"
+                            onclick="location.href = 'loginChangeClient.php'"
                             type="button"
                         >
                             &#8249;
