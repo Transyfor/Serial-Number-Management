@@ -50,7 +50,7 @@ if(!$stmt->prepare($sql)){
 }
 
 //In our $sql (which is now $stmt) String, there are question marks for the values we need to add. Let's replace the question marks with what we want to add now
-$stmt->bind_param("sssssss",$_POST["create-username"],$_POST["create-password"],$_POST["create-name"],$_POST["create-email"],$_POST["create-address"],$_POST["paymentMethod"],$_POST["accountType"]); //the first parameter the method takes is to tell it what type each value is. We're adding 7 strings to our table, so "sssssss", where each s represents one of the variables
+$stmt->bind_param("sssssss",$_POST["create-username"],$_POST["create-name"],$_POST["create-password"],$_POST["create-email"],$_POST["create-address"],$_POST["paymentMethod"],$_POST["accountType"]); //the first parameter the method takes is to tell it what type each value is. We're adding 7 strings to our table, so "sssssss", where each s represents one of the variables
 if($stmt->execute()){ //If appending was successful
     header("Location: /api/index.php");
     exit();
