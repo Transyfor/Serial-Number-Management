@@ -2,12 +2,19 @@
 
 //We will deal with the login up here. No need to make another .php file to handle it.
     if($_SERVER["REQUEST_METHOD"]=== "POST"){ //So if the form below posts, this catches it
+        if(empty($_POST["password"])&&empty($_POST["user"])){
+            echo '<script>alert("Username and password is required"); 
+            window.location.href="/api/index.php";</script>';           
+             exit();
+        }
         if(empty($_POST["password"])){
-            echo '<script>alert("Password is required"); window.location.href="/api/CreateAccount.html";</script>';
-            exit();
+            echo '<script>alert("Password is required"); 
+            window.location.href="/api/index.php";</script>';           
+             exit();
         }
         if(empty($_POST["user"])){
-            echo '<script>alert("User is required"); window.location.href="/api/CreateAccount.html";</script>';
+            echo '<script>alert("Username is invalid"); 
+            window.location.href="/api/index.php";</script>';
             exit();
         }
         //We start by connecting to the database by requiring our db_conn file
