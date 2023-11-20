@@ -13,10 +13,10 @@
             <div class="navigation">
                 <ul id="horizontalmenu">
                     <li id="homepage">
-                        <a href="./P_ClientHomeScreen.php">Home</a>
+                        <a href="P_ClientHomeScreen.php">Home</a>
                     </li>
                     <li id="settings">
-                        <a class="active" href="./loginChangeClient.php"
+                        <a class="active" href="loginChangeClient.php"
                             >Settings</a
                         >
                     </li>
@@ -31,28 +31,28 @@
                     <li>
                         <a
                             class="active"
-                            href="./loginChangeClient.php"
+                            href="loginChangeClient.php"
                             id="password"
                             >Change Login</a
                         >
                     </li>
                     <li>
-                        <a href="./addressChangeClient.php" id="address"
+                        <a href="addressChangeClient.php" id="address"
                             >Change Address</a
                         >
                     </li>
                     <li>
-                        <a href="./nameChangeClient.php" id="name"
+                        <a href="nameChangeClient.php" id="name"
                             >Change Name</a
                         >
                     </li>
                     <li>
-                        <a href="./paymentChangeClient.php" id="payment"
+                        <a href="paymentChangeClient.php" id="payment"
                             >Change Payment Method</a
                         >
                     </li>
                     <li>
-                        <a href="./deleteAccountClient.php" id="delete"
+                        <a href="deleteAccountClient.php" id="delete"
                             >Delete Account</a
                         >
                     </li>
@@ -65,7 +65,7 @@
                     <div style="text-align: center">
                         <button
                             id="emailChange"
-                            onclick="location.href = './emailChangeClient.php'"
+                            onclick="location.href = 'emailChangeClient.php'"
                             type="button"
                         >
                             Change Email
@@ -75,7 +75,7 @@
                     <div style="text-align: center">
                         <button
                             id="passwordChange"
-                            onclick="location.href = './passwordChangeClient.php'"
+                            onclick="location.href = 'passwordChangeClient.php'"
                             type="button"
                         >
                             Change Password
