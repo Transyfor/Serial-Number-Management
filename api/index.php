@@ -2,9 +2,9 @@
 
 //We will deal with the login up here. No need to make another .php file to handle it.
     if($_SERVER["REQUEST_METHOD"]=== "POST"){ //So if the form below posts, this catches it
+        echo '<script>alert("Found spot"); window.location.href="index.php";</script>';
         //We start by connecting to the database by requiring our db_conn file
         $mysqli= require __DIR__ ."/db_conn.php";
-        echo '<script>alert("Found spot"); window.location.href="index.php";</script>';
         //Then we write the sql to select a record based on the email address
         $sql= sprintf("SELECT * FROM Users WHERE Username = '%s'",$mysqli->real_escape_string($_POST["user"])); //The sprintf function replaces the %s in our string with the the second parameter, which is the given username in this case.
 //We could've not written the real_escape_string part and just wrote $_POST["user"] directly, but real_escape_string protects us from attackers.
