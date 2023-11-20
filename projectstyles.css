@@ -3,7 +3,8 @@ Site-Wide Styles
 */
 
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
     font-size: 20px;
 }
 
@@ -73,10 +74,8 @@ table {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #4caf50;
 }
-
-
 
 .inputBox:hover {
     background-color: rgb(236, 236, 236);
@@ -99,12 +98,12 @@ th {
 }
 
 #homepage,
-#passwordmenu {
+#settings {
     float: left;
 }
 
 #homepage a,
-#passwordmenu a {
+#settings a {
     display: block;
     color: white;
     text-align: center;
@@ -125,12 +124,12 @@ th {
 }
 
 #homepage a.active,
-#passwordmenu a.active {
+#settings a.active {
     background-color: #111;
 }
 
 #homepage a:hover:not(.active),
-#passwordmenu a:hover:not(.active),
+#settings a:hover:not(.active),
 #logout button:hover {
     background-color: #111;
 }
