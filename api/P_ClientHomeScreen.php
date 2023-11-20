@@ -17,8 +17,8 @@ session_start(); //This makes it so that any variables attributed to the current
     <div class="maindiv">
         <div class="navigation">
             <ul id="horizontalmenu">
-                <li id="homepage"><a class="active" href="P_ClientHomeScreen.html">Home</a></li>
-                <li id="settings"><a href="loginChangeClient.html">Settings</a></li>
+                <li id="homepage"><a class="active" href="P_ClientHomeScreen.php">Home</a></li>
+                <li id="settings"><a href="loginChangeClient.php">Settings</a></li>
                 <li id="logout" style="float:right"><button onclick="logout()">Log out</button></li>
             </ul>
         </div>
@@ -91,12 +91,12 @@ session_start(); //This makes it so that any variables attributed to the current
         </div>
         </br></br>
         <div>
-            <a href="password.html">
+            <a href="loginChangeClient.php">
                 <button id="move-between-pages-button" type="button">Manage Account</button>
             </a>
             </br></br>
 
-            <a href="license.html">
+            <a href="license.php">
                 <button id="move-between-pages-button" type="button">Redeem Licence</button>
             </a>
             </br></br></br></br>
