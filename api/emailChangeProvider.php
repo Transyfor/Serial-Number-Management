@@ -2,7 +2,7 @@
 <html style="height: 94.5%; padding-top: 0%">
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./projectstyles.css" />
+        <link rel="stylesheet" href="/projectstyles.css" />
         <title>SP Change Password</title>
     </head>
 
@@ -13,10 +13,10 @@
             <div class="navigation">
                 <ul id="horizontalmenu">
                     <li id="homepage">
-                        <a href="./P_SPAccountScreen.html">Home</a>
+                        <a href="P_SPAccountScreen.php">Home</a>
                     </li>
                     <li id="settings">
-                        <a class="active" href="./loginChangeProvider.html"
+                        <a class="active" href="loginChangeProvider.php"
                             >Settings</a
                         >
                     </li>
@@ -31,13 +31,13 @@
                     <li>
                         <a
                             class="active"
-                            href="./loginChangeProvider.html"
+                            href="loginChangeProvider.php"
                             id="loginchangeprovidermenu"
                             >Change Login</a
                         >
                     </li>
                     <li>
-                        <a href="./nameChangeProvider.html" id="nameProvider"
+                        <a href="nameChangeProvider.php" id="nameProvider"
                             >Change Name</a
                         >
                     </li>
@@ -54,7 +54,7 @@
                                 font-size: larger;
                                 cursor: pointer;
                             "
-                            onclick="location.href = './loginChangeProvider.html'"
+                            onclick="location.href = 'loginChangeProvider.php'"
                             type="button"
                         >
                             &#8249;
