@@ -2,6 +2,14 @@
 
 //We will deal with the login up here. No need to make another .php file to handle it.
     if($_SERVER["REQUEST_METHOD"]=== "POST"){ //So if the form below posts, this catches it
+        if(empty($_POST["password"])){
+            echo '<script>alert("Password is required"); window.location.href="/api/CreateAccount.html";</script>';
+            exit();
+        }
+        if(empty($_POST["user"])){
+            echo '<script>alert("User is required"); window.location.href="/api/CreateAccount.html";</script>';
+            exit();
+        }
         //We start by connecting to the database by requiring our db_conn file
         $mysqli= require __DIR__ ."/db_conn.php";
         //Then we write the sql to select a record based on the email address
