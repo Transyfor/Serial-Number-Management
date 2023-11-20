@@ -98,12 +98,14 @@ th {
 }
 
 #homepage,
-#settings {
+#settings,
+#settingsProvider{
     float: left;
 }
 
 #homepage a,
-#settings a {
+#settings a,
+#settingsProvider a{
     display: block;
     color: white;
     text-align: center;
@@ -124,12 +126,14 @@ th {
 }
 
 #homepage a.active,
-#settings a.active {
+#settings a.active,
+#settingsProvider a.active{
     background-color: #111;
 }
 
 #homepage a:hover:not(.active),
 #settings a:hover:not(.active),
+#settingsProvider a:hover:not(.active),
 #logout button:hover {
     background-color: #111;
 }
