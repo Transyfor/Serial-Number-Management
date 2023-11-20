@@ -15,7 +15,7 @@
                     <li id="homepage">
                         <a href="P_SPAccountScreen.php">Home</a>
                     </li>
-                    <li id="settings">
+                    <li id="settingsProvider">
                         <a class="active" href="loginChangeProvider.php"
                             >Settings</a
                         >
