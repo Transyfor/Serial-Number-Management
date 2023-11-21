@@ -1,9 +1,14 @@
 <?php
 //This is the file that manages new accounts
+//When someone submits a form on createAccount, the server goes to this file to find out what to do.
+//All the information that was inputted in the form is sent as an array called $_POST which looks something like this:
+//$_POST= ["create-username": (value given by user), "create-password": (value given by user), etc]
 
 //We start by checking that the $_POST array has values for each
 if(empty($_POST["create-username"])){
+    //echo is php's term for printing. By saying echo, I'm just saying to print in the .php or the .html file what follows. If it's script, it'll excecute it.
     echo '<script>alert("Username is required"); window.location.href="/api/CreateAccount.html";</script>';
+    //Need to do exit(), as otherwise the php code will keep running even if the user goes to another page.
     exit();
 }
 
@@ -27,32 +32,37 @@ if(empty($_POST["create-address"])){
     exit();
 }
 
-//We can also check for a valid email
-
-if (! filter_var($_POST["create-email"], FILTER_VALIDATE_EMAIL)) {
+//We can also check for a valid email. filter_var is a special php method that can check, given a String, if it passes a test. Here we gave the FILTER_VALIDATE_EMAIL test.
+if (! filter_var($_POST["create-email"], FILTER_VALIDATE_EMAIL)) { //If it didn't pass our test, echo the following code.
     echo '<script>alert("Valid email is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
+//Next we need a variable that holds the info on how to connect to our database. I made a file for this already db_conn.php. This just accesses that and connectes to our database.
 $mysqli = require __DIR__ ."/db_conn.php"; //This is a connection object
 
 //Now we've connected to the database! We can now enter a new record into the user table
-
+//But there's a few more steps first
 //First we make a statement which we'll use in our query
 $sql = "INSERT INTO `Users` (`userID`, `Name`, `Username`, `Password`, `Email`, `Address`, `Payment Method`, `Account Type`, `Serial Numbers`) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, '')";
-//Then we create a new prepared statement object by calling the statement init method on the mysqli connect object.
-$stmt= $mysqli->stmt_init();
 
-//Next we prepare the $sql statement for executution by calling the prepare method on the stmt object using our prewritten $sql string
-//This checks if our statement is well written or not, and if theres an error it'll return false!
+$stmt= $mysqli->stmt_init(); //This initializes our connection object from before ($mysqli) so that it's ready to send information to the database.
+
+//Now we have two things. $stmt which is an object that represents our connection to the database. 
+//$sql which is a command we want to tell the database to do
+//We want to now bring the two together and modify $stmt such that it now includes our command to the database ($sql)
+
 if(!$stmt->prepare($sql)){ //Returns false is preperation fails.
     die("SQL error");
 }
 
-//In our $sql (which is now $stmt) String, there are question marks for the values we need to add. Let's replace the question marks with what we want to add now
+//In our $sql String (which has now been binded to $stmt), there were question marks for the values we want to replace. Let's replace the question marks with what we actually want to add to the database.
 $stmt->bind_param("sssssss",$_POST["create-username"],$_POST["create-name"],$_POST["create-password"],$_POST["create-email"],$_POST["create-address"],$_POST["paymentMethod"],$_POST["accountType"]); //the first parameter the method takes is to tell it what type each value is. We're adding 7 strings to our table, so "sssssss", where each s represents one of the variables
-if($stmt->execute()){ //If appending was successful
-    header("Location: /api/index.php");
+
+//$stmt is now fully ready. It includes a command to tell the database, and also the information on connecting to the database. We can execute it!
+
+if($stmt->execute()){ //Has to be if, as it returns a boolean whether it succeeded or not.
+    header("Location: /api/index.php"); //Header is an HTTP command. When php reads this, it'll say this exact command to HTTP. We said "Location: " which HTTP represents as making the user go somewhere.
     exit();
 }
 else{ //If it wasnt successful
