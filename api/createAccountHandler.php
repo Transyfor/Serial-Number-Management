@@ -45,7 +45,7 @@ $stmt= $mysqli->stmt_init();
 
 //Next we prepare the $sql statement for executution by calling the prepare method on the stmt object using our prewritten $sql string
 //This checks if our statement is well written or not, and if theres an error it'll return false!
-if(!$stmt->prepare($sql)){
+if(!$stmt->prepare($sql)){ //Returns false is preperation fails.
     die("SQL error");
 }
 
