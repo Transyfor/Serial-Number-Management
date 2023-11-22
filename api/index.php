@@ -28,7 +28,7 @@
         if ($user){ //This part only runs if there IS a user
             if($_POST['password']==$user['Password']){ //We check password
                 $_SESSION['userID']=$user['userID'];
-                $_SESSION['Name']=$user['Name'];
+                $_SESSION['Name']="John";
                 $_SESSION['Username']=$user['Username'];
                 $_SESSION['Password']=$user['Password'];
                 $_SESSION['Email']=$user['Email'];
