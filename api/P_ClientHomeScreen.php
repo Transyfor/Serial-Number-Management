@@ -11,7 +11,7 @@ session_start(); //This makes it so that any variables attributed to the current
 </head>
 <header class="heading">
     Your Licences
-    Hello <?php echo "Hello, ". $_SESSION[Name] . " !" ?>
+    Hello <?php echo "Hello, ". $_SESSION['Name'] . " !" ?>
 </header>
 
 <body class="blueBackground">
