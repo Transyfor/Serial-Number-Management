@@ -1,5 +1,8 @@
 <?php
+ob_start();
  session_start(); //This makes it so that I can attribute variables to the current user
+?>
+<?php
 //We will deal with the login up here. No need to make another .php file to handle it.
     if($_SERVER["REQUEST_METHOD"]=== "POST"){ //So if the form below posts, this catches it
         if(empty($_POST["password"])&&empty($_POST["user"])){
@@ -28,7 +31,7 @@
         if ($user){ //This part only runs if there IS a user
             if($_POST['password']==$user['Password']){ //We check password
                 $_SESSION['userID']=$user['userID'];
-                $_SESSION['Name']="John";
+                $_SESSION['Name']=$user['Name'];
                 $_SESSION['Username']=$user['Username'];
                 $_SESSION['Password']=$user['Password'];
                 $_SESSION['Email']=$user['Email'];

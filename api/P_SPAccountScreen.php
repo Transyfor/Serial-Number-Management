@@ -1,5 +1,6 @@
 <?php
-session_start(); //This makes it so that any variables attributed to the current session will still be present on this page.
+    ob_start();
+ session_start(); //This makes it so that I can attribute variables to the current user
 ?>
 <!DOCTYPE html>
 <html>
