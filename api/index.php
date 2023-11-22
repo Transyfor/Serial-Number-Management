@@ -36,7 +36,6 @@
                 $_SESSION['Payment Method']=$user['Payment Method'];
                 $_SESSION['Account Type']=$user['Account Type'];
                 $_SESSION['Serial Numbers']=$user['Serial Numbers'];
-                //And then send them to the right page afterwards
                 if($_SESSION['Account Type']=="Client"){
                 header("Location: /api/P_ClientHomeScreen.php");
                 exit();

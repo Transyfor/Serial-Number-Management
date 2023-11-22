@@ -11,7 +11,10 @@ session_start(); //This makes it so that any variables attributed to the current
 </head>
 <header class="heading">
     List of Clients
-    Hello <?php echo "Hello, ". $_SESSION['Name'] . " !" ?>
+<?php echo '<pre>';
+var_dump($_SESSION);
+echo '</pre>';
+?>
 </header>
 
 <body class="blueBackground">
