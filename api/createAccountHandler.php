@@ -7,28 +7,28 @@
 //We start by checking that the $_POST array has values for each
 if(empty($_POST["create-username"])){
     //echo is php's term for printing. By saying echo, I'm just saying to print in the .php or the .html file what follows. If it's script, it'll excecute it.
-    echo '<script>alert("Username is required"); window.location.href="/api/CreateAccount.html";</script>';
+    echo '<script>alert("Username is required"); window.location.href="CreateAccount.html";</script>';
     //Need to do exit(), as otherwise the php code will keep running even if the user goes to another page.
     exit();
 }
 
 if(empty($_POST["create-password"])){
-    echo '<script>alert("Password is required"); window.location.href="/api/CreateAccount.html";</script>';
+    echo '<script>alert("Password is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-name"])){
-    echo '<script>alert("Name is required"); window.location.href="/api/CreateAccount.html";</script>';
+    echo '<script>alert("Name is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-email"])){
-    echo '<script>alert("Email is required"); window.location.href="/api/CreateAccount.html";</script>';
+    echo '<script>alert("Email is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
 if(empty($_POST["create-address"])){
-    echo '<script>alert("Address is required"); window.location.href="/api/CreateAccount.html";</script>';
+    echo '<script>alert("Address is required"); window.location.href="CreateAccount.html";</script>';
     exit();
 }
 
@@ -62,12 +62,12 @@ $stmt->bind_param("sssssss",$_POST["create-username"],$_POST["create-name"],$_PO
 //$stmt is now fully ready. It includes a command to tell the database, and also the information on connecting to the database. We can execute it!
 
 if($stmt->execute()){ //Has to be if, as it returns a boolean whether it succeeded or not.
-    header("Location: /api/index.php"); //Header is an HTTP command. When php reads this, it'll say this exact command to HTTP. We said "Location: " which HTTP represents as making the user go somewhere.
+    header("Location: index.php"); //Header is an HTTP command. When php reads this, it'll say this exact command to HTTP. We said "Location: " which HTTP represents as making the user go somewhere.
     exit();
 }
 else{ //If it wasnt successful
     if($mysqli->errno === 1062) { //Special case if it's because email already taken
-        echo '<script>alert("Given email or username is already taken"); window.location.href="/api/CreateAccount.html";</script>';
+        echo '<script>alert("Given email or username is already taken"); window.location.href="CreateAccount.html";</script>';
         exit();
     } 
     else {

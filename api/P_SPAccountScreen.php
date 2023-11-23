@@ -12,10 +12,7 @@
 </head>
 <header class="heading">
     List of Clients
-<?php echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';
-?>
+    <?php echo 'Hello, ' . $_SESSION['Name'] . '!';?>
 </header>
 
 <body class="blueBackground">

@@ -1,5 +1,4 @@
 <?php
-ob_start();
  session_start(); //This makes it so that I can attribute variables to the current user
 ?>
 <!DOCTYPE html>
@@ -12,9 +11,7 @@ ob_start();
 </head>
 <header class="heading">
     Your Licences
-    <?php echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';
+    <?php echo 'Hello, ' . $_SESSION['Name'] . '!';
 ?>
 </header>
 
