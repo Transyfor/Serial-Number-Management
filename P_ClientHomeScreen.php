@@ -10,9 +10,10 @@
     <title>Client Home Screen</title>
 </head>
 <header class="heading">
-    Your Licences
+    
     <?php echo 'Hello, ' . $_SESSION['Name'] . '!';
 ?>
+Here are Your Licences
 </header>
 
 <body class="blueBackground">
