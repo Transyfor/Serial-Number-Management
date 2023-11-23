@@ -7,17 +7,17 @@ ob_start();
     if($_SERVER["REQUEST_METHOD"]=== "POST"){ //So if the form below posts, this catches it
         if(empty($_POST["password"])&&empty($_POST["user"])){
             echo '<script>alert("Username and password is required"); 
-            window.location.href="/api/index.php";</script>';           
+            window.location.href="index.php";</script>';           
              exit();
         }
         if(empty($_POST["password"])){
             echo '<script>alert("Password is required"); 
-            window.location.href="/api/index.php";</script>';           
+            window.location.href="index.php";</script>';           
              exit();
         }
         if(empty($_POST["user"])){
             echo '<script>alert("Username is invalid"); 
-            window.location.href="/api/index.php";</script>';
+            window.location.href="index.php";</script>';
             exit();
         }
         //We start by connecting to the database by requiring our db_conn file
@@ -40,24 +40,24 @@ ob_start();
                 $_SESSION['Account Type']=$user['Account Type'];
                 $_SESSION['Serial Numbers']=$user['Serial Numbers'];
                 if($_SESSION['Account Type']=="Client"){
-                header("Location: /api/P_ClientHomeScreen.php");
+                header("Location: P_ClientHomeScreen.php");
                 exit();
                 }
                 if($_SESSION['Account Type']=="SP"){
-                    header("Location: /api/P_SPAccountScreen.php");
+                    header("Location: P_SPAccountScreen.php");
                     exit();
                 }
             }
             else{
                 echo '<script>alert("Login is invalid"); 
-            window.location.href="/api/index.php";</script>'; 
+            window.location.href="index.php";</script>'; 
             exit();
             }
 
         }
         else{
         echo '<script>alert("Login is invalid"); 
-        window.location.href="/api/index.php";</script>'; 
+        window.location.href="index.php";</script>'; 
         exit();
         }
 
