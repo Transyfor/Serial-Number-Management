@@ -3,6 +3,18 @@ ob_start();
  session_start(); //This makes it so that I can attribute variables to the current user
 ?>
 <?php
+//This is so users that are already logged in can't get here.
+if(isset($_SESSION['Account Type'])){
+    if($_SESSION['Account Type']=="Client"){
+        header("Location: P_ClientHomeScreen.php");
+        exit();
+        }
+    if($_SESSION['Account Type']=="SP"){
+        header("Location: P_SPAccountScreen.php");
+        exit();
+     }
+}
+
 //We will deal with the login up here. No need to make another .php file to handle it.
     if($_SERVER["REQUEST_METHOD"]=== "POST"){ //So if the form below posts, this catches it
         if(empty($_POST["password"])&&empty($_POST["user"])){

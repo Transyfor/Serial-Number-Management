@@ -1,6 +1,12 @@
 <?php
-    ob_start();
  session_start(); //This makes it so that I can attribute variables to the current user
+
+ //If a user gets here and doesn't already have an account, we need to redirect them out
+if(!isset($_SESSION['Account Type'])){
+    header("Location: index.php");
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +27,11 @@
             <ul id="horizontalmenu">
                 <li id="homepage"><a href="P_SPAccountScreen.php">Home</a></li>
                 <li id="settings"><a href="/loginChangeProvider.php">Settings</a></li>
-                <li id="logout" style="float:right"><button onclick="logout()">Log out</button></li>
+                <li id="logout" style="float:right">
+                <a href="logout.php">
+                <button>Log out</button>
+                </a>
+                </li>
             </ul>
         </div>
         <div>

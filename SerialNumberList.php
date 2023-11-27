@@ -1,3 +1,13 @@
+<?php
+ session_start(); //This makes it so that I can attribute variables to the current user
+
+ //If a user gets here and doesn't already have an account, we need to redirect them out
+if(!isset($_SESSION['Account Type'])){
+    header("Location: index.php");
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +25,11 @@
         <div class="navigation">
             <ul id="horizontalmenu">
                 <li id="homepage"><a href="P_SPAccountScreen.html">Home</a></li>
-                <li id="logout" style="float:right"><button onclick="logout()">Log out</button></li>
+                <li id="logout" style="float:right">
+                <a href="logout.php">
+                <button>Log out</button>
+                </a>
+                </li>
             </ul>
         </div>
 
@@ -79,10 +93,11 @@
         </div>
         </br></br>
         <form name="rn">
-            <input type="button" id="new-Serial-Number-button" value="Generate a New Serial Number"
+            <input type="button" id="new-Serial-Number-button" name="SN" value="Generate a New Serial Number"
                 onclick="RandomSN();" />
             </br></br>
-            <input type="text" id="tb" class="inputBox" />
+            <input name="price "type="text" id="tb" class="inputBox" placeholder="Price"/>
+            <input name="Name" type="text" id="tb" class="inputBox" placeholder="Name"/>
         </form>
         </br></br></br></br>
         <!--<a href="index.html">-->
