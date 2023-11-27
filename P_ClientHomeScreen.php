@@ -113,7 +113,12 @@ Here are Your Licences
             <a href="license.php">
                 <button id="move-between-pages-button" type="button">Redeem Licence</button>
             </a>
-            </br></br></br></br>
+            </br>
+            <form action="" method="">
+            <input type="text" placeholder="Renew Serial Number">
+            <input type="button" value="Renew">
+            </form>
+            </br></br></br>
         </div>
         <script type="text/javascript" src="script.js"></script>
 

@@ -131,8 +131,14 @@ if(!isset($_SESSION['Account Type'])){
         <a href="SerialNumberList.php">
             <button id="Serial-Number-list-button" type="button">Serial Numbers List</button>
         </a>
-
+        <br>
+        <br>
+        <form action="" method="">
+            <input type="text" placeholder="Lock Serial Number">
+            <input type="button" value="Lock">
+            </form>
         </br></br></br></br></br></br></br>
+
 
         <!--<button id="client-logout-button" onclick="logout()" type="button">Log out</button>-->
 

@@ -92,13 +92,15 @@ if(!isset($_SESSION['Account Type'])){
             </table>
         </div>
         </br></br>
-        <form name="rn">
+        <form name="rn" action="" method="post">
             <input type="button" id="new-Serial-Number-button" name="SN" value="Generate a New Serial Number"
                 onclick="RandomSN();" />
             </br></br>
             <input name="SerialNum" type="text" id="tb" class="inputBox" placeholder="Serial Number"/>
             <input name="price "type="text" id="tb" class="inputBox" placeholder="Price"/>
             <input name="Name" type="text" id="tb" class="inputBox" placeholder="Name"/>
+            <br>
+            <input type="submit" value="Submit" />
         </form>
         </br></br></br></br>
         <!--<a href="index.html">-->
