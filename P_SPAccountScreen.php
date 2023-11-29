@@ -10,7 +10,7 @@ if (!isset($_SESSION['Account Type'])) {
 }
 
 // Fetch data from the 'SerialNumbers' table
-$query = "SELECT Code, Name, DateOfCreation, ExpirationDate, Price, Redeemed, Paused, AttributedUserID, ProviderUserID FROM `Serial Numbers`";
+$query = "SELECT Code, Name, 'Date Of Creation', 'Expiration Date', Price, Redeemed, Paused, 'Attributed UserID, ProviderUserID FROM `Serial Numbers`";
 $result = $mysqli->query($query);
 
 if (!$result) {
