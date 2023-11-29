@@ -7,39 +7,65 @@
 //We start by checking that the $_POST array has values for each
 if(empty($_POST["create-username"])){
     //echo is php's term for printing. By saying echo, I'm just saying to print in the .php or the .html file what follows. If it's script, it'll excecute it.
-    echo '<script>alert("Username is required"); window.location.href="/createAccount.html";</script>';
+    echo '<script>alert("Username is required");</script>';
     //Need to do exit(), as otherwise the php code will keep running even if the user goes to another page.
     exit();
 }
 
 if(empty($_POST["create-password"])){
-    echo '<script>alert("Password is required"); window.location.href="/createAccount.html";</script>';
+    echo '<script>alert("Password is required"); </script>';
     exit();
 }
 
 if(empty($_POST["create-name"])){
-    echo '<script>alert("Name is required"); window.location.href="/createAccount.html";</script>';
+    echo '<script>alert("Name is required"); </script>';
     exit();
 }
 
 if(empty($_POST["create-email"])){
-    echo '<script>alert("Email is required"); window.location.href="/createAccount.html";</script>';
+    echo '<script>alert("Email is required"); </script>';
     exit();
 }
 
 if(empty($_POST["create-address"])){
-    echo '<script>alert("Address is required"); window.location.href="/createAccount.html";</script>';
+    echo '<script>alert("Address is required"); </script>';
     exit();
 }
 
 //We can also check for a valid email. filter_var is a special php method that can check, given a String, if it passes a test. Here we gave the FILTER_VALIDATE_EMAIL test.
 if (! filter_var($_POST["create-email"], FILTER_VALIDATE_EMAIL)) { //If it didn't pass our test, echo the following code.
-    echo '<script>alert("Valid email is required"); window.location.href="createAccount.html";</script>';
+    echo '<script>alert("Valid email is required"); </script>';
     exit();
 }
 
 //Next we need a variable that holds the info on how to connect to our database. I made a file for this already db_conn.php. This just accesses that and connectes to our database.
 $mysqli = require __DIR__ ."/db_conn.php"; //This is a connection object
+
+//Before we continue, let's check if the given username and password are not already taken
+$username= $_POST["create-username"];
+$email= $_POST["create-email"];
+
+$sql="SELECT * FROM 'Users' WHERE (Username='$username' or Email='$email');";
+
+      $res=mysqli_query($mysqli,$sql);
+
+      if (mysqli_num_rows($res) > 0) {
+        
+        $row = mysqli_fetch_assoc($res);
+        if($email==isset($row['Email']))
+        {
+            echo '<script>alert("Email is already taken"); ";</script>';
+            exit();
+        }
+		if($username==isset($row['Username']))
+		{
+			echo '<script>alert("Username is required"); </script>';
+            exit();
+		}
+}
+
+	
+
 
 //Now we've connected to the database! We can now enter a new record into the user table
 //But there's a few more steps first
