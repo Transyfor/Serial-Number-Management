@@ -40,7 +40,7 @@ padding-top: 0%;">
             <form>
                 <h1 id="psswtitle">Redeem License Code</h1>
                 <label for="codeinput" id="code">Code:</label>
-                <input type="text" id="codeinput" name="codeinput" class="inputBox" maxLength="6">
+                <input type="text" id="codeinput" name="codeinput" class="inputBox">
                 <input type="submit" value="Submit" id="submitcode">
             </form>
         </div>
