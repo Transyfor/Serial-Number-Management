@@ -34,7 +34,17 @@ if (!$result) {
 
 <body class="blueBackground">
     <div class="maindiv">
-        <!-- ... other codes ... -->
+    <div class="navigation">
+            <ul id="horizontalmenu">
+                <li id="homepage"><a href="P_SPAccountScreen.php">Home</a></li>
+                <li id="settings"><a href="/loginChangeProvider.php">Settings</a></li>
+                <li id="logout" style="float:right">
+                <a href="logout.php">
+                <button>Log out</button>
+                </a>
+                </li>
+            </ul>
+        </div>
         <div>
             <table id="SPtHS-table" class="bubbleStyle">
                 <tr height="50px">
@@ -68,8 +78,9 @@ if (!$result) {
 
             </table>
         </div>
-        <!-- ... any other code ... -->
+        <!-- ... any code ... -->
     </div>
+    <script type="text/javascript" src="script.js"></script>
 
     <footer> &#0169; 2023 SSMS Corporation All Right Reserved </footer>
 </body>
