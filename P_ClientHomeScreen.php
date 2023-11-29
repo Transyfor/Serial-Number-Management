@@ -45,7 +45,7 @@ Here are Your Licences
                     <th width="160">Expiration Date</th>
                     <th width="170">Subscription Fee ($)</th>
                     <th width="130">Status</th>
-                    <th width="120">Renew/</br>Cancel</th>
+                    <!-- <th width="120">Renew/</br>Cancel</th> -->
                 </tr>
                 <tr>
                     <td>Software1</td>
@@ -54,7 +54,7 @@ Here are Your Licences
                     <td>06/11/2023</td>
                     <td>19.99</td>
                     <td>Active</td>
-                    <td><button class="Renewbtn">Cancel</button></td>
+                    <!-- <td><button class="Renewbtn">Cancel</button></td> -->
                 </tr>
                 <tr>
                     <td>Software2</td>
@@ -63,7 +63,7 @@ Here are Your Licences
                     <td>16/02/2024</td>
                     <td>189.99</td>
                     <td>Active</td>
-                    <td><button class="Renewbtn">Cancel</button></td>
+                    <!-- <td><button class="Renewbtn">Cancel</button></td> -->
                 </tr>
                 <tr>
                     <td>Software3</td>
@@ -72,7 +72,7 @@ Here are Your Licences
                     <td>01/10/2024</td>
                     <td>49.99</td>
                     <td>Active</td>
-                    <td><button class="Renewbtn">Cancel</button></td>
+                    <!-- <td><button class="Renewbtn">Cancel</button></td> -->
                 </tr>
                 <tr>
                     <td>Software4</td>
@@ -81,7 +81,7 @@ Here are Your Licences
                     <td>29/11/2024</td>
                     <td>79.99</td>
                     <td>Expired</td>
-                    <td><button class="Renewbtn">Renew</button></td>
+                    <!-- <td><button class="Renewbtn">Renew</button></td> -->
                 </tr>
                 <tr>
                     <td>Software5</td>
@@ -90,7 +90,7 @@ Here are Your Licences
                     <td>12/12/2025</td>
                     <td>99.99</td>
                     <td>Active</td>
-                    <td><button class="Renewbtn">Cancel</button></td>
+                    <!-- <td><button class="Renewbtn">Cancel</button></td> -->
                 </tr>
                 <tr>
                     <td>Software6</td>
@@ -99,7 +99,7 @@ Here are Your Licences
                     <td>05/12/2022</td>
                     <td>69.99</td>
                     <td>Expired</td>
-                    <td><button class="Renewbtn">Renew</button></td>
+                    <!-- <td><button class="Renewbtn">Renew</button></td> -->
                 </tr>
             </table>
         </div>
@@ -114,11 +114,14 @@ Here are Your Licences
                 <button id="move-between-pages-button" type="button">Redeem Licence</button>
             </a>
             </br>
-            <form action="" method="">
-            <input type="text" placeholder="Renew Serial Number">
-            <input type="button" value="Renew">
-            </form>
-            </br></br></br>
+            <div style="text-align: center;">
+                </br>
+                    <form action="" method="">
+                        <input type="text" placeholder="Renew Serial Number">
+                        <input type="button" value="Renew">
+                    </form>
+                </br></br></br>
+            </div>
         </div>
         <script type="text/javascript" src="script.js"></script>
 
