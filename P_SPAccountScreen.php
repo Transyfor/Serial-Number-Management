@@ -62,6 +62,9 @@ if (!$result) {
                 <?php
                 // Populate the table with data from the database
                 while ($row = $result->fetch_assoc()) {
+                    if($_SESSION['userID']!=$row['ProviderUSERID']){ //This just makes it so that we only display serial numbers created by this provider
+                        continue;
+                    }
                     echo "<tr>";
                     echo "<td>{$row['Code']}</td>";
                     echo "<td>{$row['Name']}</td>";
