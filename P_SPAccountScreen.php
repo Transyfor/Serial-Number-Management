@@ -71,14 +71,28 @@ if (!$result) {
                     echo "<td>{$row['Redeemed']}</td>";
                     echo "<td>{$row['Paused']}</td>";
                     echo "<td>{$row['AttributedUserID']}</td>";
-                    echo "<td>{$row['ProviderUserID']}</td>";
+                    echo "<td>{$row['ProviderUSERID']}</td>";
                     echo "</tr>";
                 }
                 ?>
 
             </table>
         </div>
-        <!-- ... any code ... -->
+        <a href="SerialNumberList.php">
+            <button id="Serial-Number-list-button" type="button">Serial Numbers List</button>
+        </a>
+        <br>
+        <br>
+        <form action="" method="">
+            <input type="text" placeholder="Lock Serial Number">
+            <input type="button" value="Lock">
+            </form>
+        </br></br></br></br></br></br></br>
+
+
+        <!--<button id="client-logout-button" onclick="logout()" type="button">Log out</button>-->
+
+        <script type="text/javascript" src="script.js"></script>
     </div>
     <script type="text/javascript" src="script.js"></script>
 
