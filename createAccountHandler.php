@@ -54,12 +54,12 @@ $sql="SELECT * FROM Users WHERE (Username='$username' OR Email='$email')";
         $row = mysqli_fetch_assoc($res);
         if($email==isset($row['Email']))
         {
-            echo '<script>alert("Email is already taken"); window.location.href="/createAccount.php";</script>';
+            echo '<script>alert("Email or Username is already taken"); window.location.href="/createAccount.php";</script>';
             exit();
         }
 		if($username==isset($row['Username']))
 		{
-			echo '<script>alert("Username is taken"); window.location.href="/createAccount.php";</script>';
+			echo '<script>alert("Email or Username is already taken"); window.location.href="/createAccount.php";</script>';
             exit();
 		}
 }
