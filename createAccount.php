@@ -16,26 +16,26 @@
                 <br>
                 <div style>
                 <label for="create-username"> Username: </label>
-                <input id="create-username" type="text" name="create-username" class="inputBox" value="<?php echo $_POST['create-username']; ?>" >
+                <input id="create-username" type="text" name="create-username" class="inputBox" value="<?php if (isset($_POST['create-username'])) echo $_POST['create-username']; ?>" >
                 </div>
                 <br>
                 <div>
                 <label for="create-password"> Password: </label>
-                <input id="create-password" type="password" name="create-password" class="inputBox" value="<?php echo $_POST['create-password']; ?>" >
+                <input id="create-password" type="password" name="create-password" class="inputBox" value="<?php if (isset($_POST['create-password'])) echo $_POST['create-password']; ?>" >
                 </div>
                 <br>
                 <div>
                 <label for="create-name"> Name: </label>
-                <input id="create-name" type="text" name="create-name" class="inputBox" value="<?php echo $_POST['create-name']; ?>" >
+                <input id="create-name" type="text" name="create-name" class="inputBox" value="<?php if (isset($_POST['create-name'])) echo $_POST['create-name']; ?>" >
                 </div>
                 <br>
                 <div>
                 <label for="create-email"> Email Address: </label>
-                <input id="create-email" type="email" name="create-email"class="inputBox" value="<?php echo $_POST['create-email']; ?>">
+                <input id="create-email" type="email" name="create-email"class="inputBox" value="<?php if (isset($_POST['create-email'])) echo $_POST['create-email']; ?>">
                 </div>
                 <br>
                 <label for="create-address"> Home Address: </label>
-                <input id="create-address" type="text" name="create-address" class="inputBox" value="<?php echo $_POST['create-address']; ?>">
+                <input id="create-address" type="text" name="create-address" class="inputBox" value="<?php if (isset($_POST['create-address'])) echo $_POST['create-address']; ?>">
                 <br>
                 <br>
                 Payment Method
