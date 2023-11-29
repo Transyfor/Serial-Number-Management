@@ -7,34 +7,34 @@
 //We start by checking that the $_POST array has values for each
 if(empty($_POST["create-username"])){
     //echo is php's term for printing. By saying echo, I'm just saying to print in the .php or the .html file what follows. If it's script, it'll excecute it.
-    echo '<script>alert("Username is required");</script>';
+    echo '<script>alert("Username is required"); window.location.href="/createAccount.php";</script>';
     //Need to do exit(), as otherwise the php code will keep running even if the user goes to another page.
     exit();
 }
 
 if(empty($_POST["create-password"])){
-    echo '<script>alert("Password is required"); </script>';
+    echo '<script>alert("Password is required"); window.location.href="/createAccount.php"; </script>';
     exit();
 }
 
 if(empty($_POST["create-name"])){
-    echo '<script>alert("Name is required"); </script>';
+    echo '<script>alert("Name is required"); window.location.href="/createAccount.php";</script>';
     exit();
 }
 
 if(empty($_POST["create-email"])){
-    echo '<script>alert("Email is required"); </script>';
+    echo '<script>alert("Email is required"); window.location.href="/createAccount.php";</script>';
     exit();
 }
 
 if(empty($_POST["create-address"])){
-    echo '<script>alert("Address is required"); </script>';
+    echo '<script>alert("Address is required"); window.location.href="/createAccount.php";</script>';
     exit();
 }
 
 //We can also check for a valid email. filter_var is a special php method that can check, given a String, if it passes a test. Here we gave the FILTER_VALIDATE_EMAIL test.
 if (! filter_var($_POST["create-email"], FILTER_VALIDATE_EMAIL)) { //If it didn't pass our test, echo the following code.
-    echo '<script>alert("Valid email is required"); </script>';
+    echo '<script>alert("Valid email is required"); window.location.href="/createAccount.php";</script>';
     exit();
 }
 
@@ -54,12 +54,12 @@ $sql="SELECT * FROM 'Users' WHERE (Username='$username' or Email='$email');";
         $row = mysqli_fetch_assoc($res);
         if($email==isset($row['Email']))
         {
-            echo '<script>alert("Email is already taken"); ";</script>';
+            echo '<script>alert("Email is already taken"); window.location.href="/createAccount.php";</script>';
             exit();
         }
 		if($username==isset($row['Username']))
 		{
-			echo '<script>alert("Username is required"); </script>';
+			echo '<script>alert("Username is taken"); window.location.href="/createAccount.php";</script>';
             exit();
 		}
 }
@@ -93,7 +93,7 @@ if($stmt->execute()){ //Has to be if, as it returns a boolean whether it succeed
 }
 else{ //If it wasnt successful
     if($mysqli->errno === 1062) { //Special case if it's because email already taken
-        echo '<script>alert("Given email or username is already taken"); window.location.href="/createAccount.html";</script>';
+        echo '<script>alert("Given email or username is already taken"); window.location.href="/createAccount.php";</script>';
         exit();
     } 
     else {
