@@ -45,7 +45,7 @@ $mysqli = require __DIR__ ."/db_conn.php"; //This is a connection object
 $username= $_POST["create-username"];
 $email= $_POST["create-email"];
 
-$sql="SELECT * FROM 'Users' WHERE 'Username'='$username' OR 'Email'='$email';";
+$sql="SELECT * FROM 'Users' WHERE ('Username'='$username' OR 'Email'='$email')";
 
       $res=mysqli_query($mysqli,$sql);
 
