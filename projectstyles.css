@@ -246,11 +246,12 @@ th {
     border-radius: 100px;
     background-color: lightgreen;
     cursor: pointer;
-    position: relative;
-    left: 45%;
+    margin: auto;
+    display: block;
     padding: 10px;
     width: 200px;
-    box-shadow: 5px 5px rgba(61, 61, 67, 0.744)
+    box-shadow: 5px 5px rgba(61, 61, 67, 0.744);
+    text-decoration: none;
 }
 
 #move-between-pages-button:hover {
