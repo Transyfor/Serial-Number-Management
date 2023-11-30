@@ -29,7 +29,6 @@ if (!$result) {
 
 <header class="heading">
     List of Clients
-    <!--<?php echo 'Hello, ' . $_SESSION['Name'] . '!'; ?>-->
 </header>
 
 <body class="blueBackground">
@@ -56,7 +55,7 @@ if (!$result) {
                     <th>Redeemed</th>
                     <th>Paused</th>
                     <th>Attributed userID</th>
-                    <th>ProviderUSERID</th>
+                    <th>Provider</th>
                 </tr>
 
                 <?php
