@@ -93,22 +93,38 @@ if(!isset($_SESSION['Account Type'])){
             </table>
         </div>
         </br></br>
-        <form name="rn" action="" method="post">
-            <input type="button" id="new-Serial-Number-button" name="SN" value="Generate a New Serial Number"
-                onclick="RandomSN();" />
-            </br></br>
-            <input name="SerialNum" type="text" id="tb" class="inputBox" placeholder="Serial Number"/>
-            <input name="price "type="text" id="tb" class="inputBox" placeholder="Price"/>
-            <input name="Name" type="text" id="tb" class="inputBox" placeholder="Name"/>
-            <br>
-            <input type="submit" value="Submit" />
-        </form>
+        <div style="">
+            <form name="rn" action="serialNumbersHandler.php" method="post">
+                <input type="button" id="new-Serial-Number-button" name="SN" value="Generate a New Serial Number"
+                    onclick="RandomSN();" />
+                </br></br>
+                <div class="inputContainer">
+                    <div class="inputGroup">
+                        <input name="SerialNum" type="text" class="inputBox" placeholder="Serial Number"/>
+                        <input name="price" type="text" class="inputBox" placeholder="Price"/>
+                        <input name="Name" type="text" class="inputBox" placeholder="Name"/>
+                    </div>
+                    <div class="buttonContainer">
+                        <input id="submitSN" type="submit" value="Submit" />
+                    </div>
+                </div>
+                </br></br></br></br>
+            </form>
+        </div>
         </br></br></br></br>
         <!--<a href="index.html">-->
         <!--<button id="client-logout-button" onclick="logout()" type="button">Log out</button>-->
         <!--</a>-->
 
         <script type="text/javascript" src="script.js"></script>
+        
+        <script type="text/javascript">
+          //Random Number Generator (temporary) for Serial Number
+          function RandomSN() {
+            var rnd = Math.floor(Math.random() * 1000000000);
+            document.querySelector('input[name="SerialNum"]').value = rnd;
+          }
+        </script>
 
         <!-- function RandomSN() {
             var rnd = Math.floor(Math.random() * 1000000000);
