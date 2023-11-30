@@ -89,9 +89,9 @@ Here are Your Licences
         </div>
         </br></br>
         <div>
-            <a href="loginChangeClient.php">
+            <!--<a href="loginChangeClient.php">
                 <button id="move-between-pages-button" type="button">Manage Account</button>
-            </a>
+            </a>-->
             </br></br>
 
             <a href="license.php">
