@@ -29,7 +29,7 @@ if (!$result) {
 
 <header class="heading">
     List of Clients
-    <?php echo 'Hello, ' . $_SESSION['Name'] . '!'; ?>
+    <!--<?php echo 'Hello, ' . $_SESSION['Name'] . '!'; ?>-->
 </header>
 
 <body class="blueBackground">
