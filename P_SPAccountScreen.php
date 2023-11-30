@@ -50,6 +50,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <link rel="stylesheet" type="text/css" href="/projectstyles.css">
+    <style>
+        #error-message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f8d7da; /* Red background for error messages */
+            color: #721c24; /* Dark red text color for error messages */
+            border: 1px solid #f5c6cb; /* Border color for error messages */
+            display: <?php echo isset($message) ? 'block' : 'none'; ?>; /* Show error message only if it's set */
+        }
+        #success-message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #d4edda; /* Green background for success messages */
+            color: #155724; /* Dark green text color for success messages */
+            border: 1px solid #c3e6cb; /* Border color for success messages */
+            display: <?php echo isset($successMessage) ? 'block' : 'none'; ?>; /* Show success message only if it's set */
+        }
+    </style>
     <title>Service Provider Account Screen</title>
 </head>
 
@@ -117,11 +137,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
         <div style="text-align: center;">
             <br>
+            <!-- Form for pausing/unpausing serial numbers -->
             <form action="" method="POST" onsubmit="return pauseUnpauseSerialNumber()">
                 <input type="text" name="serialNumber" id="serialNumber" placeholder="Lock Serial Number">
                 <input type="submit" value="Pause/Unpause">
             </form>
-            <p id="message"><?php echo isset($message) ? $message : ""; ?></p>
+            <!-- Display error message -->
+            <p id="error-message"><?php echo isset($message) ? $message : ""; ?></p>
+            <!-- Display success message -->
+            <p id="success-message"><?php echo isset($successMessage) ? $successMessage : ""; ?></p>
             </br></br></br>
         </div>
         <!--<button id="client-logout-button" onclick="logout()" type="button">Log out</button>-->
