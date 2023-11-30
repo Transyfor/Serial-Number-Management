@@ -98,15 +98,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div>
             <table id="SPtHS-table" class="bubbleStyle">
                 <tr height="50px">
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Date of Creation</th>
-                    <th>Expiration Date</th>
-                    <th>Price</th>
-                    <th>Redeemed</th>
-                    <th>Paused</th>
-                    <th>Attributed userID</th>
-                    <th>Provider</th>
+                    <th width="150">Code</th>
+                    <th width="150">Name</th>
+                    <th width="180">Date of Creation</th>
+                    <th width="180">Expiration Date</th>
+                    <th width="150">Price</th>
+                    <th width="150">Redeemed</th>
+                    <th width="150">Paused</th>
+                    <th width="150">Attributed userID</th>
+                    <!--<th>Provider</th>-->
                 </tr>
 
                 <?php
@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $res=mysqli_query($mysqli,$sql); //I send this query to mySQL
                     $UsersRow = mysqli_fetch_assoc($res); //I transform their reply into an array
                     echo "<td>{$UsersRow['Name']}</td>"; //I display the 'Name' variable on the row they gave me
-                    echo "<td>{$row['ProviderUSERID']}</td>";
+                    //echo "<td>{$row['ProviderUSERID']}</td>";
                     echo "</tr>";
                 }
                 ?>
