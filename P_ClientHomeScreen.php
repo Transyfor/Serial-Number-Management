@@ -8,8 +8,9 @@ if(!isset($_SESSION['Account Type'])){
 }
 
 // Fetch serial numbers from the database
-$query = "SELECT `Code`, `Name`, `Date of Creation` AS DateOfCreation, `Expiration Date` AS ExpirationDate, `Price`, `Redeemed`, `Paused`, `Attributed userID` AS AttributedUserID, `ProviderUSERID` FROM `Serial Numbers` WHERE Condition";
+$query = "SELECT `Code`, `Name`, `Date of Creation` AS DateOfCreation, `Expiration Date` AS ExpirationDate, `Price`, `Redeemed`, `Paused`, `Attributed userID` AS AttributedUserID, `ProviderUSERID` FROM `Serial Numbers`";
 $result = $mysqli->query($query);
+
 
 // Check if the query was successful
 if (!$result) {
