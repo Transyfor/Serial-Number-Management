@@ -21,14 +21,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $serialNumber = $_POST["serialNumber"];
 
     if (empty($serialNumber)) {
-        $message = "Please provide a serial number to Pause/Unpause.";
+        $message = "Please provide a Serial Number to Pause/Unpause!";
     } else {
         $serialNumber = $mysqli->real_escape_string($serialNumber);
         $checkQuery = "SELECT * FROM `Serial Numbers` WHERE `Code` = '$serialNumber'";
         $checkResult = $mysqli->query($checkQuery);
 
         if ($checkResult->num_rows == 0) {
-            $message = "Serial number does not exist.";
+            $message = "Please provide a valid Serial Number!";
         } else {
             $updateQuery = "UPDATE `Serial Numbers` SET `Paused` = NOT `Paused` WHERE `Code` = '$serialNumber'";
             $updateResult = $mysqli->query($updateQuery);
@@ -55,18 +55,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin-top: 10px;
             padding: 10px;
             border-radius: 5px;
-            background-color: #f8d7da; /* Red background for error messages */
-            color: #721c24; /* Dark red text color for error messages */
-            border: 1px solid #f5c6cb; /* Border color for error messages */
-            display: <?php echo isset($message) ? 'block' : 'none'; ?>; /* Show error message only if it's set */
+            background-color: #f8d7da; /* Red */
+            color: #721c24; /* Dark red  */
+            border: 1px solid #f5c6cb; 
+            display: <?php echo isset($message) ? 'block' : 'none'; ?>; 
         }
         #success-message {
             margin-top: 10px;
             padding: 10px;
             border-radius: 5px;
-            background-color: #d4edda; /* Green background for success messages */
-            color: #155724; /* Dark green text color for success messages */
-            border: 1px solid #c3e6cb; /* Border color for success messages */
+            background-color: #d4edda; /* Green */
+            color: #155724; /* Dark green text */
+            border: 1px solid #c3e6cb; 
             display: <?php echo isset($successMessage) ? 'block' : 'none'; ?>; /* Show success message only if it's set */
         }
     </style>
