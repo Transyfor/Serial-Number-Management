@@ -1,6 +1,9 @@
 <?php
  session_start(); //This makes it so that I can attribute variables to the current user
 
+ include("db_conn.php"); // Include the database connection file
+
+
  //If a user gets here and doesn't already have an account, we need to redirect them out
 if(!isset($_SESSION['Account Type'])){
     header("Location: index.php");
