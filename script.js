@@ -49,3 +49,14 @@ function RandomSN() {
   var rnd = Math.floor(Math.random() * 1000000000);
   document.getElementById("tb").value = rnd;
 }
+
+function pauseUnpauseSerialNumber() {
+  var serialNumberInput = document.getElementById("serialNumber").value;
+
+  if (serialNumberInput.trim() === "") {
+      alert("Please provide a serial number to Pause/Unpause.");
+      return false;
+  }
+
+  return true;
+}

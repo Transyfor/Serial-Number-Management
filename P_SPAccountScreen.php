@@ -17,6 +17,32 @@ if (!$result) {
     die("Error: " . $mysqli->error);
 }
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $serialNumber = $_POST["serialNumber"];
+
+    if (empty($serialNumber)) {
+        $message = "Please provide a serial number to Pause/Unpause.";
+    } else {
+        $serialNumber = $mysqli->real_escape_string($serialNumber);
+        $checkQuery = "SELECT * FROM `Serial Numbers` WHERE `Code` = '$serialNumber'";
+        $checkResult = $mysqli->query($checkQuery);
+
+        if ($checkResult->num_rows == 0) {
+            $message = "Please Provide a valid Serial Number";
+        } else {
+            $updateQuery = "UPDATE `Serial Numbers` SET `Paused` = NOT `Paused` WHERE `Code` = '$serialNumber'";
+            $updateResult = $mysqli->query($updateQuery);
+
+            if ($updateResult) {
+                $message = "Serial number Paused/Unpaused successfully.";
+            } else {
+                $message = "Error updating serial number status.";
+            }
+        }
+    }
+}
+?>
+
 ?>
 
 <!DOCTYPE html>
@@ -91,13 +117,13 @@ if (!$result) {
         <br>
         <div style="text-align: center;">
             <br>
-                <form action="" method="">
-                    <input type="text" placeholder="Lock Serial Number">
-                    <input type="button" value="Lock">
-                </form>
+            <form action="" method="POST" onsubmit="return pauseUnpauseSerialNumber()">
+                <input type="text" name="serialNumber" id="serialNumber" placeholder="Lock Serial Number">
+                <input type="submit" value="Pause/Unpause">
+            </form>
+            <p id="message"><?php echo isset($message) ? $message : ""; ?></p>
             </br></br></br>
         </div>
-
         <!--<button id="client-logout-button" onclick="logout()" type="button">Log out</button>-->
 
         <script type="text/javascript" src="script.js"></script>
