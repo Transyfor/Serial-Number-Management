@@ -35,7 +35,7 @@ if (!$result) {
     <?php echo 'Hello, ' . $_SESSION['Name'] . '! ';
 ?>
 </br>
-Here are Your Licences
+Here is the list of your Licences!
 </header>
 
 <body class="blueBackground">
@@ -87,7 +87,6 @@ Here are Your Licences
                     $res=mysqli_query($mysqli,$sql); //I send this query to mySQL
                     $UsersRow = mysqli_fetch_assoc($res); //I transform their reply into an array
                     echo "<td>{$UsersRow['Name']}</td>"; //I display the 'Name' variable on the row they gave me
-                    echo "<td>{$row['ProviderUSERID']}</td>";
                     echo "</tr>";
                 }
                 ?>
