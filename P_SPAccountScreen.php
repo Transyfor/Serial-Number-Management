@@ -71,7 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #d4edda; /* Green */
             color: #155724; /* Dark green text */
             border: 1px solid #c3e6cb; 
-            display: <?php echo isset($successMessage) ? 'block' : 'none'; ?>; /* Show success message only if it's set */
+            /*display: <?php echo isset($successMessage) ? 'block' : 'none'; ?>; /* Show success message only if it's set */
+            display: block;
         }
     </style>
     <title>Service Provider Account Screen</title>
