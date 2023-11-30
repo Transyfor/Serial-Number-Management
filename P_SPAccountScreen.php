@@ -28,13 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $checkResult = $mysqli->query($checkQuery);
 
         if ($checkResult->num_rows == 0) {
-            $message = "Please Provide a valid Serial Number";
+            echo "<script>alert('Please provide a valid Serial Number.');</script>";
         } else {
             $updateQuery = "UPDATE `Serial Numbers` SET `Paused` = NOT `Paused` WHERE `Code` = '$serialNumber'";
             $updateResult = $mysqli->query($updateQuery);
 
             if ($updateResult) {
-                $message = "Serial number Paused/Unpaused successfully.";
+                $pausedStatus = $updateResult ? "PAUSED" : "UNPAUSED";
+                echo "<script>alert('Serial number $pausedStatus successfully.');</script>";
             } else {
                 $message = "Error updating serial number status.";
             }
