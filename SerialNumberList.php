@@ -24,7 +24,8 @@ if(!isset($_SESSION['Account Type'])){
     <div class="maindiv">
         <div class="navigation">
             <ul id="horizontalmenu">
-                <li id="homepage"><a href="P_SPAccountScreen.html">Home</a></li>
+                <li id="homepage"><a href="P_SPAccountScreen.php">Home</a></li>
+                <li id="settings"><a href="/loginChangeProvider.php">Settings</a></li>
                 <li id="logout" style="float:right">
                 <a href="logout.php">
                 <button>Log out</button>
