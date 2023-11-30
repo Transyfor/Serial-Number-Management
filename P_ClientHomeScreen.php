@@ -67,7 +67,7 @@ Here is the list of your Licences!
                 <?php
                 // Loop through the results and populate the table
                 while ($row = $result->fetch_assoc()) {
-                    // Only display the infor if the current user has the same ID as in the serial number table
+                    // Only display the info for the user with the same ID as in the serial number table
                     if ($_SESSION['userID'] != $row['AttributedUserID']) {
                         continue;
                     }
