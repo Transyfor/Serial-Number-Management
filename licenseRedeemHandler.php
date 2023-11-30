@@ -16,14 +16,14 @@ $license = $_POST['codeinput'];
 $userID = $_SESSION['userID'];
 
 // Check if the serial number exists and the 'Attributed userID' is null
-$sql = "SELECT * FROM `Serial Number` WHERE `SerialNumber` = ? AND `Attributed userID` IS NULL";
+$sql = "SELECT * FROM `Serial Numbers` WHERE `Code` = ? AND `Attributed userID` = -1";
 if ($stmt = $mysqli->prepare($sql)) {
     $stmt->bind_param("s", $license);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        $updateSql = "UPDATE `Serial Number` SET `Attributed userID` = ? WHERE `SerialNumber` = ?";
+        $updateSql = "UPDATE `Serial Numbers` SET `Attributed userID` = ? WHERE `Code` = ?";
         if ($updateStmt = $mysqli->prepare($updateSql)) {
             $updateStmt->bind_param("ss", $userID, $license);
             if ($updateStmt->execute()) {
