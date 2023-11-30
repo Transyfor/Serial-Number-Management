@@ -149,7 +149,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- Display error message -->
             <p id="error-message"><?php echo isset($message) ? $message : ""; ?></p>
             <!-- Display success message -->
-            <p id="success-message"><?php echo isset($successMessage) ? $successMessage : ""; ?></p>
+            <p id="success-message"><?php echo isset($_SESSION['successMessage']) ? $_SESSION['successMessage'] : ""; ?></p>
+
+            <?php unset($_SESSION['successMessage']); ?> <!--to unset the success message we added to session, so it does not go to other pages-->
             </br></br></br>
         </div>
         <!--<button id="client-logout-button" onclick="logout()" type="button">Log out</button>-->
