@@ -32,8 +32,9 @@ if (!$result) {
 </head>
 <header class="heading">
     
-    <?php echo 'Hello, ' . $_SESSION['Name'] . '!';
+    <?php echo 'Hello, ' . $_SESSION['Name'] . '! ';
 ?>
+</br>
 Here are Your Licences
 </header>
 
