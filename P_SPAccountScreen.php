@@ -97,8 +97,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<td>{$row['DateOfCreation']}</td>";
                     echo "<td>{$row['ExpirationDate']}</td>";
                     echo "<td>{$row['Price']}</td>";
-                    echo "<td>{$row['Redeemed']}</td>";
-                    echo "<td>{$row['Paused']}</td>";
+                    echo "<td>" . ($row['Redeemed'] == 0 ? 'Not Redeemed Yet' : 'Yes') . "</td>";
+                    echo "<td>" . ($row['Paused'] == 0 ? 'Active' : 'Paused') . "</td>";
                     $mysqli = require __DIR__ ."/db_conn.php"; //This is a connection object
                     $currentID= $row['AttributedUserID']; //I store the userID on this row in a variable
                     $sql="SELECT * FROM Users WHERE userID='$currentID'"; //I search the Users table for the User with this ID
