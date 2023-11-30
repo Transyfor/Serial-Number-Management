@@ -72,7 +72,8 @@ if(!isset($_SESSION['Account Type'])){
             </div>
 
             <div class="bubbleStyle" id="addressdiv">
-                <form>
+                <form action="addressChangeClientHandler.php"
+                    method="post">
                     <h1 id="addresstitle">Change Address</h1>
                     <p id="oldaddresstag">Old address:</p>
                     <p id="oldaddress">
