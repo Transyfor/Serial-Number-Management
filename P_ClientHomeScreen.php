@@ -7,7 +7,17 @@ if(!isset($_SESSION['Account Type'])){
     exit();
 }
 
+// Fetch serial numbers from the database
+$query = "SELECT `Code`, `Name`, `Date of Creation` AS DateOfCreation, `Expiration Date` AS ExpirationDate, `Price`, `Redeemed`, `Paused`, `Attributed userID` AS AttributedUserID, `ProviderUSERID` FROM `Serial Numbers` WHERE Condition";
+$result = $mysqli->query($query);
+
+// Check if the query was successful
+if (!$result) {
+    die("Error in query: " . $mysqli->error);
+}
+
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -39,68 +49,38 @@ Here are Your Licences
         <div>
             <table id="clientHS-table" class="bubbleStyle">
                 <tr height="50px">
-                    <th width="150">Software</th>
+                    <th width="150">Product</th>
                     <th width="150">Serial Number</th>
                     <th width="160">Subscription Date</th>
                     <th width="160">Expiration Date</th>
                     <th width="170">Subscription Fee ($)</th>
+                    <th width="170">Redeemed</th>
                     <th width="130">Status</th>
-                    <!-- <th width="120">Renew/</br>Cancel</th> -->
                 </tr>
                 <tr>
-                    <td>Software1</td>
-                    <td>sw1!859646</td>
-                    <td>07/10/2022</td>
-                    <td>06/11/2023</td>
-                    <td>19.99</td>
-                    <td>Active</td>
-                    <!-- <td><button class="Renewbtn">Cancel</button></td> -->
+                <?php
+                // Loop through the results and populate the table
+                while ($row = $result->fetch_assoc()) {
+                    // Only display the infor if the current user has the same ID as in the serial number table
+                    if ($_SESSION['userID'] != $row['AttributedUserID']) {
+                        continue;
+                    }
+
+                    echo "<tr>";
+                    echo "<td>" . $row['Name'] . "</td>";
+                    echo "<td>" . $row['Code'] . "</td>";
+                    echo "<td>" . $row['DateOfCreation'] . "</td>";
+                    echo "<td>" . $row['ExpirationDate'] . "</td>";
+                    echo "<td>" . $row['Price'] . "</td>";                 
+                    // Check Paused and Redeemed values and display accordingly
+                    echo "<td>" . ($row['Redeemed'] == 0 ? 'Not Redeemed Yet' : 'Yes') . "</td>";
+                    echo "<td>" . ($row['Paused'] == 0 ? 'Active' : 'Paused') . "</td>";
+
+                    echo "</tr>";
+                }
+                ?>
                 </tr>
-                <tr>
-                    <td>Software2</td>
-                    <td>sw2!745118</td>
-                    <td>17/02/2022</td>
-                    <td>16/02/2024</td>
-                    <td>189.99</td>
-                    <td>Active</td>
-                    <!-- <td><button class="Renewbtn">Cancel</button></td> -->
-                </tr>
-                <tr>
-                    <td>Software3</td>
-                    <td>sw3!748569</td>
-                    <td>02/10/2023</td>
-                    <td>01/10/2024</td>
-                    <td>49.99</td>
-                    <td>Active</td>
-                    <!-- <td><button class="Renewbtn">Cancel</button></td> -->
-                </tr>
-                <tr>
-                    <td>Software4</td>
-                    <td>sw4!78769</td>
-                    <td>30/11/2023</td>
-                    <td>29/11/2024</td>
-                    <td>79.99</td>
-                    <td>Expired</td>
-                    <!-- <td><button class="Renewbtn">Renew</button></td> -->
-                </tr>
-                <tr>
-                    <td>Software5</td>
-                    <td>sw5!111562</td>
-                    <td>13/12/2023</td>
-                    <td>12/12/2025</td>
-                    <td>99.99</td>
-                    <td>Active</td>
-                    <!-- <td><button class="Renewbtn">Cancel</button></td> -->
-                </tr>
-                <tr>
-                    <td>Software6</td>
-                    <td>sw5!5543672</td>
-                    <td>06/12/2021</td>
-                    <td>05/12/2022</td>
-                    <td>69.99</td>
-                    <td>Expired</td>
-                    <!-- <td><button class="Renewbtn">Renew</button></td> -->
-                </tr>
+                
             </table>
         </div>
         </br></br>
