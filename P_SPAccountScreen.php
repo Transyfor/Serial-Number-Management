@@ -34,7 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $updateResult = $mysqli->query($updateQuery);
 
             if ($updateResult) {
-                $message = "Serial number Paused/Unpaused successfully.";
+                  // Set a session variable for the success message bc it needs to redirect then
+                $_SESSION['successMessage'] = "Serial number Paused/Unpaused successfully.";
+                // Redirect to the same page
+                header("Location: P_SPAccountScreen.php");
+                exit();
             } else {
                 $message = "Error updating serial number status.";
             }
