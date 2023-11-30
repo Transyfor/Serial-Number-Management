@@ -78,8 +78,8 @@ if(!isset($_SESSION['Account Type'])){
                     <p id="oldaddress">
                         <em
                             ><strong
-                                >123 Main Street<br />Montreal, Quebec, A1A
-                                1A1<br />Canada</strong
+                                ><?php echo $_SESSION['Address'];
+?></strong
                             ></em
                         >
                     </p>
