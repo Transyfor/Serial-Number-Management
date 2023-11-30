@@ -55,12 +55,13 @@ Here are Your Licences
             <table id="clientHS-table" class="bubbleStyle">
                 <tr height="50px">
                     <th width="150">Product</th>
-                    <th width="150">Serial Number</th>
-                    <th width="160">Subscription Date</th>
-                    <th width="160">Expiration Date</th>
-                    <th width="170">Subscription Fee ($)</th>
+                    <th width="180">Serial Number</th>
+                    <th width="180">Subscription Date</th>
+                    <th width="180">Expiration Date</th>
+                    <th width="180">Subscription Fee ($)</th>
                     <th width="170">Redeemed</th>
                     <th width="130">Status</th>
+                    <th width="150">Provider</th> <!--try-->
                 </tr>
                 <tr>
                 <?php
@@ -80,7 +81,13 @@ Here are Your Licences
                     // Check Paused and Redeemed values and display accordingly
                     echo "<td>" . ($row['Redeemed'] == 0 ? 'Not Redeemed Yet' : 'Yes') . "</td>";
                     echo "<td>" . ($row['Paused'] == 0 ? 'Active' : 'Paused') . "</td>";
-
+                    $mysqli = require __DIR__ ."/db_conn.php"; //This is a connection object
+                    $currentID= $row['AttributedUserID']; //I store the userID on this row in a variable
+                    $sql="SELECT * FROM Users WHERE userID='$currentID'"; //I search the Users table for the User with this ID
+                    $res=mysqli_query($mysqli,$sql); //I send this query to mySQL
+                    $UsersRow = mysqli_fetch_assoc($res); //I transform their reply into an array
+                    echo "<td>{$UsersRow['Name']}</td>"; //I display the 'Name' variable on the row they gave me
+                    echo "<td>{$row['ProviderUSERID']}</td>";
                     echo "</tr>";
                 }
                 ?>
