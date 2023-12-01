@@ -20,27 +20,31 @@ if (!$result) {
     die("Error in query: " . $mysqli->error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['renewSerial'])) {
-    $serialToRenew = $_POST['renewSerial'];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["renewSerial"])) {
+    $serialToRenew = $_POST["renewSerial"];
 
     if (empty($serialToRenew)) {
-        echo "<script>alert('Please enter a serial number.');</script>";
+        $message = "Please enter a serial number to renew!";
     } else {
-        $serialQuery = "SELECT * FROM `Serial Numbers` WHERE `Code`='$serialToRenew'";
-        $serialResult = $mysqli->query($serialQuery);
+        $serialToRenew = $mysqli->real_escape_string($serialToRenew);
+        $checkQuery = "SELECT * FROM `Serial Numbers` WHERE `Code` = '$serialToRenew'";
+        $checkResult = $mysqli->query($checkQuery);
 
-        if ($serialResult->num_rows > 0) {
-            // Serial number exists, update expiration date
-            $updateQuery = "UPDATE `Serial Numbers` SET `Expiration Date` = DATE_ADD(`Expiration Date`, INTERVAL 1 YEAR) WHERE `Code`='$serialToRenew'";
+        if ($checkResult->num_rows == 0) {
+            $message = "Please provide a valid Serial Number!";
+        } else {
+            $updateQuery = "UPDATE `Serial Numbers` SET `Expiration Date` = DATE_ADD(`Expiration Date`, INTERVAL 1 YEAR) WHERE `Code` = '$serialToRenew'";
             $updateResult = $mysqli->query($updateQuery);
 
             if ($updateResult) {
-                echo "<script>alert('Serial number renewed successfully.');</script>";
+                // Set a session variable for the success message because it needs to redirect then
+                $_SESSION['successMessage'] = "Serial number renewed successfully.";
+                // Redirect to the same page
+                header("Location: P_SPAccountScreen.php");
+                exit();
             } else {
-                echo "<script>alert('Error renewing serial number.');</script>";
+                $message = "Error renewing serial number.";
             }
-        } else {
-            echo "<script>alert('Serial number not found.');</script>";
         }
     }
 }
@@ -130,13 +134,20 @@ Here is the list of your Licences!
             </a>
             </br>
             <div style="text-align: center;">
-            </br>
-            <form action="" method="POST">
-                <input type="text" name="renewSerial" placeholder="Renew Serial Number">
-                <input type="submit" value="Renew">
-            </form>
-            </br></br></br>
-        </div>
+                <br>
+                <!-- Form for renewing serial numbers -->
+                <form action="" method="POST">
+                    <input type="text" name="renewSerial" placeholder="Renew Serial Number">
+                    <input type="submit" value="Renew">
+                </form>
+                <!-- Display error message -->
+                <p id="error-message"><?php echo isset($message) ? $message : ""; ?></p>
+                <!-- Display success message -->
+                <p id="success-message"><?php echo isset($_SESSION['successMessage']) ? $_SESSION['successMessage'] : ""; ?></p>
+
+                <?php unset($_SESSION['successMessage']); ?> <!--to unset the success message we added to session, so it does not go to other pages-->
+                <br><br><br>
+            </div>
         </div>
         <script type="text/javascript" src="script.js"></script>
 
