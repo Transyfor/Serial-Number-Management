@@ -16,7 +16,7 @@ $license = $_POST['codeinput'];
 $userID = $_SESSION['userID'];
 
 // Check if the serial number exists and the 'Attributed userID' is null
-$sql = "SELECT * FROM `Serial Numbers` WHERE `Code` = ? AND `Attributed userID` = -1";
+$sql = "SELECT * FROM `Serial Numbers` WHERE `Code` = ? AND `Attributed userID` = 0";
 if ($stmt = $mysqli->prepare($sql)) {
     $stmt->bind_param("s", $license);
     $stmt->execute();
@@ -29,7 +29,18 @@ if ($stmt = $mysqli->prepare($sql)) {
             if ($updateStmt->execute()) {
                 // Update the session variable after successful update
                 $_SESSION['Attributed userID'] = $userID;
-                echo '<script>alert("Attributed userID updated successfully for Serial Number: ' . $license . '"); window.location.href="/license.php";</script>';
+                // Update 'Redeemed' column to 1
+                $updateRedeemedSql = "UPDATE `Serial Numbers` SET `Redeemed` = 1 WHERE `Code` = ?";
+                $updateRedeemedStmt = $mysqli->prepare($updateRedeemedSql);
+                $updateRedeemedStmt->bind_param("s", $license);
+                if ($updateRedeemedStmt->execute()) {
+                    // Successful update of 'Redeemed' column
+                    echo '<script>alert("Attributed userID and Redeemed updated successfully for Serial Number: ' . $license . '"); window.location.href="/license.php";</script>';
+                } else {
+                    // Handle 'Redeemed' update failure
+                    echo '<script>alert("Error updating \'Redeemed\': ' . $mysqli->error . '"); window.location.href="/license.php";</script>';
+                }
+                $updateRedeemedStmt->close();
             } else {
                 // Handle update failure
                 echo '<script>alert("Error updating \'Attributed userID\': ' . $mysqli->error . '"); window.location.href="/license.php";</script>';
