@@ -45,9 +45,12 @@ if ($result->num_rows > 0) {
 } else {
     $current_date = date("Y-m-d");
     // Serial number is unique, insert it into the table
-    $insertQuery = "INSERT INTO `Serial Numbers` (`Code`, `Price`, `Name`, `ProviderUSERID`, `Date of Creation`) VALUES (?, ?, ?, ?, ?)";
+    $insertQuery = "INSERT INTO `Serial Numbers` (`Code`, `Price`, `Name`, `ProviderUSERID`, `Date of Creation`, `Expiration Date`) VALUES (?, ?, ?, ?, ?, ?)";
+    // Calculate expiration date
+    $expiration_date = date("Y-m-d", strtotime('+1 year'));
+    
     $insertStmt = $mysqli->prepare($insertQuery);
-    $insertStmt->bind_param("sssis", $serialNumber, $price, $name, $userID, $current_date);
+    $insertStmt->bind_param("sssiss", $serialNumber, $price, $name, $userID, $current_date, $expiration_date);
     $insertStmt->execute();
 
     // Redirect back to the page
