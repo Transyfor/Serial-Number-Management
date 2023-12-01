@@ -23,7 +23,7 @@ if(empty($_POST["Name"])) {
     exit();
 }
 
-//Next we need a variable that holds the info on how to connect to our database. I made a file for this already db_conn.php. This just accesses that and connectes to our database.
+// Next we need a variable that holds the info on how to connect to our database. I made a file for this already db_conn.php. This just accesses that and connectes to our database.
 $mysqli = require __DIR__ . "/db_conn.php"; // This is a connection object
 
 $serialNumber = $_POST['SerialNum'];
@@ -43,10 +43,11 @@ if ($result->num_rows > 0) {
     echo '<script>alert("Serial number already exists. Please enter a different serial number."); window.location.href="/SerialNumberList.php";</script>';
     exit();
 } else {
+    $current_date = date("Y-m-d");
     // Serial number is unique, insert it into the table
-    $insertQuery = "INSERT INTO `Serial Numbers` (`Code`, `Price`, `Name`, `ProviderUSERID`) VALUES (?, ?, ?, ?)";
+    $insertQuery = "INSERT INTO `Serial Numbers` (`Code`, `Price`, `Name`, `ProviderUSERID`, `Date of Creation`) VALUES (?, ?, ?, ?, ?)";
     $insertStmt = $mysqli->prepare($insertQuery);
-    $insertStmt->bind_param("sssi", $serialNumber, $price, $name, $userID);
+    $insertStmt->bind_param("sssis", $serialNumber, $price, $name, $userID, $current_date);
     $insertStmt->execute();
 
     // Redirect back to the page
