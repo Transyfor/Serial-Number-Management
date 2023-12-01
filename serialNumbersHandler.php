@@ -23,7 +23,7 @@ if(empty($_POST["Name"])) {
     exit();
 }
 
-// Next we need a variable that holds the info on how to connect to our database. I made a file for this already db_conn.php. This just accesses that and connectes to our database.
+//Next we need a variable that holds the info on how to connect to our database. I made a file for this already db_conn.php. This just accesses that and connectes to our database.
 $mysqli = require __DIR__ . "/db_conn.php"; // This is a connection object
 
 $serialNumber = $_POST['SerialNum'];
