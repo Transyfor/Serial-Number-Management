@@ -20,36 +20,34 @@ if (!$result) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $serialNumber = $_POST["serialNumber"];
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $serialNumber = $_POST["serialNumber"];
-    
-        if (empty($serialNumber)) {
-            $message = "Please provide a Serial Number to Pause/Unpause!";
+    if (empty($serialNumber)) {
+        $message = "Please provide a Serial Number to Pause/Unpause!";
+    } else {
+        $serialNumber = $mysqli->real_escape_string($serialNumber);
+        $checkQuery = "SELECT * FROM `Serial Numbers` WHERE `Code` = '$serialNumber'";
+        $checkResult = $mysqli->query($checkQuery);
+
+        if ($checkResult->num_rows == 0) {
+            $message = "Please provide a valid Serial Number!";
         } else {
-            $serialNumber = $mysqli->real_escape_string($serialNumber);
-            $checkQuery = "SELECT * FROM `Serial Numbers` WHERE `Code` = '$serialNumber'";
-            $checkResult = $mysqli->query($checkQuery);
-    
-            if ($checkResult->num_rows == 0) {
-                $message = "Please provide a valid Serial Number!";
+            $updateQuery = "UPDATE `Serial Numbers` SET `Paused` = NOT `Paused` WHERE `Code` = '$serialNumber'";
+            $updateResult = $mysqli->query($updateQuery);
+
+            if ($updateResult) {
+                // Set a session variable for the success message bc it needs to redirect then
+                $_SESSION['successMessage'] = "Serial number Paused/Unpaused successfully.";
+                // Redirect to the same page
+                header("Location: P_SPAccountScreen.php");
+                exit();
             } else {
-                $updateQuery = "UPDATE `Serial Numbers` SET `Paused` = NOT `Paused` WHERE `Code` = '$serialNumber'";
-                $updateResult = $mysqli->query($updateQuery);
-    
-                if ($updateResult) {
-                    // Set a session variable for the success message bc it needs to redirect then
-                    $_SESSION['successMessage'] = "Serial number Paused/Unpaused successfully.";
-                    // Redirect to the same page
-                    header("Location: P_SPAccountScreen.php");
-                    exit();
-                } else {
-                    $message = "Error updating serial number status.";
-                }
+                $message = "Error updating serial number status.";
             }
         }
     }
-    // Fetch updated data after the update
-    $result = $mysqli->query($query);
+}
+
+// Fetch updated data after the update
+$result = $mysqli->query($query);
 ?>
 
 <!DOCTYPE html>
