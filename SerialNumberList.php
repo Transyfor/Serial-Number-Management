@@ -1,13 +1,37 @@
 <?php
- session_start(); //This makes it so that I can attribute variables to the current user
+    session_start(); //This makes it so that I can attribute variables to the current user
 
- //If a user gets here and doesn't already have an account, we need to redirect them out
-if(!isset($_SESSION['Account Type'])){
-    header("Location: index.php");
-    exit();
-}
-
+    //If a user gets here and doesn't already have an account, we need to redirect them out
+    if(!isset($_SESSION['Account Type'])){
+        header("Location: index.php");
+        exit();
+    }
+    
+    //Next we need a variable that holds the info on how to connect to our database. I made a file for this already db_conn.php. This just accesses that and connectes to our database.
+    $mysqli = require __DIR__ . "/db_conn.php"; // This is a connection object
+    
+    // Gets the provider's user ID
+    $userID = $_SESSION['userID'];
+    
+    // Gets the Code and Redeemed columns from table to display based on the provider's user ID
+    $providerSerialNumbersQuery = "SELECT `Code`, `Redeemed` FROM `Serial Numbers` WHERE `ProviderUSERID` = ?";
+    if ($stmt = $mysqli->prepare($providerSerialNumbersQuery)) {
+        $stmt->bind_param("s", $userID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        $serialNumbers = [];
+        // Loops through each row from $result
+        while ($row = $result->fetch_assoc()) {
+            // Appends the row to the $serialNumbers array
+            $serialNumbers[] = $row;
+        }
+        $stmt->close();
+    }
+    
+    $mysqli->close();
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -45,51 +69,19 @@ if(!isset($_SESSION['Account Type'])){
                     <th width="150">Serial Number</th>
                     <th width="150">Redeemed</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>6355889699</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>9048193061</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>2818186387</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>8151499694</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>9761690838</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>6510642069</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>2232341414</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>6414193177</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>8112049524</td>
-                    <td>Yes</td>
-                </tr>
+                <?php
+                // In order to list the SNs on the table from 1 to whoever many there are
+                $counter = 1;
+                // Iterates through $serialNumbers array
+                foreach ($serialNumbers as $sn) {
+                    echo "<tr>";
+                    echo "<td>" . $counter . "</td>";
+                    echo "<td>" . $sn['Code'] . "</td>";
+                    echo "<td>" . ($sn['Redeemed'] ? "Yes" : "No") . "</td>";
+                    echo "</tr>";
+                    $counter++;
+                }
+                ?>
             </table>
         </div>
         </br></br>
