@@ -37,13 +37,18 @@ padding-top: 0%;">
         </div>
 
         <div class="bubbleStyle" id="codediv">
-            <form>
-                <h1 id="psswtitle">Redeem License Code</h1>
-                <label for="codeinput" id="code">Serial Number:</label>
-                <input type="text" id="codeinput" name="codeinput" class="inputBox">
-                <input type="submit" value="Submit" id="submitcode">
-            </form>
-        </div>
+                <form action="licenseRedeemHandler.php" method="post">
+                    <h1 id="psswtitle">Redeem License Code</h1>
+                    <label for="codeinput" id="code">Serial Number:</label>
+                    <input
+                        type="text"
+                        id="codeinput"
+                        name="codeinput"
+                        class="inputBox"
+                    />
+                    <input type="submit" value="Submit" id="submitcode" />
+                </form>
+            </div>
     </div>
 
     <script type="text/javascript" src="script.js"></script>
