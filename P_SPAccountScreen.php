@@ -123,7 +123,6 @@ $result = $mysqli->query($query);
                     echo "<td>{$row['Price']}</td>";
                     echo "<td>" . ($row['Redeemed'] == 0 ? 'Not Redeemed Yet' : 'Yes') . "</td>";
                     echo "<td>" . ($row['Paused'] == 0 ? 'Active' : 'Paused') . "</td>";
-                    $mysqli = require __DIR__ ."/db_conn.php"; //This is a connection object
                     $currentID= $row['AttributedUserID']; //I store the userID on this row in a variable
                     $sql="SELECT * FROM Users WHERE userID='$currentID'"; //I search the Users table for the User with this ID
                     $res=mysqli_query($mysqli,$sql); //I send this query to mySQL
