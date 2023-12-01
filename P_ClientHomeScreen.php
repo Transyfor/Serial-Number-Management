@@ -48,7 +48,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["renewSerial"])) {
         }
     }
 }
+
+// Fetch serial numbers from the database again after the update
+$result = $mysqli->query($query);
+
+if (!$result) {
+    die("Error in query: " . $mysqli->error);
+}
 ?>
+
 
 <!DOCTYPE html>
 <html>
