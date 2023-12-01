@@ -72,7 +72,7 @@ $result = $mysqli->query($query);
             background-color: #d4edda; /* Green */
             color: #155724; /* Dark green text */
             border: 1px solid #c3e6cb; 
-            display:<?php echo isset($successMessage) ? 'block' : 'none'; ?>; /* Show success message only if it's set */
+            display:<?php echo isset($_SESSION['successMessage']) ? 'block' : 'none'; ?>; /* Show success message only if it's set */
         }
     </style>
     <title>Service Provider Account Screen</title>
@@ -98,7 +98,7 @@ $result = $mysqli->query($query);
         <div>
             <table id="SPtHS-table" class="bubbleStyle">
                 <tr height="50px">
-                    <th width="150">Code</th>
+                    <th width="150">Serial Number</th>
                     <th width="150">Name</th>
                     <th width="180">Date of Creation</th>
                     <th width="180">Expiration Date</th>
