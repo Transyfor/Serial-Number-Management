@@ -20,6 +20,30 @@ if (!$result) {
     die("Error in query: " . $mysqli->error);
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['renewSerial'])) {
+    $serialToRenew = $_POST['renewSerial'];
+
+    if (empty($serialToRenew)) {
+        echo "<script>alert('Please enter a serial number.');</script>";
+    } else {
+        $serialQuery = "SELECT * FROM `Serial Numbers` WHERE `Code`='$serialToRenew'";
+        $serialResult = $mysqli->query($serialQuery);
+
+        if ($serialResult->num_rows > 0) {
+            // Serial number exists, update expiration date
+            $updateQuery = "UPDATE `Serial Numbers` SET `Expiration Date` = DATE_ADD(`Expiration Date`, INTERVAL 1 YEAR) WHERE `Code`='$serialToRenew'";
+            $updateResult = $mysqli->query($updateQuery);
+
+            if ($updateResult) {
+                echo "<script>alert('Serial number renewed successfully.');</script>";
+            } else {
+                echo "<script>alert('Error renewing serial number.');</script>";
+            }
+        } else {
+            echo "<script>alert('Serial number not found.');</script>";
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -106,13 +130,13 @@ Here is the list of your Licences!
             </a>
             </br>
             <div style="text-align: center;">
-                </br>
-                    <form action="" method="">
-                        <input type="text" placeholder="Renew Serial Number">
-                        <input type="button" value="Renew">
-                    </form>
-                </br></br></br>
-            </div>
+            </br>
+            <form action="" method="POST">
+                <input type="text" name="renewSerial" placeholder="Renew Serial Number">
+                <input type="submit" value="Renew">
+            </form>
+            </br></br></br>
+        </div>
         </div>
         <script type="text/javascript" src="script.js"></script>
 
