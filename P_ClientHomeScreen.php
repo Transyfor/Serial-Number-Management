@@ -94,6 +94,7 @@ Here is the list of your Licences!
                 <tr>
                 <?php
                 // Loop through the results and populate the table
+                $result->data_seek(0);  // Reset the result set pointer to the beginning
                 while ($row = $result->fetch_assoc()) {
                     // Only display the info for the user with the same ID as in the serial number table
                     if ($_SESSION['userID'] != $row['AttributedUserID']) {
