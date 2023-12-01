@@ -100,9 +100,9 @@ if(!isset($_SESSION['Account Type'])){
                 </br></br>
                 <div class="inputContainer">
                     <div class="inputGroup">
-                        <input name="SerialNum" type="text" class="inputBox" placeholder="Serial Number"/>
-                        <input name="price" type="text" class="inputBox" placeholder="Price"/>
-                        <input name="Name" type="text" class="inputBox" placeholder="Name"/>
+                        <input name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
+                        <input name="price" type="text" class="th" placeholder="Price"/>
+                        <input name="Name" type="text" class="th" placeholder="Name"/>
                     </div>
                     <div class="buttonContainer">
                         <input id="submitSN" type="submit" value="Submit" />
