@@ -43,16 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["renewSerial"])) {
                 if (!$result) {
                     die("Error in query: " . $mysqli->error);
                 }
-                // Redirect to the same page
-                header("Location: P_SPAccountScreen.php");
-                exit();
+                // Continue the loop to populate the table rows
             } else {
                 $message = "Error renewing serial number.";
             }
         }
     }
 }
-
 ?>
 
 
