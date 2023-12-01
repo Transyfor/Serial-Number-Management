@@ -37,8 +37,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["renewSerial"])) {
             $updateResult = $mysqli->query($updateQuery);
 
             if ($updateResult) {
-                // Set a session variable for the success message because it needs to redirect then
                 $_SESSION['successMessage'] = "Serial number renewed successfully.";
+                // Re-fetch the data after the update
+                $result = $mysqli->query($query);
+                if (!$result) {
+                    die("Error in query: " . $mysqli->error);
+                }
                 // Redirect to the same page
                 header("Location: P_SPAccountScreen.php");
                 exit();
@@ -49,12 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["renewSerial"])) {
     }
 }
 
-// Fetch serial numbers from the database again after the update
-$result = $mysqli->query($query);
-
-if (!$result) {
-    die("Error in query: " . $mysqli->error);
-}
 ?>
 
 
