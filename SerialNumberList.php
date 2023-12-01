@@ -19,12 +19,15 @@
         $stmt->bind_param("s", $userID);
         $stmt->execute();
         $result = $stmt->get_result();
-    
+        
         $serialNumbers = [];
-        // Loops through each row from $result
+        $index = 0;
+        
+        // Loops through each row from $result from query
         while ($row = $result->fetch_assoc()) {
-            // Appends the row to the $serialNumbers array
-            $serialNumbers[] = $row;
+            // Adds it to the $serialNumbers array
+            $serialNumbers[$index] = $row;
+            $index++;
         }
         $stmt->close();
     }
