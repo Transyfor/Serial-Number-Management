@@ -255,13 +255,12 @@ th {
 }
 
 #renew-box {
+    border-radius: 100px;
     padding: 20px;
     cursor: pointer;
     margin: auto;
     width: 200px;
     text-decoration: none;
-    -webkit-border-radius: 100px;
-
 }
 
 
