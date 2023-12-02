@@ -33,19 +33,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["renewSerial"])) {
         if ($checkResult->num_rows == 0) {
             $message = "Please provide a valid Serial Number!";
         } else {
-            $updateQuery = "UPDATE `Serial Numbers` SET `Expiration Date` = DATE_ADD(`Expiration Date`, INTERVAL 1 YEAR) WHERE `Code` = '$serialToRenew'";
-            $updateResult = $mysqli->query($updateQuery);
+            $row = $checkResult->fetch_assoc();
 
-            if ($updateResult) {
-                $_SESSION['successMessage'] = "Serial number renewed successfully.";
-                // Re-fetch the data after the update
-                $result = $mysqli->query($query);
-                if (!$result) {
-                    die("Error in query: " . $mysqli->error);
-                }
-                // Continue the loop to populate the table rows
+            if ($row['Paused'] == 1) {
+                $message = "This Serial Number is PAUSED by the provider and CANNOT be renewed!";
             } else {
-                $message = "Error renewing serial number.";
+                $updateQuery = "UPDATE `Serial Numbers` SET `Expiration Date` = DATE_ADD(`Expiration Date`, INTERVAL 1 YEAR) WHERE `Code` = '$serialToRenew'";
+                $updateResult = $mysqli->query($updateQuery);
+
+                if ($updateResult) {
+                    $_SESSION['successMessage'] = "Serial number renewed successfully.";
+                    // Re-fetch the data after the update
+                    $result = $mysqli->query($query);
+                    if (!$result) {
+                        die("Error in query: " . $mysqli->error);
+                    }
+                    // Continue the loop to populate the table rows
+                } else {
+                    $message = "Error renewing serial number.";
+                }
             }
         }
     }
@@ -169,7 +175,10 @@ Here is the list of your Licences!
                 <!-- Display success message -->
                 <p id="success-message"><?php echo isset($_SESSION['successMessage']) ? $_SESSION['successMessage'] : ""; ?></p>
 
-                <?php unset($_SESSION['successMessage']); ?> <!--to unset the success message we added to session, so it does not go to other pages-->
+                <?php unset($_SESSION['successMessage']);  <!--to unset the success message we added to session, so it does not go to other pages-->
+                // Unset the success message from the session after displaying it
+                unset($_SESSION['successMessage']);
+                ?>
                 <br><br><br>
             </div>
         </div>
