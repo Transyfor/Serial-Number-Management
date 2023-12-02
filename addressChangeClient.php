@@ -77,12 +77,9 @@ if(!isset($_SESSION['Account Type'])){
                     <h1 id="addresstitle">Change Address</h1>
                     <p id="oldaddresstag">Old address:</p>
                     <p id="oldaddress">
-                        <em
-                            ><strong
-                                ><?php echo $_SESSION['Address'];
-?></strong
-                            ></em
-                        >
+                        <em><strong>
+                                <?php echo $_SESSION['Address'];?>
+                        </strong></em>
                     </p>
                     <label for="streetaddress" id="streetaddress"
                         >New Address:</label
