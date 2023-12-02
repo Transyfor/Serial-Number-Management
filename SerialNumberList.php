@@ -96,8 +96,8 @@
                 <div class="inputContainer">
                     <div class="inputGroup">
                         <input name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
-                        <input name="price" type="text" class="th" placeholder="Price"/>
-                        <input name="Name" type="text" class="th" placeholder="Name"/>
+                        <input name="price" type="text" class="th" placeholder="Software Price"/>
+                        <input name="Name" type="text" class="th" placeholder="Software Name"/>
                     </div>
                     <div class="buttonContainer">
                         <input id="submitSN" type="submit" value="Submit" />
