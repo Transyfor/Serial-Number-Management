@@ -72,7 +72,7 @@ if(!isset($_SESSION['Account Type'])){
             </div>
 
             <div class="bubbleStyle" id="deletediv">
-                <form>
+                <form action="deleteAccountClient.php" method="POST">
                     <h1 id="deletetitle">Delete Account</h1>
                     <label for="currentpassword" id="currentpassword"
                         >Enter Password:</label

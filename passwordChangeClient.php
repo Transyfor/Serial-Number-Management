@@ -72,7 +72,7 @@ if(!isset($_SESSION['Account Type'])){
             </div>
 
             <div class="bubbleStyle" id="psswproviderdiv">
-                <form>
+                <form action="passwordChangeClientHandler.php" method="POST">
                     <h1 id="psswtitle">
                         <button
                             style="
