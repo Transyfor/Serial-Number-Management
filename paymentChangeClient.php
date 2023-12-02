@@ -72,11 +72,13 @@ if(!isset($_SESSION['Account Type'])){
             </div>
 
             <div class="bubbleStyle" id="paymentdiv">
-                <form>
+                <form action="paymentChangeClientHandler.php" method="POST">
                     <h1 id="paymenttitle">Change Payment<br />Method</h1>
                     <p id="oldpaymentmethodtag">Current Payment Method:</p>
                     <p id="oldpaymentmethod">
-                        <em><strong>Credit</strong></em>
+                        <em><strong>
+                            <?php echo $_SESSION['Payment Method'];?>
+                        </strong></em>
                     </p>
                     <label for="newpayment" id="enterpayment"
                         >New Payment Method:</label
