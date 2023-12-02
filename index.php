@@ -36,7 +36,7 @@ if(isset($_SESSION['Account Type'])){
         $mysqli= require __DIR__ ."/db_conn.php";
         //Then we write the sql to select a record based on the email address
         $sql= sprintf("SELECT * FROM Users WHERE Username = '%s'",$mysqli->real_escape_string($_POST["user"])); //The sprintf function replaces the %s in our string with the the second parameter, which is the given username in this case.
-//We could've not written the real_escape_string part and just wrote $_POST["user"] directly, but real_escape_string protects us from attackers.
+        //We could've not written the real_escape_string part and just wrote $_POST["user"] directly, but real_escape_string protects us from attackers.
         $result= $mysqli->query($sql); //This just fetches the row in our table which has the username we want. 
         $user= $result->fetch_assoc(); //This converts the row of our table into an array
         //Now we check if the given password was correct
@@ -144,6 +144,15 @@ if(isset($_SESSION['Account Type'])){
             top: 80%;
             bottom: -10%;
         }
+        
+        #forgotPassword {
+            font-size: 12px;
+            color: #41B571;
+        }
+        
+        #forgotPassword:hover {
+            color: #1A7A42;
+        }
     </style>
 
 </head>
@@ -157,6 +166,7 @@ if(isset($_SESSION['Account Type'])){
             <input type="text" id="loginInfo" name="user" class="inputBox"><br><br>
             <label>Password:</label><br>
             <input type="password" id="password" name="password" class="inputBox"><br>
+            <a href="forgotPassword.php" id="forgotPassword">Forgot Password</a>
             <input id="submitButtonHome" type="submit" value="Login">
         </form>
         <button id="createButtonHome" onclick="location.href='createAccount.php';">Create Account</button>
