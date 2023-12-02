@@ -72,7 +72,7 @@ if(!isset($_SESSION['Account Type'])){
             </div>
 
             <div class="bubbleStyle" id="namediv">
-                <form>
+                <form action = "nameChangeClientHandler.php">
                     <h1 id="nametitle">Change Name</h1>
                     <p id="oldnametag">Old Name:</p>
                     <p id="oldname">

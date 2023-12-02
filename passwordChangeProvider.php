@@ -57,7 +57,7 @@ if(!isset($_SESSION['Account Type'])){
             </div>
 
             <div class="bubbleStyle" id="psswproviderdiv">
-                <form>
+                <form action="pa">
                     <h1 id="psswtitle">
                         <button
                             style="
