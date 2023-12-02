@@ -254,6 +254,16 @@ th {
     text-decoration: none;
 }
 
+#renew-box {
+    border-radius: 100px;
+    cursor: pointer;
+    margin: auto;
+    width: 200px;
+    text-decoration: none;
+}
+
+
+
 #move-between-pages-button:hover {
     background-color: #329161;
     color: black;
