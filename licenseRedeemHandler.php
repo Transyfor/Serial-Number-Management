@@ -34,8 +34,18 @@ if ($stmt = $mysqli->prepare($sql)) {
                 $updateRedeemedStmt = $mysqli->prepare($updateRedeemedSql);
                 $updateRedeemedStmt->bind_param("s", $license);
                 if ($updateRedeemedStmt->execute()) {
-                    // Successful update of 'Redeemed' column
-                    echo '<script>alert("Attributed userID and Redeemed updated successfully for Serial Number: ' . $license . '"); window.location.href="/license.php";</script>';
+                    // Update 'Expiration Date' column to 1 year after the current date
+                    $updateExpirationSql = "UPDATE `Serial Numbers` SET `Expiration Date` = DATE_ADD(CURDATE(), INTERVAL 1 YEAR) WHERE `Code` = ?";
+                    $updateExpirationStmt = $mysqli->prepare($updateExpirationSql);
+                    $updateExpirationStmt->bind_param("s", $license);
+                    if ($updateExpirationStmt->execute()) {
+                        // Successful update of 'Expiration Date'
+                        echo '<script>alert("Attributed userID, Redeemed, and Expiration Date updated successfully for Serial Number: ' . $license . '"); window.location.href="/license.php";</script>';
+                    } else {
+                        // Handle 'Expiration Date' update failure
+                        echo '<script>alert("Error updating \'Expiration Date\': ' . $mysqli->error . '"); window.location.href="/license.php";</script>';
+                    }
+                    $updateExpirationStmt->close();
                 } else {
                     // Handle 'Redeemed' update failure
                     echo '<script>alert("Error updating \'Redeemed\': ' . $mysqli->error . '"); window.location.href="/license.php";</script>';

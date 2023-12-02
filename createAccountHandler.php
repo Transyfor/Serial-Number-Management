@@ -83,7 +83,7 @@ if(!$stmt->prepare($sql)){ //Returns false is preperation fails.
 }
 
 //In our $sql String (which has now been binded to $stmt), there were question marks for the values we want to replace. Let's replace the question marks with what we actually want to add to the database.
-$stmt->bind_param("sssssss",$_POST["create-username"],$_POST["create-name"],$_POST["create-password"],$_POST["create-email"],$_POST["create-address"],$_POST["paymentMethod"],$_POST["accountType"]); //the first parameter the method takes is to tell it what type each value is. We're adding 7 strings to our table, so "sssssss", where each s represents one of the variables
+$stmt->bind_param("sssssss",$_POST["create-name"],$_POST["create-username"],$_POST["create-password"],$_POST["create-email"],$_POST["create-address"],$_POST["paymentMethod"],$_POST["accountType"]); //the first parameter the method takes is to tell it what type each value is. We're adding 7 strings to our table, so "sssssss", where each s represents one of the variables
 
 //$stmt is now fully ready. It includes a command to tell the database, and also the information on connecting to the database. We can execute it!
 
