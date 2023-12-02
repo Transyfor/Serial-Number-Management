@@ -100,7 +100,7 @@
                         <input name="Name" type="text" class="th" placeholder="Software Name"/>
                     </div>
                     <div class="buttonContainer">
-                        <input id="submitSN" type="submit" value="Submit" />
+                        <input id="submitSN" type="submit" value="Add New Software" />
                     </div>
                 </div>
                 </br></br></br></br>
