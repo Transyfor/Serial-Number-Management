@@ -167,8 +167,8 @@ Here is the list of your Licences!
                 <br>
                 <!-- Form for renewing serial numbers -->
                 <form action="" method="POST">
-                    <input type="text" name="renewSerial" placeholder="Renew Serial Number">
-                    <input type="submit" value="Renew">
+                    <input id="move-between-pages-button" type="text" name="renewSerial" placeholder="Renew Serial Number">
+                    <input id="move-between-pages-button" type="submit" value="Renew">
                 </form>
                 <!-- Display error message -->
                 <p id="error-message"><?php echo isset($message) ? $message : ""; ?></p>
