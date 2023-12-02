@@ -59,10 +59,12 @@ if(!isset($_SESSION['Account Type'])){
             </div>
 
             <div class="bubbleStyle" id="psswproviderdiv">
-                <form>
+                <form action="nameChangeProviderHandler.php" method="POST">
                     <h1 id="nametitle">Change Name</h1>
                     <p id="oldname">
-                        <em><strong>old_name</strong></em>
+                        <em><strong>
+                            <?php echo $_SESSION['Name'];?>
+                        </strong></em>
                     </p>
                     <label for="newname" id="entername">New Name:</label>
                     <input

@@ -57,7 +57,7 @@ if(!isset($_SESSION['Account Type'])){
             </div>
 
             <div class="bubbleStyle" id="emailproviderdiv">
-                <form>
+                <form action="emailChangeProviderHandler.php" method="POST">
                     <h1 id="emailtitle">
                         <button
                             style="
