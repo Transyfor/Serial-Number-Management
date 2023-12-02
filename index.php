@@ -1,5 +1,5 @@
 <?php
-ob_start();
+ ob_start();
  session_start(); //This makes it so that I can attribute variables to the current user
 ?>
 <?php
