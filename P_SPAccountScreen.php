@@ -144,8 +144,8 @@ $result = $mysqli->query($query);
             <br>
             <!-- Form for pausing/unpausing serial numbers -->
             <form action="" method="POST" onsubmit="return pauseUnpauseSerialNumber()">
-                <input type="text" name="serialNumber" id="serialNumber" placeholder="Lock Serial Number">
-                <input type="submit" value="Pause/Unpause">
+                <input id="renew-box" type="text" name="serialNumber" id="serialNumber" placeholder="Lock Serial Number">
+                <input id="move-between-pages-button" type="submit" value="Pause/Unpause">
             </form>
             <!-- Display error message -->
             <p id="error-message"><?php echo isset($message) ? $message : ""; ?></p>
