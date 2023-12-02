@@ -28,8 +28,13 @@ if(isset($_SESSION['Account Type'])){
              exit();
         }
         if(empty($_POST["user"])){
-            echo '<script>alert("Username is invalid"); 
+            echo '<script>alert("Username is required"); 
             window.location.href="/index.php";</script>';
+            exit();
+        }
+        if(($_POST['user'])=="Deleted"){
+            echo '<script>alert("Login is invalid"); 
+            window.location.href="/index.php";</script>'; 
             exit();
         }
         //We start by connecting to the database by requiring our db_conn file

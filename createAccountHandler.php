@@ -38,6 +38,18 @@ if (! filter_var($_POST["create-email"], FILTER_VALIDATE_EMAIL)) { //If it didn'
     exit();
 }
 
+if(($_POST["create-username"])=="Deleted"){
+    echo '<script>alert("This username cannot be chosen."); 
+    window.location.href="/index.php";</script>'; 
+    exit();
+}
+
+if(($_POST["create-name"])=="[Account Deleted]"){
+    echo '<script>alert("This name cannot be chosen."); 
+    window.location.href="/index.php";</script>'; 
+    exit();
+}
+
 //Next we need a variable that holds the info on how to connect to our database. I made a file for this already db_conn.php. This just accesses that and connectes to our database.
 $mysqli = require __DIR__ ."/db_conn.php"; //This is a connection object
 
