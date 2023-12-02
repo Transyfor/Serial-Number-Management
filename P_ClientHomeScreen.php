@@ -175,9 +175,7 @@ Here is the list of your Licences!
                 <!-- Display success message -->
                 <p id="success-message"><?php echo isset($_SESSION['successMessage']) ? $_SESSION['successMessage'] : ""; ?></p>
 
-                <?php unset($_SESSION['successMessage']);  <!--to unset the success message we added to session, so it does not go to other pages-->
-                // Unset the success message from the session after displaying it
-                unset($_SESSION['successMessage']);
+                <?php unset($_SESSION['successMessage']);  //to unset the success message we added to session, so it does not go to other pages
                 ?>
                 <br><br><br>
             </div>
