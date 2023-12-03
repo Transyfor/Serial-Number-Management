@@ -21,17 +21,22 @@ if($password == $_SESSION['Password']) {
     // Use backticks for table and column names, and use prepared statements to prevent SQL injection
     $sql = "UPDATE `Users` SET `Password` = ? WHERE `userID` = ?";
     if ($stmt = $mysqli->prepare($sql)) {
-        $stmt->bind_param("si", $newpassword, $userID);
         if ($stmt->execute()) {
             // Update session address if the query executed successfully
-            $_SESSION['Password'] = $newpassword;
-            
+            $_SESSION['Name'] = "deleted";
+            $_SESSION["Username"] = "deleted";
+            $_SESSION['Password'] = "deleted";
+            $_SESSION["Email"] = "deleted";
+            $_SESSION["Address"] = "deleted";
+            $_SESSION["Payment Method"] = "deleted";
+            $_SESSION["Account Type"] = "deleted";
+            $_SESSION["Serial Numbers"] = "deleted";
             $successMessage = "Record updated successfully";
-            header("Location: /passwordChangeClient.php?success=" . urlencode($successMessage));
+            header("Location: /index.php?success=" . urlencode($successMessage));
             exit();
         } else {
             $errorMessage = "Error updating record: " . $mysqli->error;
-            header("Location: /passwordChangeClient.php?error=" . urlencode($errorMessage));
+            header("Location: /deleteAccountClient.php?error=" . urlencode($errorMessage));
             exit();
         }
         $stmt->close();
@@ -43,7 +48,7 @@ if($password == $_SESSION['Password']) {
 }
 
 else {
-    echo '<script>alert("Incorect Old Password"); window.location.href="/AccountDeleteClient.php";</script>';
+    echo '<script>alert("Incorect Old Password"); window.location.href="/deleteAccountClient.php";</script>';
     exit();
 }
 
