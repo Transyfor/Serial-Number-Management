@@ -157,17 +157,17 @@ Here is the list of your Licences!
             <!--<a href="loginChangeClient.php">
                 <button id="move-between-pages-button" type="button">Manage Account</button>
             </a>-->
-            </br></br>
+            </br>
 
             <a href="license.php">
                 <button id="move-between-pages-button" type="button">Redeem Licence</button>
             </a>
             </br>
             <div style="text-align: center;">
-                <br>
+                </br></br></br>
                 <!-- Form for renewing serial numbers -->
                 <form action="" method="POST">
-                    <input id="renew-box" type="text" name="renewSerial" placeholder="Renew Serial Number">
+                    <input id="renew-box" type="text" name="renewSerial" placeholder="Renew Serial Number" style="margin-bottom: 50px;">
                     <input id="move-between-pages-button" type="submit" value="Renew">
                 </form>
                 <!-- Display error message -->
