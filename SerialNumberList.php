@@ -94,13 +94,11 @@
                     onclick="RandomSN();" />
                 </br></br></br></br>
                 <div class="inputContainer">
-                    <form action="" method="POST">
                         <input id="submit-box" name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
                         <input id="submit-box" name="price" type="text" class="th" placeholder="Software Price"/>
                         <input id="submit-box" name="Name" type="text" class="th" placeholder="Software Name"/>
                         </br>
                         <input id="submitSN" type="submit" value="Add New Software" />
-                    </form>
                 </div>
                 </br></br></br></br>
             </form>
