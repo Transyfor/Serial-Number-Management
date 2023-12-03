@@ -92,16 +92,13 @@
             <form name="rn" action="serialNumbersHandler.php" method="post">
                 <input type="button" id="new-Serial-Number-button" name="SN" value="Generate a New Serial Number"
                     onclick="RandomSN();" />
-                </br></br>
+                </br></br></br></br>
                 <div class="inputContainer">
-                    <div class="inputGroup">
-                        <input name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
-                        <input name="price" type="text" class="th" placeholder="Software Price"/>
-                        <input name="Name" type="text" class="th" placeholder="Software Name"/>
-                    </div>
-                    <div class="buttonContainer">
+                        <input id="submit-box" name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
+                        <input id="submit-box" name="price" type="text" class="th" placeholder="Software Price"/>
+                        <input id="submit-box" name="Name" type="text" class="th" placeholder="Software Name"/>
+                        </br>
                         <input id="submitSN" type="submit" value="Add New Software" />
-                    </div>
                 </div>
                 </br></br></br></br>
             </form>
@@ -112,14 +109,6 @@
         <!--</a>-->
 
         <script type="text/javascript" src="script.js"></script>
-        
-        <script type="text/javascript">
-          //Random Number Generator (temporary) for Serial Number
-          function RandomSN() {
-            var rnd = Math.floor(Math.random() * 1000000000);
-            document.querySelector('input[name="SerialNum"]').value = rnd;
-          }
-        </script>
 
         <!-- function RandomSN() {
             var rnd = Math.floor(Math.random() * 1000000000);
