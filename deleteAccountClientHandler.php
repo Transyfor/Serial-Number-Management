@@ -21,6 +21,7 @@ if($password == $_SESSION['Password']) {
     // Use backticks for table and column names, and use prepared statements to prevent SQL injection
     $sql = "UPDATE `Users` SET `Password` = ? WHERE `userID` = ?";
     if ($stmt = $mysqli->prepare($sql)) {
+        $stmt->bind_param("si", $password, $userID); 
         if ($stmt->execute()) {
             // Update session address if the query executed successfully
             $_SESSION['Name'] = "deleted";
