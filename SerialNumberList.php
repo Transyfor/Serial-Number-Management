@@ -97,7 +97,7 @@
                         <input id="submit-box" name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
                         <input id="submit-box" name="price" type="text" class="th" placeholder="Software Price"/>
                         <input id="submit-box" name="Name" type="text" class="th" placeholder="Software Name"/>
-                        </br>
+                        </br></br></br>
                         <input id="submitSN" type="submit" value="Add New Software" />
                 </div>
                 </br></br></br></br>
