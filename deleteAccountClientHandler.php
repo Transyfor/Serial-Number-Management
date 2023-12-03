@@ -19,12 +19,11 @@ $password = $_POST['currentpassword'];
 
 if($password == $_SESSION['Password']) {
     // Use backticks for table and column names, and use prepared statements to prevent SQL injection
-    $sql = "UPDATE `Users` SET `Name` = ? WHERE `userID` = ?";
+    $sql = "UPDATE `Users` SET `Name` = ?, `Username` = ?, `Password` = ?, `Email` = ?, `Address` = ?,`Payment Method` = ?, `Account Type` = ? WHERE `userID` = ?";
     if ($stmt = $mysqli->prepare($sql)) {
-        $stmt->bind_param("si", $delete, $userID);
+        $stmt->bind_param("sssssssi", $delete, $userID, $userID, $userID, $userID,  $userID,  $userID, $userID);
         if ($stmt->execute()) {
             // Update session address if the query executed successfully
-            $_SESSION['Name'] = $delete;
             
             $successMessage = "Record updated successfully";
             header("Location: /index.php?success=" . urlencode($successMessage));
