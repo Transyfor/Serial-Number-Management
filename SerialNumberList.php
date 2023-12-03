@@ -94,12 +94,13 @@
                     onclick="RandomSN();" />
                 </br></br>
                 <div class="inputContainer">
-                    <div>
+                    <form action="" method="POST">
                         <input id="submit-box" name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
                         <input id="submit-box" name="price" type="text" class="th" placeholder="Software Price"/>
                         <input id="submit-box" name="Name" type="text" class="th" placeholder="Software Name"/>
+                        </br>
                         <input id="submitSN" type="submit" value="Add New Software" />
-                    </div>
+                    </form>
                 </div>
                 </br></br></br></br>
             </form>
@@ -110,14 +111,6 @@
         <!--</a>-->
 
         <script type="text/javascript" src="script.js"></script>
-        
-        <script type="text/javascript">
-          //Random Number Generator (temporary) for Serial Number
-          function RandomSN() {
-            var rnd = Math.floor(Math.random() * 1000000000);
-            document.querySelector('input[name="SerialNum"]').value = rnd;
-          }
-        </script>
 
         <!-- function RandomSN() {
             var rnd = Math.floor(Math.random() * 1000000000);
