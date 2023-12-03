@@ -92,7 +92,7 @@
             <form name="rn" action="serialNumbersHandler.php" method="post">
                 <input type="button" id="new-Serial-Number-button" name="SN" value="Generate a New Serial Number"
                     onclick="RandomSN();" />
-                </br></br>
+                </br></br></br></br>
                 <div class="inputContainer">
                     <form action="" method="POST">
                         <input id="submit-box" name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
