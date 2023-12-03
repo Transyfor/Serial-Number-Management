@@ -32,11 +32,6 @@ if(isset($_SESSION['Account Type'])){
             window.location.href="/index.php";</script>';
             exit();
         }
-        if(($_POST['user'])=="Deleted"){
-            echo '<script>alert("Login is invalid"); 
-            window.location.href="/index.php";</script>'; 
-            exit();
-        }
         //We start by connecting to the database by requiring our db_conn file
         $mysqli= require __DIR__ ."/db_conn.php";
         //Then we write the sql to select a record based on the email address
@@ -62,6 +57,12 @@ if(isset($_SESSION['Account Type'])){
                 }
                 if($_SESSION['Account Type']=="SP"){
                     header("Location: P_SPAccountScreen.php");
+                    exit();
+                }
+                else{
+                    echo '<script>alert("Login is invalid"); 
+                    window.location.href="/index.php";</script>';
+                    session_destroy();
                     exit();
                 }
             }
