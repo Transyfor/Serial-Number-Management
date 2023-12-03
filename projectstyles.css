@@ -348,12 +348,8 @@ th {
 }
 
 .th {
-    /*display: block;*/
     margin-bottom: 10px;
     left: 41%;
-    /*position: relative;*/
-    /*border-radius: 100px;*/
-    border: none;
     display: inline-block;
     width: 250px;
     padding: 2px;
