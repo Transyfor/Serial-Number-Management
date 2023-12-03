@@ -94,12 +94,10 @@
                     onclick="RandomSN();" />
                 </br></br>
                 <div class="inputContainer">
-                    <div class="inputGroup">
-                        <input name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
-                        <input name="price" type="text" class="th" placeholder="Software Price"/>
-                        <input name="Name" type="text" class="th" placeholder="Software Name"/>
-                    </div>
-                    <div class="buttonContainer">
+                    <div>
+                        <input id="submit-box" name="SerialNum" type="text" class="th" placeholder="Serial Number"/>
+                        <input id="submit-box" name="price" type="text" class="th" placeholder="Software Price"/>
+                        <input id="submit-box" name="Name" type="text" class="th" placeholder="Software Name"/>
                         <input id="submitSN" type="submit" value="Add New Software" />
                     </div>
                 </div>

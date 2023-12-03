@@ -366,8 +366,26 @@ th {
     margin-top: 10px;
 }
 
-#submitSN {
+
+#submit-box {
+    border-radius: 100px;
+    padding: 20px;
     cursor: pointer;
+    margin: auto;
+    width: 200px;
+    text-decoration: none;
+}
+
+#submitSN {
+    border-radius: 100px;
+    background-color: lightgreen;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 5px 5px rgba(61, 61, 67, 0.744);
+    text-decoration: none;
 }
 
 /*
