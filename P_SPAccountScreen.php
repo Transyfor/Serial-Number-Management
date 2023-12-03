@@ -96,7 +96,7 @@ $result = $mysqli->query($query);
             </ul>
         </div>
         <div>
-            <table id="SPtHS-table" class="bubbleStyle">
+            <table id="SPtHS-table" class="bubbleStyle" style="margin-bottom: 50px;">
                 <tr height="50px">
                     <th width="150">Serial Number</th>
                     <th width="150">Name</th>
@@ -137,14 +137,14 @@ $result = $mysqli->query($query);
             </table>
         </div>
         <a href="SerialNumberList.php">
-            <button id="Serial-Number-list-button" type="button">Serial Numbers List</button>
+            <button id="Serial-Number-list-button" type="button" style="margin-top: 0px;">Serial Numbers List</button>
         </a>
         <br>
         <div style="text-align: center;">
-            <br>
+            </br></br></br>
             <!-- Form for pausing/unpausing serial numbers -->
             <form action="" method="POST" onsubmit="return pauseUnpauseSerialNumber()">
-                <input id="renew-box" type="text" name="serialNumber" id="serialNumber" placeholder="Serial Number">
+                <input id="renew-box" type="text" name="serialNumber" id="serialNumber" placeholder="Serial Number" style="margin-bottom: 50px;">
                 <input id="move-between-pages-button" type="submit" value="Pause/Unpause">
             </form>
             <!-- Display error message -->
