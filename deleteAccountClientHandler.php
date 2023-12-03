@@ -16,22 +16,23 @@ $mysqli = require __DIR__ . "/db_conn.php"; // This is a connection object
 
 $password = $_POST['currentpassword'];
 $userID = $_SESSION['userID'];
+$delete = "deleted";
 
 if($password == $_SESSION['Password']) {
     // Use backticks for table and column names, and use prepared statements to prevent SQL injection
-    $sql = "UPDATE `Users` SET `Password` = ? WHERE `userID` = ?";
+    $sql = "UPDATE `Users` SET `Password` = ?  WHERE `userID` = ?";
     if ($stmt = $mysqli->prepare($sql)) {
-        $stmt->bind_param("si", $password, $userID); 
+        $stmt->bind_param("si", $delete, $userID); 
         if ($stmt->execute()) {
             // Update session address if the query executed successfully
-            $_SESSION['Name'] = "deleted";
-            $_SESSION["Username"] = "deleted";
-            $_SESSION['Password'] = "deleted";
-            $_SESSION["Email"] = "deleted";
-            $_SESSION["Address"] = "deleted";
-            $_SESSION["Payment Method"] = "deleted";
-            $_SESSION["Account Type"] = "deleted";
-            $_SESSION["Serial Numbers"] = "deleted";
+            $_SESSION['Name'] = $delete;
+            $_SESSION["Username"] = $delete;
+            $_SESSION['Password'] = $delete;
+            $_SESSION["Email"] = $delete;
+            $_SESSION["Address"] = $delete;
+            $_SESSION["Payment Method"] = $delete;
+            $_SESSION["Account Type"] = $delete;
+            $_SESSION["Serial Numbers"] = $delete;
             $successMessage = "Record updated successfully";
             header("Location: /index.php?success=" . urlencode($successMessage));
             exit();
