@@ -109,6 +109,13 @@
         <!--</a>-->
 
         <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript">
+          //Random Number Generator (temporary) for Serial Number
+          function RandomSN() {
+            var rnd = Math.floor(Math.random() * 1000000000);
+            document.querySelector('input[name="SerialNum"]').value = rnd;
+          }
+        </script>
 
         <!-- function RandomSN() {
             var rnd = Math.floor(Math.random() * 1000000000);
